@@ -1,0 +1,97 @@
+@import "../../css/_module-imports";
+
+.u4m-countdown {
+  padding-left: 40px;
+  padding-right: 40px;
+  @include tabletvert {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .countdown-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 50px;
+    @include tabletvert {
+      row-gap: 20px;
+    }
+    .countdown-item {
+      width: 20%;
+      text-align: center;
+      display: inline-block;
+
+      @include tablet {
+        width: 33.333%;
+      }
+
+      @include tabletvert {
+        width: 100%;
+      }
+
+      .countdown-item-inn {
+        @include b2;
+        text-align: center;
+        color: $charcoal;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-right: $azure 1px solid;
+        @include tabletvert {
+          border-right: 0;
+          padding-left: 0;
+          padding-right: 0;
+          border-bottom: $azure 1px solid;
+          padding-bottom: 20px;
+        }
+        .countdown-assets {
+          @include size18;
+          font-weight: 800;
+          line-height: 1.2;
+          letter-spacing: 0.02em;
+          color: $purlple;
+          margin-bottom: 12px;
+        }
+        .remaining-days {
+          @include h1;
+          line-height: 1;
+          letter-spacing: -0.03em;
+          text-align: center;
+          margin-bottom: 12px;
+        }
+        h5.remaining-text {
+          margin-bottom: 4px;
+        }
+      }
+    }
+
+    @include tablet {
+      .countdown-item:nth-child(5n) {
+        .countdown-item-inn {
+          border-right: $azure 1px solid;
+        }
+      }
+      .countdown-item:nth-child(3n),
+      .countdown-item:last-child {
+        .countdown-item-inn {
+          border-right: 0;
+        }
+      }
+    }
+
+    @include tabletvert {
+      .countdown-item:last-child {
+        .countdown-item-inn {
+          border-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    .countdown-item:nth-child(5n),
+    .countdown-item:last-child {
+      .countdown-item-inn {
+        border-right: 0;
+      }
+    }
+  }
+}

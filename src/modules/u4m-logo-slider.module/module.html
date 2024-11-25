@@ -1,0 +1,96 @@
+{% set moduleName = 'u4m-logo-slider' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
+	{{macros.introGroup(module.intro_content)}}
+	<div class="logo-slider-row">
+		<div class="logo-slider-items flex_row">
+			{% for item in module.slides %}
+			<div class="logo-slider-item col2 col">
+				{% if item.enable_logo_link %}
+				{% set href = item.link_field.url.href %}
+				{% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+				{% set href = "mailto:" + href %}
+				{% endif %}
+				<a
+					 {% if item.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+					 href="{{ href }}" 
+					 {% else %}
+					 href="{{ href|escape_url }}"
+					 {% endif %}
+					 {% if item.link_field.open_in_new_tab %}
+					 target="_blank"
+					 {% endif %}
+					 {% if item.link_field.rel %}
+					 rel="{{ item.link_field.rel|escape_attr }}"
+					 {% endif %}
+					 >
+					{% endif %}
+					{% set loadingAttr = item.logo.loading != 'disabled' ? 'loading="{{ item.logo.loading|escape_attr }}"' : '' %}
+					<img src="{{ item.logo.src|escape_url }}" alt="{{ item.logo.alt|escape_attr }}" {{ loadingAttr }}>
+					{% if item.enable_logo_link %}
+				</a>
+				{% endif %}
+			</div> 
+			{% endfor %}
+		</div>
+	</div>
+
+</div>
+
+
+
+</section>
+
+
+
+{% require_js %}
+
+<script>
+	$('.{{name}} .logo-slider-items').slick({
+		slidesToShow: 6,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 0,
+		speed: 6000,
+		dots: false,
+		arrows: false,
+		infinite: true,
+		responsive: [
+		{
+		  breakpoint: 1024,
+		  settings: {
+			slidesToShow: 4,
+			slidesToScroll: 4
+		  }
+		},
+		{
+		  breakpoint: 600,
+		  settings: {
+			slidesToShow: 2,
+			slidesToScroll: 2
+		  }
+		},
+		{
+		  breakpoint: 480,
+		  settings: {
+			slidesToShow: 1,
+			slidesToScroll: 1
+		  }
+		}
+	  ]
+	});
+</script>
+
+{% end_require_js %}
+
+
+
+
+
+
+
+
+
+
+

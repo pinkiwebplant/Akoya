@@ -1,0 +1,21 @@
+@import "../../css/_module-imports";
+
+.u4m-logo-slider {
+  .intro_content {
+    margin-bottom: 0;
+    .intro_desc {
+      margin-bottom: 0;
+      h5 {
+        margin-bottom: 24px;
+      }
+    }
+  }
+  .logo-slider-row {
+    .logo-slider-item {
+      text-align: center;
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+}

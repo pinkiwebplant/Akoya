@@ -20,9 +20,14 @@ body {
   font-family: $font1;
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
-  color: $black;
+  color: $basecolor;
   font-weight: normal;
-  margin-top: 78rem;
+}
+
+@mixin bodyContent {
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  font-family: $font2;
 }
 
 body.lp-sign-up {
@@ -62,6 +67,17 @@ h5 {
 h6 {
   @include h6;
 }
+
+// @font-face {
+//   font-family: "Neue Haas Grotesk Text Pro";
+//   src:
+//     url("{{ get_asset_url('../fonts/NeueHaasDisplay-Bold.eot') }}") format("eot"),
+//     url("{{ get_asset_url('../fonts/NeueHaasDisplay-Bold.woff') }}") format("woff"),
+//     url("{{ get_asset_url('../fonts/NeueHaasDisplay-Bold.woff2') }}") format("woff2"),
+//     url("{{ get_asset_url('../fonts/NeueHaasDisplay-Bold.ttf') }}") format("ttf");
+//   font-weight: 700;
+//   font-style: normal;
+// }
 
 //Set in Typography Mixins
 p:first-child,
@@ -136,11 +152,11 @@ div.hs_cos_wrapper_widget section.bottom-margin-medium {
   margin-bottom: 100rem;
 
   @include tabletvert {
-    margin-bottom: 75rem
+    margin-bottom: 75rem;
   }
 
   @include phone {
-    margin-bottom: 50rem
+    margin-bottom: 50rem;
   }
 }
 
@@ -216,11 +232,11 @@ div.hs_cos_wrapper_widget section.bottom-padding-medium {
   padding-bottom: 100rem;
 
   @include tabletvert {
-    padding-bottom: 75rem
+    padding-bottom: 75rem;
   }
 
   @include phone {
-    padding-bottom: 50rem
+    padding-bottom: 50rem;
   }
 }
 
@@ -263,7 +279,7 @@ div.video-popup {
 div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom.can-use-gradients {
   box-shadow: 2rem -1rem 5rem 0rem rgba(0, 0, 0, 0.05);
   border: 0;
-  background-color: rgba($white, .9);
+  background-color: rgba($white, 0.9);
 
   div#hs-eu-cookie-confirmation-inner {
     background-color: rgba($white, 0);
@@ -293,12 +309,9 @@ div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom.can-use-gra
 }
 
 // default p size
-p {
-  @include b3;
-}
 
 a {
-  @include link
+  @include link;
 }
 
 blockquote,
@@ -332,7 +345,7 @@ ol {
 
 li {
   margin-bottom: 5rem;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
 }
 
 ul ul,
@@ -353,7 +366,7 @@ button {
 
 /* Forms */
 form {
-  margin-bottom: 30rem
+  margin-bottom: 30rem;
 }
 
 ::-webkit-input-placeholder {
@@ -416,11 +429,11 @@ code {
   border-radius: 0;
 }
 
-pre>code {
+pre > code {
   display: block;
   padding: 1rem 15rem;
   white-space: pre;
-  margin-bottom: 30rem
+  margin-bottom: 30rem;
 }
 
 pre {
@@ -452,7 +465,7 @@ td:last-child {
 }
 
 table {
-  margin-bottom: 30rem
+  margin-bottom: 30rem;
 }
 
 table th {
@@ -464,11 +477,134 @@ table td {
   font-size: 14rem;
 }
 
-a[href='javascript:;'] {
+a[href="javascript:;"] {
   cursor: default;
 }
 
-//
-section[class*='u4m-'] {
+section[class*="u4m-"] {
   scroll-margin-top: 150px;
+}
+
+.flex-row,
+.flex_row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.arrow-link {
+  display: block;
+}
+
+// bg
+
+.primary-teal-bg {
+  background-color: $primary-teal;
+}
+.secondary-teal-bg {
+  background-color: $secondary-teal;
+}
+.azure-bg {
+  background-color: $azure;
+}
+.purlple-bg {
+  background-color: $purlple;
+}
+.black-bg {
+  background-color: $black;
+}
+.charcoal-bg {
+  background-color: $black;
+}
+.gray-bg {
+  background-color: $gray;
+}
+.silver-bg {
+  background-color: $silver;
+}
+.white-bg {
+  background-color: $white;
+}
+
+.dnd_padd {
+  position: relative;
+}
+
+.bg_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+
+  & ~ .full-width-container,
+  & ~ .page-center {
+    position: relative;
+    z-index: 3;
+  }
+
+  &.bg_image {
+    z-index: 2;
+    background-repeat: no-repeat;
+  }
+}
+
+.gradient1 {
+  background: $gradient1;
+}
+
+.gradient2 {
+  transform: rotate(-180deg);
+  background: $gradient2;
+}
+
+.intro_content {
+  text-align: center;
+  margin-bottom: 61rem;
+  max-width: $introContainer;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .eyebrow_text {
+    @include eyebrow;
+    margin-bottom: 12rem;
+  }
+
+  .intro_title {
+    margin-bottom: 24rem;
+  }
+
+  .intro_desc {
+    margin-bottom: 36px;
+
+    p:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.intro_btn_wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 36px;
+  align-items: center;
+}
+
+.hs-button {
+  @include button;
+}
+
+.arrow-link {
+  @include arrow-link;
+}
+
+.reverse-text {
+  color: $white;
+  .intro_desc,
+  .intro_title {
+    color: $white;
+  }
 }

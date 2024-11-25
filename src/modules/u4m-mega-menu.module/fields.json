@@ -1,0 +1,364 @@
+[ {
+  "id" : "282d332b-e989-2fc1-6a10-6f11237457b1",
+  "name" : "mega_menu",
+  "display_width" : null,
+  "label" : "Mega Menu",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "b17dbf78-d89c-191c-349a-ae777b9ff642",
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "b17dbf78-d89c-191c-349a-ae777b9ff642",
+    "name" : "menu_text",
+    "display_width" : null,
+    "label" : "Menu Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Financial Institutions "
+  }, {
+    "id" : "786d63a6-4772-db88-3062-8901f14b82ef",
+    "name" : "menu_link",
+    "display_width" : null,
+    "label" : "Menu Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "8894720f-815c-8abf-d798-d8722215a18a",
+    "name" : "enable_child_menu",
+    "display_width" : null,
+    "label" : "Enable Child Menu",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "ee797e5c-aa86-0daa-8f7b-b0fb26f41c71",
+    "name" : "child_menu",
+    "display_width" : null,
+    "label" : "Child Menu",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "mega_menu.enable_child_menu",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "1374464d-b8ea-5caf-cc12-42238a15292d",
+      "name" : "content",
+      "display_width" : null,
+      "label" : "Content",
+      "required" : false,
+      "locked" : false,
+      "type" : "richtext",
+      "default" : "<h6>Fintechs overview</h6>\n<p>Opened menu items can have an introductory area, like this space here, followed by 1+ columns of links beneath. Hovering an item adds an arrow.</p>"
+    }, {
+      "id" : "e28ea403-fef3-5220-ad22-2a4849b7094b",
+      "name" : "menu_group",
+      "display_width" : null,
+      "label" : "Menu Group",
+      "required" : false,
+      "locked" : false,
+      "occurrence" : {
+        "min" : null,
+        "max" : null,
+        "sorting_label_field" : "849655fa-2789-5fd3-2ba3-da0eb4d91e5b",
+        "default" : 1
+      },
+      "children" : [ {
+        "id" : "849655fa-2789-5fd3-2ba3-da0eb4d91e5b",
+        "name" : "menu_title",
+        "display_width" : null,
+        "label" : "Menu Title",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "Use Cases"
+      }, {
+        "id" : "86c5cae7-8db1-1a2d-7aa3-af2b876e927e",
+        "name" : "menu_item",
+        "display_width" : null,
+        "label" : "Menu Item",
+        "required" : false,
+        "locked" : false,
+        "occurrence" : {
+          "min" : null,
+          "max" : null,
+          "sorting_label_field" : "7129c8ed-62a0-06e0-f942-a9ffec17fc59",
+          "default" : 1
+        },
+        "children" : [ {
+          "id" : "7129c8ed-62a0-06e0-f942-a9ffec17fc59",
+          "name" : "menu_text",
+          "display_width" : null,
+          "label" : "Menu Text",
+          "required" : false,
+          "locked" : false,
+          "validation_regex" : "",
+          "allow_new_line" : false,
+          "show_emoji_picker" : false,
+          "type" : "text",
+          "default" : "Account Opening"
+        }, {
+          "id" : "eef68cb8-f2fa-229d-c2bc-1cd29a44ba4e",
+          "name" : "menu_link",
+          "display_width" : null,
+          "label" : "Menu Link",
+          "required" : false,
+          "locked" : false,
+          "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+          "show_advanced_rel_options" : false,
+          "type" : "link",
+          "default" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ],
+        "tab" : "CONTENT",
+        "expanded" : false,
+        "group_occurrence_meta" : null,
+        "type" : "group",
+        "default" : [ {
+          "menu_text" : "Account Opening",
+          "menu_link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "default" : [ {
+        "menu_title" : "Use Cases",
+        "menu_item" : [ {
+          "menu_text" : "Account Opening",
+          "menu_link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : {
+      "content" : "<h6>Fintechs overview</h6>\n<p>Opened menu items can have an introductory area, like this space here, followed by 1+ columns of links beneath. Hovering an item adds an arrow.</p>",
+      "menu_group" : [ {
+        "menu_title" : "Use Cases",
+        "menu_item" : [ {
+          "menu_text" : "Account Opening",
+          "menu_link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : [ {
+    "menu_text" : "Financial Institutions ",
+    "menu_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "enable_child_menu" : true,
+    "child_menu" : {
+      "content" : "<h6>Fintechs overview</h6>\n<p>Opened menu items can have an introductory area, like this space here, followed by 1+ columns of links beneath. Hovering an item adds an arrow.</p>",
+      "menu_group" : [ {
+        "menu_title" : "Use Cases",
+        "menu_item" : [ {
+          "menu_text" : "Account Opening",
+          "menu_link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
+    }
+  }, {
+    "menu_text" : "Financial Institutions ",
+    "menu_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "enable_child_menu" : true,
+    "child_menu" : {
+      "content" : "<h6>Fintechs overview</h6>\n<p>Opened menu items can have an introductory area, like this space here, followed by 1+ columns of links beneath. Hovering an item adds an arrow.</p>",
+      "menu_group" : [ {
+        "menu_title" : "Use Cases",
+        "menu_item" : [ {
+          "menu_text" : "Account Opening",
+          "menu_link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
+    }
+  }, {
+    "menu_text" : "Financial Institutions ",
+    "menu_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "enable_child_menu" : true,
+    "child_menu" : {
+      "content" : "<h6>Fintechs overview</h6>\n<p>Opened menu items can have an introductory area, like this space here, followed by 1+ columns of links beneath. Hovering an item adds an arrow.</p>",
+      "menu_group" : [ {
+        "menu_title" : "Use Cases",
+        "menu_item" : [ {
+          "menu_text" : "Account Opening",
+          "menu_link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
+    }
+  }, {
+    "menu_text" : "Financial Institutions ",
+    "menu_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "enable_child_menu" : true,
+    "child_menu" : {
+      "content" : "<h6>Fintechs overview</h6>\n<p>Opened menu items can have an introductory area, like this space here, followed by 1+ columns of links beneath. Hovering an item adds an arrow.</p>",
+      "menu_group" : [ {
+        "menu_title" : "Use Cases",
+        "menu_item" : [ {
+          "menu_text" : "Account Opening",
+          "menu_link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
+    }
+  }, {
+    "menu_text" : "Financial Institutions ",
+    "menu_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "enable_child_menu" : true,
+    "child_menu" : {
+      "content" : "<h6>Fintechs overview</h6>\n<p>Opened menu items can have an introductory area, like this space here, followed by 1+ columns of links beneath. Hovering an item adds an arrow.</p>",
+      "menu_group" : [ {
+        "menu_title" : "Use Cases",
+        "menu_item" : [ {
+          "menu_text" : "Account Opening",
+          "menu_link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
+    }
+  } ]
+} ]
