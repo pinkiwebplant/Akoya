@@ -9,8 +9,78 @@
 
 		<div class="tabber_nav">
 			{% for item in module.tabber_group %}
-			<div class="tab_nav_item {% if loop.index == 1 %}active{% endif %}">
+			<div class="tab_nav_item {% if loop.index == 1 %}active animated{% endif %}">
 				<span class="tab_nav" data-nav="{{name}}_tab{{loop.index}}">{{ item.nav_text }}</span>
+
+				<div class="acc_box" {% if loop.index == 1 %}{% else %}style="display: none"{% endif %}>
+					<div class="tabber_pannel_item {% if loop.index == 1 %}active animated{% endif %}" data-tab-id="{{name}}_tab{{loop.index}}">
+
+
+						<div class="flex_row">
+
+							<div class="content_col">
+
+								{% if item.title %}
+								<h3 class="tab_title">
+									{{ item.title }}
+								</h3>
+								{% endif %}
+
+								{% if  item.content %}
+								<div class="tab_text">
+									{{ item.content }}
+								</div>
+								{% endif %}
+								{% if  item.button_group %}
+								{{macros.buttonGroup(item.button_group)}}
+								{% endif %}
+							</div>
+
+							<div class="right_col">
+
+
+								{% if item.image.src %}
+								<div class="tab_img">
+									<img src="{{ item.image.src}}" alt="{{ item.image.alt|escape_attr }}">
+								</div>
+								{% endif %}
+
+
+								{% if item.include_stats %}
+
+								<div class="abs_stats">
+									{% for item2 in item.stats_group %}
+									<div class="abs_stat_item it{{loop.index}}">
+										<div class="abs_icon_box">
+											{% if item2.select_icon_type == "image" and item2.image_icon.src %}
+											<span class="img_icon">
+												<img src="{{ item2.image_icon.src|escape_url }}" alt="{{ item2.image_icon.alt|escape_attr }}" >
+											</span>
+											{% endif %}
+											{% if item2.select_icon_type == "custom" and item2.custom_icon %}
+											<span class="material-symbols-outlined">{{ item2.custom_icon }}
+											</span>
+											{% endif %}
+										</div>
+
+										<div class="abs_content_box">
+											{% if item2.title  %}<span class="title_box">{{ item2.title }}</span>{% endif %}
+											{% if item2.stats  %}<span class="stats_box">{{ item2.stats }}</span>{% endif %}
+										</div>
+
+									</div>
+									{% endfor %}
+
+								</div>
+								{% endif %}
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
 			</div>
 			{% endfor %}
 
@@ -19,7 +89,7 @@
 		<div class="tabber_pannel">
 
 			{% for item in module.tabber_group %}
-			<div class="tabber_pannel_item {% if loop.index == 1 %}active{% endif %}" data-tab-id="{{name}}_tab{{loop.index}}">
+			<div class="tabber_pannel_item {% if loop.index == 1 %}active animated{% endif %}" data-tab-id="{{name}}_tab{{loop.index}}">
 
 
 				<div class="flex_row">
@@ -98,15 +168,19 @@
 </section>
 
 {% require_js %}
-	<script>
-
+<script>
 
 	$('.tabber_nav  .tab_nav').click(function(){
-	$(this).parent().addClass('');
+		var getId = $(this).attr('data-nav');
+		$(this).parent().siblings().removeClass('active');
+		$(this).parent().addClass('active');
+
+		$(this).parents('.tab_main').find('.tabber_pannel_item').removeClass('active animated')
+		$('[data-tab-id="'+getId+'"]').addClass('active');
+		setTimeout(function(){
+			$('[data-tab-id="'+getId+'"]').addClass('animated');
+		}, 400)
 	})
-	
-	
-	
-	
-	</script>
+
+</script>
 {% end_require_js %}

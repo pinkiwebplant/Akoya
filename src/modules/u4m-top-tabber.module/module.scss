@@ -11,6 +11,10 @@ section.u4m-top-tabber {
     border-bottom: 2px solid $azure;
     margin-bottom: 76px;
 
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
     .tab_nav {
       display: block;
       cursor: pointer;
@@ -19,6 +23,10 @@ section.u4m-top-tabber {
       padding-bottom: 2px;
       margin-bottom: -2px;
       border-bottom: 2px solid transparent;
+
+      @include tablet {
+        width: 100%;
+      }
     }
 
     .active {
@@ -83,13 +91,32 @@ section.u4m-top-tabber {
     }
     .flex_row {
       align-items: center;
+      opacity: 0;
+      transition: 0.4s ease;
     }
+
+    &.animated .flex_row {
+      opacity: 1;
+    }
+
     .intro_btn_wrap {
       justify-content: flex-start;
     }
 
     .tab_title {
       margin-bottom: 16px;
+    }
+  }
+
+  .tabber_pannel {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .acc_box {
+    @include tabletMin {
+      display: none;
     }
   }
 

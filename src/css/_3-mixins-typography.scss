@@ -183,6 +183,17 @@
 
 //
 
+@mixin size64 {
+  font-size: 64rem;
+
+  @include tablet {
+    font-size: 48rem;
+  }
+  @include phone {
+    font-size: 38rem;
+  }
+}
+
 @mixin size38 {
   font-size: 38rem;
 
@@ -230,4 +241,24 @@
   @include phone {
     font-size: 16rem;
   }
+}
+
+@mixin size16 {
+  font-size: 16rem;
+}
+
+@mixin size15 {
+  font-size: 15rem;
+}
+
+@mixin size14 {
+  font-size: 14rem;
+}
+
+@mixin size13 {
+  font-size: 13rem;
+}
+
+@mixin size12 {
+  font-size: 12rem;
 }
