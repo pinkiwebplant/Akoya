@@ -86,8 +86,10 @@ section.u4m-top-tabber {
   }
 
   .tabber_pannel_item {
-    &:not(.active) {
-      display: none;
+    @include tabletMin {
+      &:not(.active) {
+        display: none;
+      }
     }
     .flex_row {
       align-items: center;
@@ -117,6 +119,12 @@ section.u4m-top-tabber {
   .acc_box {
     @include tabletMin {
       display: none;
+    }
+
+    .tabber_pannel_item {
+      .flex_row {
+        opacity: 1;
+      }
     }
   }
 
