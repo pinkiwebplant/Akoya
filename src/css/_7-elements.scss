@@ -536,7 +536,9 @@ section[class*="u4m-"] {
   height: 100%;
   width: 100%;
   z-index: 1;
+  pointer-events: none;
 
+  & ~ .full-width-container,
   & ~ .page-center {
     position: relative;
     z-index: 3;

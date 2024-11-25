@@ -63,8 +63,8 @@ section.u4m-top-tabber {
     }
     .abs_stats {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 57rem;
+      left: 49rem;
       display: flex;
       width: 100%;
       flex-wrap: wrap;
@@ -78,6 +78,9 @@ section.u4m-top-tabber {
   }
 
   .tabber_pannel_item {
+    &:not(.active) {
+      display: none;
+    }
     .flex_row {
       align-items: center;
     }
