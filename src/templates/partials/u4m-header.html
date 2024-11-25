@@ -23,7 +23,15 @@
 						{% module "logo" path="@hubspot/logo", label="Logo", link="/", img={src="{{logo_file}}", alt="Akoya", width= 500, override_inherited_src= true } %}
 					</div>
 					<div class="hdr_nav">
-						{% module "header_menu" path="/Akoya/modules/u4m-mega-menu", label="Menu" %}
+						{% module "header_menu" path="../../modules/u4m-mega-menu", label="Menu" %}
+						<div class="mobile_content">
+							<div class="hdr_login_menu">
+								{% menu "login_menu" id=183172432192, flyouts='false', max_levels='5', flow='horizontal', label='Login Menu' %}
+							</div>
+							<div class="hdr_btn">
+								{% module "headre_contact_button" path="@hubspot/button", button_text="Contact us", label="Contact Button", link={ "url": { "type": "EXTERNAL", "href": "", "content_id": null }, "open_in_new_tab": false, "no_follow": false } %}
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="right_section">
@@ -35,11 +43,20 @@
 							<img src="{{ get_asset_url('../../templates/images/search-icon.png') }}" alt="Search Icon">
 						</div>
 						<div class="hdr_site_search">
+							<span class="material-symbols-outlined">
+								close
+							</span>
+							{% include "../../modules/partials/u4-search.html" %}
 							{% module "header_search" path="../../modules/partials/u4-search", label="Search" %}
 						</div>
 					</div>
 					<div class="hdr_btn">
 						{% module "headre_contact_button" path="@hubspot/button", button_text="Contact us", label="Contact Button", link={ "url": { "type": "EXTERNAL", "href": "", "content_id": null }, "open_in_new_tab": false, "no_follow": false } %}
+					</div>
+					<div class="menu-trigger">
+						<span></span>
+						<span></span>
+						<span></span>
 					</div>
 				</div>
 			</div>
