@@ -1,0 +1,75 @@
+@import "../../css/_module-imports";
+section.u4m-grid-card {
+  .intro_content {
+    margin-bottom: 46px;
+  }
+  .gridcard_wrap {
+    .grid_items {
+      row-gap: 30px;
+      .grid_item {
+        width: 25%;
+        transition: all 0.3s linear;
+        position: relative;
+        @include tablet {
+          width: 50%;
+        }
+        @include tabletvert {
+          width: 100%;
+        }
+        &:after {
+          content: "";
+          border-radius: 5rem;
+          height: 12rem;
+          background-color: $primary-teal;
+          position: absolute;
+          left: 4%;
+          bottom: -6rem;
+          right: 4%;
+          width: 92%;
+          opacity: 0;
+        }
+        &:hover {
+          transform: translateY(-5px);
+          cursor: pointer;
+          .grid_inr {
+            border-color: $azure;
+          }
+          &::after {
+            opacity: 1;
+          }
+        }
+        .grid_inr {
+          border: 2rem solid transparent;
+          position: relative;
+          background-color: $white;
+          z-index: 9;
+          padding: 24rem;
+          border-radius: $borderRadius;
+          .arrow {
+            width: 24rem;
+            height: 24rem;
+            position: absolute;
+            right: 12rem;
+            top: 12rem;
+            border-radius: 50%;
+            background-color: rgba($primary-teal, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .grid_item_inr {
+            & > p {
+              margin-bottom: 12rem;
+            }
+            .cnt {
+              @include size16;
+              p {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
