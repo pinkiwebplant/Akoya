@@ -1,0 +1,90 @@
+{% set moduleName = 'u4m-countdown' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
+	{{macros.introGroup(module.intro_content)}}
+	<div class="countdown-row">
+		<div class="countdown-items">
+			{% for item in module.countdown %}
+			<div class="countdown-item">
+				<div class="countdown-item-inn">
+					{% if item.assets %}
+					<div class="countdown-assets">
+						{{ item.assets }}
+					</div>
+					{% endif %}
+					{% if item.selected_date %}
+					<h2 class="remaining-days" id="countdown-timer-{{loop.index}}">
+						{#{ item.selected_date }#}
+					</h2>
+					{% endif %}
+					{% if item.title %}
+					<h5 class="remaining-text">
+						{{ item.title }}
+					</h5>
+					{% endif %}
+					until {{item.selected_date|datetimeformat('%B %e, %Y')}} deadline
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+</section>
+
+{% require_js %}
+
+<script>
+	{% for item in module.countdown %}
+	var setEndDate{{loop.index}} = "{{item.selected_date}}";
+	{% endfor %}
+	function startCountDownDate(dateVal) {
+		var countDownDate = new Date(dateVal).getTime();
+		return countDownDate;
+	}
+	function countDownTimer(start, targetDOM) {
+		var now = new Date();
+		var currentTime = now.getTime();
+		var nextMidnight = new Date(now);
+		nextMidnight.setHours(24, 0, 0, 0);
+		var nextMidnightTime = nextMidnight.getTime();
+		var distance = start - currentTime;
+		if (distance < 0) {
+			start = nextMidnightTime;
+			distance = start - currentTime;
+		}
+		var daysRemaining = Math.floor(distance / (1000 * 60 * 60 * 24)) + 1;
+		daysRemaining = (daysRemaining < 10) ? "0" + daysRemaining : daysRemaining;
+		document.querySelector("#" + targetDOM).textContent = daysRemaining;
+		if (distance < 0) {
+			document.querySelector("#" + targetDOM).textContent = " ";
+		}
+	}
+
+	{% for item in module.countdown %}
+	var cdd{{loop.index}} = startCountDownDate(setEndDate{{loop.index}});
+	setInterval(function() { 
+		countDownTimer(cdd{{loop.index}}, "countdown-timer-{{loop.index}}"); 
+									 }, 1000);
+	{% endfor %}
+
+
+</script>
+
+{% end_require_js %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

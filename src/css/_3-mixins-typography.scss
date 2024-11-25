@@ -180,3 +180,54 @@
   text-transform: uppercase;
   color: $purlple;
 }
+
+//
+
+@mixin size38 {
+  font-size: 38rem;
+
+  @include tablet {
+    font-size: 34rem;
+  }
+  @include phone {
+    font-size: 28rem;
+  }
+}
+
+@mixin size26 {
+  font-size: 26rem;
+
+  @include tablet {
+    font-size: 24rem;
+  }
+  @include phone {
+    font-size: 22rem;
+  }
+}
+
+@mixin size24 {
+  font-size: 24rem;
+
+  @include tablet {
+    font-size: 22rem;
+  }
+  @include phone {
+    font-size: 20rem;
+  }
+}
+
+@mixin size20 {
+  font-size: 20rem;
+
+  @include phone {
+    font-size: 16rem;
+  }
+}
+
+@mixin size18 {
+  font-size: 18rem;
+
+  @include phone {
+    font-size: 16rem;
+  }
+}

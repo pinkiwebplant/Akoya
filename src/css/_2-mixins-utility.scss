@@ -77,6 +77,12 @@
   }
 }
 
+@mixin tabbreakpoint($min-width, $max-width) {
+  @media (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}
+
 @mixin ie {
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     @content;
