@@ -1,0 +1,94 @@
+@import "../../css/_module-imports";
+section.u4m-top-tabber {
+  display: block;
+
+  // Nav
+
+  .tabber_nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px 23px;
+    border-bottom: 2px solid $azure;
+    margin-bottom: 76px;
+
+    .tab_nav {
+      display: block;
+      cursor: pointer;
+      position: relative;
+      padding: 0 31px;
+      padding-bottom: 2px;
+      margin-bottom: -2px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .active {
+      .tab_nav {
+        border-bottom: 2px solid $purlple;
+      }
+    }
+  }
+
+  .content_col {
+    width: 100%;
+    @include tabletmidmin {
+      width: 46%;
+      padding-right: 6%;
+    }
+  }
+
+  .right_col {
+    width: 100%;
+    position: relative;
+    padding-bottom: 36.25%;
+    min-height: 380px;
+    overflow: hidden;
+    border-radius: $borderRadius;
+
+    @include tabletmidmin {
+      width: 54%;
+    }
+
+    .tab_img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .abs_stats {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      max-width: 320px;
+      width: 100%;
+      gap: 10px;
+      .abs_stat_item {
+        @include absStats;
+      }
+    }
+  }
+
+  .tabber_pannel_item {
+    .flex_row {
+      align-items: center;
+    }
+    .intro_btn_wrap {
+      justify-content: flex-start;
+    }
+
+    .tab_title {
+      margin-bottom: 16px;
+    }
+  }
+
+  //
+}

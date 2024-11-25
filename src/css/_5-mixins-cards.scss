@@ -309,3 +309,73 @@
     margin: 0 0 20px;
   }
 }
+
+@mixin absStats {
+  display: flex;
+  padding: 18px 25px;
+  gap: 20px;
+  border-radius: 10px;
+  background-color: rgba($black, 0.5);
+  border: 1px solid rgba($white, 0.5);
+  max-width: 320px;
+  align-items: center;
+
+  @include tabletvert {
+    padding: 18px 15px;
+    gap: 15px;
+  }
+
+  .abs_icon_box {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    flex-shrink: 0;
+    background-color: rgba($silver, 0.5);
+    color: $white;
+
+    display: flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    flex-shrink: 0;
+
+    @include tabletvert {
+      width: 35px;
+      height: 35px;
+    }
+
+    img {
+      display: block;
+
+      @include tabletvert {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .title_box {
+    display: block;
+    font-size: 16rem;
+    color: $white;
+    font-weight: 400;
+    line-height: 1.3125;
+    margin-bottom: 5px;
+    @include phone {
+      font-size: 14rem;
+    }
+  }
+
+  .stats_box {
+    display: block;
+    font-weight: 700;
+    color: $white;
+    @include size26;
+    line-height: 1.038;
+  }
+}
