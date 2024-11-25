@@ -1,12 +1,14 @@
 //heading styles
 @mixin h1 {
   font-family: $font1;
-  font-size: 60rem;
-  font-weight: bold;
-  letter-spacing: .25rem;
+  font-size: 66rem;
+  font-weight: 700;
+  letter-spacing: 0.25rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1;
   margin-top: 0;
+  letter-spacing: -0.03em;
+  color: $headingColor;
   @include tablet {
     font-size: 48rem;
   }
@@ -15,13 +17,16 @@
     margin-bottom: 20rem;
   }
 }
+
 @mixin h2 {
   font-family: $font1;
-  font-size: 44rem;
-  font-weight: bold;
-  letter-spacing: .25rem;
+  font-size: 45rem;
+  font-weight: 700;
   margin-bottom: 30rem;
   line-height: 1.2;
+  margin-top: 0;
+
+  color: $headingColor;
   @include tablet {
     font-size: 38rem;
   }
@@ -30,102 +35,103 @@
     margin-bottom: 20rem;
   }
 }
+
 @mixin h3 {
   font-family: $font1;
-  font-size: 38rem;
-  font-weight: bold;
-  letter-spacing: .25rem;
+  font-size: 32rem;
+  font-weight: 700;
   margin-bottom: 30rem;
   line-height: 1.2;
+  margin-top: 0;
+  letter-spacing: -0.03em;
+  color: $headingColor;
   @include tablet {
-    font-size: 32rem;
+    font-size: 28rem;
   }
   @include phone {
-    font-size: 28rem;
     margin-bottom: 20rem;
   }
 }
 @mixin h4 {
   font-family: $font1;
-  font-size: 34rem;
-  font-weight: bold;
-  letter-spacing: .25rem;
+  font-size: 24rem;
+  font-weight: 700;
   margin-bottom: 30rem;
   line-height: 1.2;
+  margin-top: 0;
+  color: $headingColor;
   @include tablet {
-    font-size: 28rem;
+    font-size: 22rem;
   }
   @include phone {
-    font-size: 24rem;
+    font-size: 20rem;
     margin-bottom: 20rem;
   }
 }
 @mixin h5 {
   font-family: $font1;
-  font-size: 30rem;
-  font-weight: bold;
-  letter-spacing: .25rem;
+  font-size: 20rem;
+  font-weight: 700;
   margin-bottom: 30rem;
   line-height: 1.2;
+  margin-top: 0;
+  color: $headingColor;
   @include tablet {
-    font-size: 24rem;
+    font-size: 18rem;
   }
   @include phone {
-    font-size: 20rem;
+    font-size: 16rem;
     margin-bottom: 20rem;
   }
 }
 @mixin h6 {
   font-family: $font1;
-  font-size: 24rem;
-  font-weight: bold;
-  letter-spacing: .25rem;
+  font-size: 18rem;
+  font-weight: 500;
   margin-bottom: 30rem;
-  line-height: 1.2;
-  @include tablet {
-    font-size: 20rem;
-  }
+  line-height: 1.5;
+  margin-top: 0;
+  color: $charcoal;
+
   @include phone {
-    font-size: 18rem;
+    font-size: 16rem;
     margin-bottom: 20rem;
   }
 }
-//body styles
-@mixin b1 {
+
+@mixin bodyStyle {
   font-family: $font1;
-  font-size: 22rem;
-  line-height: 1.4;
-  letter-spacing: .25rem;
-  margin-bottom: 20rem;
-  @include phone {
-    font-size: 17rem;
-  }
-}
-@mixin b2 {
-  font-family: $font1;
-  font-size: 18rem;
-  line-height: 1.6;
-  letter-spacing: .25rem;
-  margin-bottom: 20rem;
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+
   @include phone {
     font-size: 16rem;
   }
 }
-@mixin b3 {
-  font-family: $font1;
+
+//body styles
+@mixin b1 {
+  font-weight: 500;
+  @include bodyStyle;
+}
+@mixin b2 {
+  @include bodyStyle;
+  font-weight: 500;
   font-size: 16rem;
-  line-height: 1.6;
-  letter-spacing: .25rem;
-  margin-bottom: 20rem;
   @include phone {
     font-size: 15rem;
   }
+}
+@mixin b3 {
+  @include bodyStyle;
+  font-weight: 500;
+  font-size: 14rem;
 }
 @mixin b4 {
   font-family: $font1;
   font-size: 14rem;
   line-height: 1.6;
-  letter-spacing: .35rem;
+  letter-spacing: 0.35rem;
   margin-bottom: 20rem;
   @include phone {
     font-size: 14rem;
@@ -135,7 +141,7 @@
   font-family: $font1;
   font-size: 13rem;
   line-height: 1.6;
-  letter-spacing: .35rem;
+  letter-spacing: 0.35rem;
   margin-bottom: 20rem;
   @include phone {
     font-size: 13rem;
@@ -145,7 +151,7 @@
   font-family: $font1;
   font-size: 12rem;
   line-height: 1.6;
-  letter-spacing: .35rem;
+  letter-spacing: 0.35rem;
   margin-bottom: 10rem;
   @include phone {
     font-size: 12rem;
@@ -165,12 +171,12 @@
     font-size: 23rem;
   }
 }
+
 @mixin eyebrow {
   font-family: $font1;
+  font-weight: 700;
   font-size: 16rem;
-  font-weight: bold;
-  letter-spacing: 1rem;
+  line-height: 1.2;
   text-transform: uppercase;
-  display: block;
-  margin-bottom: 10rem;
+  color: $purlple;
 }

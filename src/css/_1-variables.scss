@@ -1,15 +1,45 @@
 // Colors - For transparency use rgba($action1, 0.5) = 50% opaque
-$action1: #733BF7;
-$action2: #00a4bd;
-$black: #33475b;
-$white: #fff;
-$gray1: #edf0f2; 
-$gray2: #cbd6e2;
-$gray3: #7C98B6;
-$gradient1: linear-gradient(-45deg, $black 0%, $action2 50%);
-$font1: 'Montserrat';
-$baseFontSize: 16rem;
-$baseLineHeight: 1.61803398875; // Golden ratio
+
+$primary-teal: #007088;
+$secondary-teal: #00819e;
+$azure: #d9e8ed;
+$purlple: #9c27b0;
+$black: #00161d;
+$charcoal: #405258;
+$gray: #a1adb1;
+$silver: #ecf1f4;
+$white: #ffffff;
+
+$basecolor: $charcoal;
+$headingColor: $black;
+
+$borderRadius: 10rem;
+
+$action1: $azure;
+$action2: $primary-teal;
+$black: $black;
+$gray1: $charcoal;
+$gray2: $gray;
+$gray3: $silver;
+
+$sectionbg: rgba($azure, 0.4);
+
+/* azure gradient */
+$gradient1: linear-gradient(
+  180deg,
+  rgba($white, 0.5) 0%,
+  rgba($azure, 0.5) 100%
+);
+
+$gradient2: linear-gradient(
+  180deg,
+  rgba($white, 0.5) 0%,
+  rgba($silver, 0.5) 100%
+);
+
+$font1: "Assistant";
+$baseFontSize: 18rem;
+$baseLineHeight: 1.5; // Golden ratio
 // Border Radius
 $border1: 4rem;
 $border2: 5rem;
@@ -20,6 +50,8 @@ $shadow2: 0 5rem 25rem 0 rgba($black, 0.2);
 $shadow3: 0 10rem 50rem 0 rgba($black, 0.3);
 $textShadow1: 0 0 4rem rgba($black, 0.3);
 // Animation
-$animation1: .1s ease-in;
-$animation2: .25s ease-in;
+$animation1: 0.1s ease-in;
+$animation2: 0.25s ease-in;
 $animation3: 1s ease-in;
+
+$introContainer: 750rem;
