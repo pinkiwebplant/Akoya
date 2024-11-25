@@ -12,7 +12,7 @@
 			<div class="tab_nav_item {% if loop.index == 1 %}active animated{% endif %}">
 				<span class="tab_nav" data-nav="{{name}}_tab{{loop.index}}">{{ item.nav_text }}</span>
 
-				<div class="acc_box" {% if loop.index == 1 %}{% else %}style="display: none"{% endif %}>
+				<div class="acc_box" {% if loop.index == 1 %}style="display: block"{% else %}style="display: none"{% endif %}>
 					<div class="tabber_pannel_item {% if loop.index == 1 %}active animated{% endif %}" data-tab-id="{{name}}_tab{{loop.index}}">
 
 
@@ -174,6 +174,10 @@
 		var getId = $(this).attr('data-nav');
 		$(this).parent().siblings().removeClass('active');
 		$(this).parent().addClass('active');
+		$(this).parent().siblings().find('.acc_box').slideUp();
+
+		$(this).next('.acc_box').slideDown()
+	
 
 		$(this).parents('.tab_main').find('.tabber_pannel_item').removeClass('active animated')
 		$('[data-tab-id="'+getId+'"]').addClass('active');
