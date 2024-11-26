@@ -1,6 +1,8 @@
 {% set moduleName = 'u4m-left-tabber' %}
 {% include "../partials/u4-module-includes.html" %}
 
+
+
 <div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
 	{{macros.introGroup(module.intro_content)}}
 
@@ -8,65 +10,61 @@
 		<div class="lefttabber_nav">
 			{% for item in module.tabber_group %}
 			<div class="lefttab_nav_item {% if loop.index == 1 %}active animated{% endif %}">
-				<div class="lefttab_nav" data-nav="{{name}}_tab{{loop.index}}">
+				<div class="lefttab_nav" >
 					<div class="nav_text_col">
-						<h4 class="nav_titlee">{{ item.nav_text }}</h4>
-						<span class="nav_descr {{item.description_style}}" {% if loop.index == 1 %}style="display: block"{% else %}style="display: none"{% endif %}>{{ item.description }}</span>
-					</div>
 
-
-					<span class="arrow_ic">
-						<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23124 6.76631C0.92292 6.45472 0.92292 5.94953 1.23124 5.63798L5.44178 1.38263C5.75009 1.07104 6.24988 1.07104 6.5582 1.38263L10.7688 5.63797C11.0771 5.94953 11.0771 6.45472 10.7688 6.76631C10.4605 7.0779 9.96059 7.0779 9.65228 6.76631L5.99999 3.0752L2.34766 6.76631C2.03934 7.0779 1.53955 7.0779 1.23124 6.76631Z" fill="#4CAF50" stroke="#00161D"/>
-						</svg>
-					</span>
-
-				</div>
-
-				{# == mobile acc== #}
-				<div class="acc_box" {% if loop.index == 1 %}style="display: block"{% else %}style="display: none"{% endif %}>
-					<div class="lefttabber_pannel_item {% if loop.index == 1 %}active animated{% endif %}" data-tab-id="{{name}}_tab{{loop.index}}">
-						<div class="right_col">
-							{% if item.image.src %}
-							<div class="tab_img">
-								<img src="{{ item.image.src}}" alt="{{ item.image.alt|escape_attr }}">
-							</div>
-							{% endif %}
-
-							{% if item.include_stats %}
-							<div class="abs_stats">
-								{% for item2 in item.stats_group %}
-								<div class="abs_stat_item it{{loop.index}}">
-									<div class="abs_icon_box">
-										{% if item2.select_icon_type == "image" and item2.image_icon.src %}
-										<span class="img_icon">
-											<img src="{{ item2.image_icon.src|escape_url }}" alt="{{ item2.image_icon.alt|escape_attr }}" >
-										</span>
-										{% endif %}
-										{% if item2.select_icon_type == "custom" and item2.custom_icon %}
-										<span class="material-symbols-outlined">{{ item2.custom_icon }}
-										</span>
-										{% endif %}
-									</div>
-
-									<div class="abs_content_box">
-										{% if item2.title  %}<span class="title_box">{{ item2.title }}</span>{% endif %}
-										{% if item2.stats  %}<span class="stats_box">{{ item2.stats }}</span>{% endif %}
-									</div>
-
-								</div>
-								{% endfor %}
-
-							</div>
-							{% endif %}
+						<div class="nav_trigger_wrap" data-nav="{{name}}_tab{{loop.index}}">
+							<h4 class="nav_titlee">{{ item.nav_text }}</h4>
+							<span class="arrow_ic">
+								<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23124 6.76631C0.92292 6.45472 0.92292 5.94953 1.23124 5.63798L5.44178 1.38263C5.75009 1.07104 6.24988 1.07104 6.5582 1.38263L10.7688 5.63797C11.0771 5.94953 11.0771 6.45472 10.7688 6.76631C10.4605 7.0779 9.96059 7.0779 9.65228 6.76631L5.99999 3.0752L2.34766 6.76631C2.03934 7.0779 1.53955 7.0779 1.23124 6.76631Z" fill="#4CAF50" stroke="#00161D"/>
+								</svg>
+							</span>
 
 						</div>
 
+						<div class="nav_content_block" {% if loop.index == 1 %}style="display: block"{% else %}style="display: none"{% endif %}>
+							<span class="nav_descr {{item.description_style}}" >{{ item.description }}</span>
+							<div class="mobile_content">
+								<div class="right_col">
+									{% if item.image.src %}
+									<div class="tab_img">
+										<img src="{{ item.image.src}}" alt="{{ item.image.alt|escape_attr }}">
+									</div>
+									{% endif %}
 
+									{% if item.include_stats %}
+									<div class="abs_stats">
+										{% for item2 in item.stats_group %}
+										<div class="abs_stat_item it{{loop.index}}">
+											<div class="abs_icon_box">
+												{% if item2.select_icon_type == "image" and item2.image_icon.src %}
+												<span class="img_icon">
+													<img src="{{ item2.image_icon.src|escape_url }}" alt="{{ item2.image_icon.alt|escape_attr }}" >
+												</span>
+												{% endif %}
+												{% if item2.select_icon_type == "custom" and item2.custom_icon %}
+												<span class="material-symbols-outlined">{{ item2.custom_icon }}
+												</span>
+												{% endif %}
+											</div>
+
+											<div class="abs_content_box">
+												{% if item2.title  %}<span class="title_box">{{ item2.title }}</span>{% endif %}
+												{% if item2.stats  %}<span class="stats_box">{{ item2.stats }}</span>{% endif %}
+											</div>
+
+										</div>
+										{% endfor %}
+
+									</div>
+									{% endif %}
+
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				{# == mobile acc== #}
-
 			</div>
 			{% endfor %}
 		</div>
@@ -124,20 +122,29 @@
 {% require_js %}
 <script>
 
-	$('.lefttabber_nav  .lefttab_nav').click(function(){
-		var getId = $(this).attr('data-nav');
-		$(this).parent().siblings().removeClass('active');
-		$(this).parent().addClass('active');
-		$(this).parent().siblings().find('.acc_box').slideUp();
+	$('.lefttabber_nav  .nav_trigger_wrap').click(function(){
+		var getthis = $(this);
 
-		$(this).next('.acc_box').slideDown()
+		var getId = $(getthis).attr('data-nav');
+
+
+		$(getthis).parents('.lefttab_nav_item').addClass('active');
+
+		setTimeout(function(){
+			$(getthis).parents('.lefttab_nav_item').addClass('animated');
+		}, 200)
+
+
+		$(getthis).parents('.lefttab_nav_item').siblings().removeClass('active animated');
+		$(getthis).parents('.lefttab_nav_item').siblings().find('.nav_content_block').slideUp();
+		$(this).next('.nav_content_block').slideDown()
 
 
 		$(this).parents('.lefttab_main').find('.lefttabber_pannel_item').removeClass('active animated')
 		$('[data-tab-id="'+getId+'"]').addClass('active');
 		setTimeout(function(){
 			$('[data-tab-id="'+getId+'"]').addClass('animated');
-		}, 400)
+		}, 300)
 	})
 
 </script>
