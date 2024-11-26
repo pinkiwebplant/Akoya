@@ -21,7 +21,7 @@ body {
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
   color: $basecolor;
-  font-weight: normal;
+  font-weight: $baseFontWeight;
 }
 
 @mixin bodyContent {

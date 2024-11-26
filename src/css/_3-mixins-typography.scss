@@ -103,6 +103,7 @@
   font-family: $font1;
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
+  font-weight: $baseFontWeight;
 
   @include phone {
     font-size: 16rem;
