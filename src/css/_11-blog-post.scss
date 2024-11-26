@@ -250,6 +250,7 @@ section.u4m-blog-post {
         justify-content: center;
         p {
           margin-bottom: 5px;
+          color: $black2;
           @include size16;
         }
         ul {
@@ -294,7 +295,7 @@ section.u4m-blog-post {
         }
       }
       blockquote {
-        background-color: rgb(156 39 176 / 10%);
+        background-color: rgba($purlple, 0.1);
         border-radius: 8px;
         padding: 36px;
         margin: 48px 0;
@@ -324,6 +325,7 @@ section.u4m-blog-post {
           font-weight: normal;
           letter-spacing: normal;
           max-width: 100%;
+          font-family: $font2;
         }
       }
     }
@@ -334,6 +336,7 @@ section.u4m-blog-post {
         font-weight: 700;
         display: inline-block;
         margin-right: 18px;
+        color: $black;
       }
       a {
         display: inline-block;
