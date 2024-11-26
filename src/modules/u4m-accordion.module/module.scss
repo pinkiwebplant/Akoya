@@ -6,6 +6,13 @@ section.u4m-accordion {
   &.reverse-text {
     .accordions {
       .accorion-item {
+        &.active {
+          .accordion_title {
+            h4 {
+              color: $white;
+            }
+          }
+        }
         .accordion_title {
           h4 {
             color: $white;
@@ -27,7 +34,20 @@ section.u4m-accordion {
       padding-right: 75px;
       border: 2px solid $azure;
       border-radius: 10px;
+      transition: all 0.3s ease-in-out;
       &.active {
+        padding-top: 36px;
+        padding-bottom: 30px;
+        .accordion_title {
+          h4 {
+            color: $black;
+          }
+          .accordion_icon {
+            svg {
+              transform: rotate(180deg);
+            }
+          }
+        }
         background-color: rgba($purlple, 0.1);
       }
       .accordion_title {
@@ -35,6 +55,7 @@ section.u4m-accordion {
         cursor: pointer;
         h4 {
           margin-bottom: 0;
+          color: rgba($black, 0.8);
         }
         .accordion_icon {
           position: absolute;
@@ -46,6 +67,9 @@ section.u4m-accordion {
           align-items: center;
           justify-content: center;
           cursor: pointer;
+          svg {
+            transition: all 0.3s ease-in-out;
+          }
         }
       }
       .accordion_content {

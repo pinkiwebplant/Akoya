@@ -174,6 +174,7 @@ section.u4m-blog-listing {
         padding: 0;
         max-width: 100%;
         border-radius: 0;
+        background: transparent;
       }
       .hs-search-field__input {
         border: 2px solid $silver;
@@ -205,50 +206,48 @@ section.u4m-blog-listing {
       margin: 0 -20px;
       margin-bottom: 60px;
     }
-    @mixin post-item {
-      .post-item {
-        padding: 0 24px;
-        width: 33.3333%;
-        @include tabletvert {
+
+    .post-item {
+      padding: 0 24px;
+      width: 33.3333%;
+      @include tabletvert {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0 20px;
+      }
+      .featured-img {
+        margin-bottom: 20px;
+        a {
           width: 100%;
-          margin-bottom: 20px;
-          padding: 0 20px;
         }
-        .featured-img {
-          margin-bottom: 20px;
+        img {
+          height: 180px;
+          width: 100%;
+          border-radius: 10px;
+          object-fit: cover;
+        }
+      }
+      .post-content {
+        .post-item-topic {
           a {
-            width: 100%;
+            color: $purlple;
+            @include eyebrow;
+            font-weight: 700;
           }
-          img {
-            height: 180px;
-            width: 100%;
-            border-radius: 10px;
-            object-fit: cover;
-          }
+          padding-bottom: 15px;
         }
-        .post-content {
-          .post-item-topic {
-            a {
-              color: $purlple;
-              @include eyebrow;
-              font-weight: 700;
-            }
-            padding-bottom: 15px;
+        h4 {
+          a {
+            color: inherit;
           }
-          h4 {
-            a {
-              color: inherit;
-            }
-            margin-bottom: 24px;
-            color: $black;
-          }
-          p {
-            @include b2;
-          }
+          margin-bottom: 24px;
+          color: $black;
+        }
+        p {
+          @include b2;
         }
       }
     }
-    @include post-item;
 
     .blog-pagination {
       text-align: center;
