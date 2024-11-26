@@ -608,3 +608,11 @@ section[class*="u4m-"] {
     color: $white;
   }
 }
+
+.cstyle1 {
+  @include b2;
+}
+
+.cstyle2 {
+  @include b3;
+}

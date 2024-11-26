@@ -4,35 +4,33 @@
 <div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
 	{{macros.introGroup(module.intro_content)}}
 
-	<div class="tab_main">
-		<div class="tabber_nav">
+	<div class="lefttab_main">
+		<div class="lefttabber_nav">
 			{% for item in module.tabber_group %}
-			<div class="tab_nav_item {% if loop.index == 1 %}active animated{% endif %}">
-				<span class="tab_nav" data-nav="{{name}}_tab{{loop.index}}">{{ item.nav_text }}</span>
+			<div class="lefttab_nav_item {% if loop.index == 1 %}active animated{% endif %}">
+				<div class="lefttab_nav" data-nav="{{name}}_tab{{loop.index}}">
+			<div class="nav_text_col">
+			<h4 class="nav_titlee">{{ item.nav_text }}</h4>
+			<span class="nav_descr">{{ item.description }}</span>
+			</div>
+
+
+				<span class="arrow_ic">
+
+				<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23124 6.76631C0.92292 6.45472 0.92292 5.94953 1.23124 5.63798L5.44178 1.38263C5.75009 1.07104 6.24988 1.07104 6.5582 1.38263L10.7688 5.63797C11.0771 5.94953 11.0771 6.45472 10.7688 6.76631C10.4605 7.0779 9.96059 7.0779 9.65228 6.76631L5.99999 3.0752L2.34766 6.76631C2.03934 7.0779 1.53955 7.0779 1.23124 6.76631Z" fill="#4CAF50" stroke="#00161D"/>
+				</svg>
+				
+				</span>
+
+				</div>
 
 				<div class="acc_box" {% if loop.index == 1 %}style="display: block"{% else %}style="display: none"{% endif %}>
-					<div class="tabber_pannel_item {% if loop.index == 1 %}active animated{% endif %}" data-tab-id="{{name}}_tab{{loop.index}}">
+					<div class="lefttabber_pannel_item {% if loop.index == 1 %}active animated{% endif %}" data-tab-id="{{name}}_tab{{loop.index}}">
 
 
 						<div class="flex_row">
 
-							<div class="content_col">
-
-								{% if item.title %}
-								<h3 class="tab_title">
-									{{ item.title }}
-								</h3>
-								{% endif %}
-
-								{% if  item.content %}
-								<div class="tab_text">
-									{{ item.content }}
-								</div>
-								{% endif %}
-								{% if  item.button_group %}
-								{{macros.buttonGroup(item.button_group)}}
-								{% endif %}
-							</div>
 
 							<div class="right_col">
 
@@ -84,33 +82,12 @@
 
 		</div>
 
-		<div class="tabber_pannel">
+		<div class="tabber_pannel right_col">
 
 			{% for item in module.tabber_group %}
-			<div class="tabber_pannel_item {% if loop.index == 1 %}active animated{% endif %}" data-tab-id="{{name}}_tab{{loop.index}}">
+			<div class="lefttabber_pannel_item {% if loop.index == 1 %}active animated{% endif %}" data-tab-id="{{name}}_tab{{loop.index}}">
 
-
-				<div class="flex_row">
-
-					<div class="content_col">
-
-						{% if item.title %}
-						<h3 class="tab_title">
-							{{ item.title }}
-						</h3>
-						{% endif %}
-
-						{% if  item.content %}
-						<div class="tab_text">
-							{{ item.content }}
-						</div>
-						{% endif %}
-						{% if  item.button_group %}
-						{{macros.buttonGroup(item.button_group)}}
-						{% endif %}
-					</div>
-
-					<div class="right_col">
+			<div class=" img_col">
 
 
 						{% if item.image.src %}
@@ -148,9 +125,8 @@
 						</div>
 						{% endif %}
 
-					</div>
-
 				</div>
+
 			</div>
 			{% endfor %}
 
@@ -168,7 +144,7 @@
 {% require_js %}
 <script>
 
-	$('.tabber_nav  .tab_nav').click(function(){
+	$('.lefttabber_nav  .lefttab_nav').click(function(){
 		var getId = $(this).attr('data-nav');
 		$(this).parent().siblings().removeClass('active');
 		$(this).parent().addClass('active');
@@ -177,7 +153,7 @@
 		$(this).next('.acc_box').slideDown()
 	
 
-		$(this).parents('.tab_main').find('.tabber_pannel_item').removeClass('active animated')
+		$(this).parents('.lefttab_main').find('.lefttabber_pannel_item').removeClass('active animated')
 		$('[data-tab-id="'+getId+'"]').addClass('active');
 		setTimeout(function(){
 			$('[data-tab-id="'+getId+'"]').addClass('animated');
