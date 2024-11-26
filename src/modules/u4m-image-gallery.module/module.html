@@ -1,0 +1,65 @@
+{% set moduleName = 'u4m-image-gallery' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
+	{{macros.introGroup(module.intro_content)}}
+</div>
+<div class="image-gallery-wrapper">
+		<div class="slider_wrapper">
+			{% for item in module.slide_section.image_field %}
+			<div class="slider_item">
+				<div class="slider_inner_item">
+					{% if item.src %}
+					{% set sizeAttrs = 'width="{{ item.width|escape_attr }}" height="{{ item.height|escape_attr }}"' %}
+					{% if item.size_type == 'auto' %}
+					{% set sizeAttrs = 'width="{{ item.width|escape_attr }}" height="{{ item.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+					{% elif item.size_type == 'auto_custom_max' %}
+					{% set sizeAttrs = 'width="{{ item.max_width|escape_attr }}" height="{{ item.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+					{% endif %}
+					{% set loadingAttr = item.loading != 'disabled' ? 'loading="{{ item.loading|escape_attr }}"' : '' %}
+					<img src="{{ item.src|escape_url }}" alt="{{ item.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+					{% endif %}
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<div class="paginator-center text-color text-center">
+		<ul>
+			<li class="prev"><button type='button' class='slick-prev pull-left'><span class='material-symbols-outlined'>chevron_left</span></button></li>
+			<li class="next"><button type='button' class='slick-next pull-right'><span class='material-symbols-outlined'>chevron_right</span></button></li>
+		</ul>
+	</div>
+</div>
+</section>
+{% require_js %}
+<script>
+	$('.slider_wrapper').slick({
+		dots: false,
+		infinite: true,
+		speed: 1000,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		centerMode: true,
+		centerPadding: '120px',
+		prevArrow: $('.prev'),
+      	nextArrow: $('.next'),
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				}
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 1,
+					centerPadding: '80px',
+					slidesToScroll: 1,
+				}
+			}
+		]
+	});
+</script>
+{% end_require_js %}
