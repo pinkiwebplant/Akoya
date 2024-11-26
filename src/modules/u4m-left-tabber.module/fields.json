@@ -76,6 +76,28 @@
     "type" : "boolean",
     "default" : true
   }, {
+    "id" : "03244556-89bc-089c-d02a-4084a0c4bd6c",
+    "name" : "content_style",
+    "display_width" : null,
+    "label" : "Content Style",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_content",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "theme", "Theme" ], [ "cstyle1", "Style 1" ], [ "cstyle2", "Style 2" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "theme"
+  }, {
     "id" : "0dc03814-a33d-3284-f2d6-b130f633f03d",
     "name" : "content",
     "display_width" : null,
@@ -265,6 +287,7 @@
     "include_heading" : true,
     "heading" : "Left Tabber module headline.",
     "include_content" : true,
+    "content_style" : "theme",
     "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco labo.</p>",
     "include_button" : false,
     "button_group" : [ {
@@ -341,6 +364,28 @@
     "show_emoji_picker" : false,
     "type" : "text",
     "default" : "Step one headline here."
+  }, {
+    "id" : "0b173a42-8482-78a9-3d98-2e067c8366f9",
+    "name" : "description_style",
+    "display_width" : null,
+    "label" : "Description Style",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_content",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "theme", "Theme" ], [ "cstyle1", "Style 1" ], [ "cstyle2", "Style 2" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "cstyle1"
   }, {
     "id" : "1eda8629-d31f-aabe-bc14-4c5922b7d746",
     "name" : "description",
@@ -524,6 +569,7 @@
       "max_height" : 412
     },
     "nav_text" : "Step one headline here.",
+    "description_style" : "cstyle1",
     "description" : "Nunc eget rutrum nibh, at feugiat velit. Vivamus maximus et quam vitae semper. Ut ac gravida elit.",
     "include_stats" : true,
     "stats_group" : [ {
@@ -569,6 +615,7 @@
       "max_height" : 412
     },
     "nav_text" : "Step one headline here.",
+    "description_style" : "cstyle1",
     "description" : "Nunc eget rutrum nibh, at feugiat velit. Vivamus maximus et quam vitae semper. Ut ac gravida elit.",
     "include_stats" : true,
     "stats_group" : [ {
@@ -614,6 +661,7 @@
       "max_height" : 412
     },
     "nav_text" : "Step one headline here.",
+    "description_style" : "cstyle1",
     "description" : "Nunc eget rutrum nibh, at feugiat velit. Vivamus maximus et quam vitae semper. Ut ac gravida elit.",
     "include_stats" : true,
     "stats_group" : [ {
@@ -659,6 +707,7 @@
       "max_height" : 412
     },
     "nav_text" : "Step one headline here.",
+    "description_style" : "cstyle1",
     "description" : "Nunc eget rutrum nibh, at feugiat velit. Vivamus maximus et quam vitae semper. Ut ac gravida elit.",
     "include_stats" : true,
     "stats_group" : [ {
