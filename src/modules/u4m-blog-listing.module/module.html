@@ -1,10 +1,10 @@
 {% set moduleName = 'u4m-blog-listing' %}
 	{% set featrows = blog_recent_tag_posts(group.id,module.featured_post.select_tag,1) %} 
 	
-	<section class='u4m-blog-listing {% if topic %} topic-page {% endif %}'>
+	<section class='u4m-blog-listing {% if topic or blog_author %} topic-page {% endif %}'>
 	
 		<div class='blog-banner'>
-			<div class="bg_overlay {% if module.background_settings.select_color %}bg_color {{ module.background_settings.select_color }} {% endif %} {% if  module.background_settings.select_gradient %} bg_gradient {{ module.background_settings.select_gradient }}{% endif %}"  {% if module.background_settings.select_color %}style="opacity: {{module.background_settings.opacity}}"{% endif %}>
+			<div class="bg_overlay {% if module.background_settings.background_type =='color' %}bg_color {{ module.background_settings.select_color }} {% endif %} {% if module.background_settings.background_type =='gradient' %} bg_gradient {{ module.background_settings.select_gradient }}{% endif %}"  {% if module.background_settings.background_type =='color' %}style="opacity: {{module.background_settings.opacity}}"{% endif %}>
 			</div>
 			<div class='page-center'>
 	
@@ -36,16 +36,14 @@
 						</div> 
 						{% endif %}
 						<div class='featured-content-col'>
-							{% if tag_post.topic_list %}
+						{% if tag_post.topic_list %}
 							<div class='featured-topic'>
-								{% for topic in tag_post.topic_list %}
-								{% if topic.name== 'featured' %}
-								{% else %}
-								<a class="{{ topic.slug }}" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>{% if not loop.last %},{% endif %}
-								{% endif %}
+								{% set included_topics = tag_post.topic_list | rejectattr("slug", "equalto", "featured") | list %}
+								{% for topic in included_topics %}
+									<a class="{{ topic.slug }}" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>{% if not loop.last %},{% endif %}
 								{% endfor %}
 							</div>
-							{% endif %}
+						{% endif %}
 							<h4>
 								<a href="{{ tag_post.absolute_url }}">{{ tag_post.name }}</a>
 							</h4>
@@ -148,14 +146,15 @@
 							{% if module.post_item.tag %}
 							{% if content.topic_list %}
 							<div class='post-item-topic'>
-								{% for topic in content.topic_list %}
-								{% if topic.name== "featured" %}
-								{% else %}
-								<a class="{{ topic.slug }}" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>{% if not loop.last %},{% endif %}
-								{% endif %}
+
+							{% set included_topics = content.topic_list | rejectattr("slug", "equalto", "featured") | list %}
+								{% for topic in included_topics %}
+									<a class="{{ topic.slug }}" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>{% if not loop.last %},{% endif %}
 								{% endfor %}
-								{% endif %}
+
+								
 							</div>
+						{% endif %}
 							{% endif %}
 							{% if module.post_item.title %}
 							<h4>

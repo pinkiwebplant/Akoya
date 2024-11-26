@@ -2,6 +2,14 @@
 
 section.u4m-blog-listing {
   position: relative;
+  &.topic-page {
+    .blog-banner {
+      padding-bottom: 60px;
+    }
+    .site-search-wrap {
+      padding-top: 60px;
+    }
+  }
   .hs-search-field {
     position: relative;
   }
@@ -39,11 +47,7 @@ section.u4m-blog-listing {
     background-color: rgba(0, 0, 0, 0.1);
     outline: none;
   }
-  &.topic-page {
-    .blog-banner {
-      padding-bottom: 60px;
-    }
-  }
+
   .blog-banner {
     position: relative;
     padding-top: 60px;
@@ -187,44 +191,51 @@ section.u4m-blog-listing {
       margin: 0 -20px;
       margin-bottom: 60px;
     }
-    .post-item {
-      padding: 0 24px;
-      width: 33.3333%;
-      @include tabletvert {
-        width: 100%;
-        margin-bottom: 20px;
-        padding: 0 20px;
-      }
-      .featured-img {
-        margin-bottom: 20px;
-        img {
-          height: 180px;
+    @mixin post-item {
+      .post-item {
+        padding: 0 24px;
+        width: 33.3333%;
+        @include tabletvert {
           width: 100%;
-          border-radius: 10px;
-          object-fit: cover;
+          margin-bottom: 20px;
+          padding: 0 20px;
         }
-      }
-      .post-content {
-        .post-item-topic {
+        .featured-img {
+          margin-bottom: 20px;
           a {
-            color: $purlple;
-            @include eyebrow;
-            font-weight: 700;
+            width: 100%;
           }
-          padding-bottom: 15px;
-        }
-        h4 {
-          a {
-            color: inherit;
+          img {
+            height: 180px;
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
           }
-          margin-bottom: 24px;
-          color: $black;
         }
-        p {
-          @include b2;
+        .post-content {
+          .post-item-topic {
+            a {
+              color: $purlple;
+              @include eyebrow;
+              font-weight: 700;
+            }
+            padding-bottom: 15px;
+          }
+          h4 {
+            a {
+              color: inherit;
+            }
+            margin-bottom: 24px;
+            color: $black;
+          }
+          p {
+            @include b2;
+          }
         }
       }
     }
+    @include post-item;
+
     .blog-pagination {
       text-align: center;
       display: flex;

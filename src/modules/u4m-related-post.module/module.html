@@ -1,0 +1,66 @@
+{% set moduleName = 'u4m-related-post' %} {% if content.topic_list %}
+	<section class="u4m-related-post">
+		<div class="bg_overlay {% if module.background_settings.background_type =='color' %}bg_color {{ module.background_settings.select_color }} {% endif %} {% if module.background_settings.background_type =='gradient' %} bg_gradient {{ module.background_settings.select_gradient }}{% endif %}"  {% if module.background_settings.background_type =='color' %}style="opacity: {{module.background_settings.opacity}}"{% endif %}>
+		</div>
+	
+		<div class="page-center">
+			<div class="related-post-header">
+				{% if module.title %}
+				<h2>
+					{{ module.title }}
+				</h2>
+				{% endif %}
+				{% if module.view_all_posts_text %}
+				<div class="all_posts_text">
+					<a href="{{ group.absolute_url }}" >{{ module.view_all_posts_text }} <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+											<path d="M15 7.99995C15 7.84065 14.9229 7.64141 14.7686 7.52196L8.21335 0.709209C7.9434 0.430264 7.51928 0.430264 7.24933 0.709209C6.97947 1.0279 6.97947 1.46615 7.24933 1.74499L12.6093 7.28286H0.694071C0.308519 7.28286 0 7.60156 0 7.99995C0 8.39844 0.308519 8.71714 0.694071 8.71714H12.6093L7.24933 14.2949C6.97947 14.5737 6.97947 15.0119 7.24933 15.2908C7.51928 15.5697 7.9434 15.5697 8.21335 15.2908L14.7686 8.51789C14.9229 8.39844 15 8.1992 15 7.99995Z" fill="#00819E"/>
+										</svg></a>
+				</div>
+				{% endif %}
+			</div>
+			<div class="flex-row">
+				{% set max_posts = module.number_of_posts %}{# Set the max number of
+		  related posts to be output to the page here #} {% set post_list = [] %} {%
+		  for topic in content.topic_list %} {% set post_list = post_list +
+		  blog_recent_topic_posts(group.id, topic.slug, max_posts + 1 ) %} {% if
+		  loop.last %} {% set post_list = post_list|sort(true, false,
+		  'publish_date')|unique('name') %} {% set i = 0 %} {% for post in post_list
+		  %} {% if content.absolute_url != post.absolute_url and i < max_posts %}
+				<div class="post-item">
+					{% if post.post_list_summary_featured_image %}
+					<div class="featured-img">
+						<a href="{{post.absolute_url}}">
+							<img
+									 src="{{ post.post_list_summary_featured_image }}"
+									 alt="{{ post.name | striptags }}"
+									 />
+						</a>
+					</div>
+					{% endif %}
+					<div class="post-content">
+						{% if post.topic_list %}
+						<div class="post-item-topic">
+							{% set included_topics = post.topic_list | rejectattr("slug",
+				"equalto", "featured") | list %} {% for topic in included_topics %}
+							<a
+								 class="{{ topic.slug }}"
+								 href="{{ blog_tag_url(group.id, topic.slug) }}"
+								 >{{ topic.name }}</a
+								>{% if not loop.last %},{% endif %} {% endfor %}
+						</div>
+						{% endif %}
+						<h4>
+							<a href="{{ post.absolute_url }}">{{ post.name }}</a>
+						</h4>
+						<p>
+							{{ post.post_list_content|safe|truncatehtml(200, '.' ,
+				false)|striptags}}
+						</p>
+					</div>
+				</div>
+				{% set i = i + 1 %} {% endif %} {% endfor %} {% endif %} {% endfor %}
+			</div>
+		</div>
+	</section>
+	{% endif %}
+	
