@@ -4,6 +4,11 @@
   "icon" : "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
   "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
   "module_id" : 183209716828,
+  "js_assets" : [ {
+    "autoload" : true,
+    "path" : "../../js/slick.js",
+    "name" : "slick.js"
+  } ],
   "label" : "Testimonial Slider",
   "is_available_for_new_content" : true
 }

@@ -329,7 +329,7 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : "ffc57875-856c-1515-9964-dd2e4f5a3919",
-    "default" : null
+    "default" : 1
   },
   "children" : [ {
     "id" : "8a1a3725-a19b-2ca3-35b3-cb3bc099e8fa",
@@ -344,23 +344,26 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/TD-Bank%201.png",
-      "alt" : "TD-Bank 1",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/TD-Bank.png",
+      "alt" : "TD-Bank",
       "loading" : "lazy",
-      "width" : 237,
-      "height" : 159,
-      "max_width" : 237,
-      "max_height" : 159
+      "width" : 219,
+      "height" : 67,
+      "max_width" : 219,
+      "max_height" : 67
     }
   }, {
-    "id" : "6028e1cf-2601-2a66-05e4-1da05885668e",
-    "name" : "content",
+    "id" : "9e65b201-7f66-e025-48ed-e3b6c899d8e0",
+    "name" : "quote",
     "display_width" : null,
-    "label" : "Content",
+    "label" : "Quote",
     "required" : false,
     "locked" : false,
-    "type" : "richtext",
-    "default" : "<p>“TD has always had a strong commitment to digital innovation, and that means continuing to invest in new ways for our customers to manage their finances online. Our relationship with Akoya leverages the use of APIs to give our customers an enhanced experience as well as more privacy and security when sharing their data”</p>"
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "TD has always had a strong commitment to digital innovation, and that means continuing to invest in new ways for our customers to manage their finances online. Our relationship with Akoya leverages the use of APIs to give our customers an enhanced experience as well as more privacy and security when sharing their data"
   }, {
     "id" : "ffc57875-856c-1515-9964-dd2e4f5a3919",
     "name" : "author_name",
@@ -446,7 +449,7 @@
       "locked" : false,
       "display" : "checkbox",
       "type" : "boolean",
-      "default" : false
+      "default" : true
     }, {
       "id" : "2de96909-dcaf-96b3-4d9e-4f7026a683df",
       "name" : "button_group",
@@ -485,7 +488,7 @@
         "locked" : false,
         "visibility" : {
           "controlling_field" : null,
-          "controlling_field_path" : "intro_content.button_group.button_type",
+          "controlling_field_path" : "items_group.right_content.button_group.button_type",
           "controlling_value_regex" : "std",
           "property" : null,
           "operator" : "EQUAL",
@@ -508,7 +511,7 @@
         "validation_regex" : "",
         "visibility" : {
           "controlling_field" : null,
-          "controlling_field_path" : "intro_content.button_group.button_type",
+          "controlling_field_path" : "items_group.right_content.button_group.button_type",
           "controlling_value_regex" : "std",
           "property" : null,
           "operator" : "EQUAL",
@@ -527,7 +530,7 @@
         "locked" : false,
         "visibility" : {
           "controlling_field" : null,
-          "controlling_field_path" : "intro_content.button_group.button_type",
+          "controlling_field_path" : "items_group.right_content.button_group.button_type",
           "controlling_value_regex" : "std",
           "property" : null,
           "operator" : "EQUAL",
@@ -554,7 +557,7 @@
         "locked" : false,
         "visibility" : {
           "controlling_field" : null,
-          "controlling_field_path" : "intro_content.button_group.button_type",
+          "controlling_field_path" : "items_group.right_content.button_group.button_type",
           "controlling_value_regex" : "cta",
           "property" : null,
           "operator" : "EQUAL",
@@ -601,7 +604,7 @@
         "max_height" : 440
       },
       "title" : "TD Bank joins the Akoya Data Access Network to accelerate Open Finance.",
-      "include_button" : false,
+      "include_button" : true,
       "button_group" : {
         "button_type" : "std",
         "button_theme" : "arrow-link",
@@ -622,7 +625,53 @@
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
-  "default" : [ ]
+  "default" : [ {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/TD-Bank.png",
+      "alt" : "TD-Bank",
+      "loading" : "lazy",
+      "width" : 219,
+      "height" : 67,
+      "max_width" : 219,
+      "max_height" : 67
+    },
+    "quote" : "TD has always had a strong commitment to digital innovation, and that means continuing to invest in new ways for our customers to manage their finances online. Our relationship with Akoya leverages the use of APIs to give our customers an enhanced experience as well as more privacy and security when sharing their data",
+    "author_name" : "Rizwan Khalfan",
+    "author_designation" : "Chief Digital & Payments Officer, TD Bank",
+    "right_content" : {
+      "background_color" : {
+        "color" : "#007088",
+        "opacity" : 100
+      },
+      "background_image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/testimonial-Group%202215.png",
+        "alt" : "testimonial-Group 2215",
+        "loading" : "lazy",
+        "width" : 563,
+        "height" : 440,
+        "max_width" : 563,
+        "max_height" : 440
+      },
+      "title" : "TD Bank joins the Akoya Data Access Network to accelerate Open Finance.",
+      "include_button" : true,
+      "button_group" : {
+        "button_type" : "std",
+        "button_theme" : "arrow-link",
+        "button_text" : "Button",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }
+    }
+  } ]
 }, {
   "id" : "module_overrides",
   "name" : "module_overrides",
@@ -1009,7 +1058,7 @@
       "step" : 10,
       "suffix" : "%",
       "type" : "number",
-      "default" : 40
+      "default" : 20
     }, {
       "id" : "b8c2d9fa-1401-0767-9600-41b009a18cb8",
       "name" : "select_gradient",
@@ -1171,7 +1220,7 @@
     "default" : {
       "background_type" : "color",
       "select_color" : "azure-bg",
-      "opacity" : 40,
+      "opacity" : 20,
       "select_gradient" : "gradient1",
       "select_background_position" : "inside",
       "include_overlay_image" : false,
@@ -1210,7 +1259,7 @@
     "background_settings" : {
       "background_type" : "color",
       "select_color" : "azure-bg",
-      "opacity" : 40,
+      "opacity" : 20,
       "select_gradient" : "gradient1",
       "select_background_position" : "inside",
       "include_overlay_image" : false,

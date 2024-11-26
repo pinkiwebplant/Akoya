@@ -306,7 +306,7 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : "ba64fb6f-92eb-ca07-2f7b-6287f8c95bba",
-    "default" : null
+    "default" : 6
   },
   "children" : [ {
     "id" : "ba64fb6f-92eb-ca07-2f7b-6287f8c95bba",
@@ -371,7 +371,133 @@
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
-  "default" : [ ]
+  "default" : [ {
+    "logo" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/morning-start.png",
+      "alt" : "Morning Star",
+      "loading" : "lazy",
+      "width" : 251,
+      "height" : 167,
+      "max_width" : 251,
+      "max_height" : 167
+    },
+    "enable_logo_link" : false,
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "logo" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/morning-start.png",
+      "alt" : "Morning Star",
+      "loading" : "lazy",
+      "width" : 251,
+      "height" : 167,
+      "max_width" : 251,
+      "max_height" : 167
+    },
+    "enable_logo_link" : false,
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "logo" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/morning-start.png",
+      "alt" : "Morning Star",
+      "loading" : "lazy",
+      "width" : 251,
+      "height" : 167,
+      "max_width" : 251,
+      "max_height" : 167
+    },
+    "enable_logo_link" : false,
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "logo" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/morning-start.png",
+      "alt" : "Morning Star",
+      "loading" : "lazy",
+      "width" : 251,
+      "height" : 167,
+      "max_width" : 251,
+      "max_height" : 167
+    },
+    "enable_logo_link" : false,
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "logo" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/morning-start.png",
+      "alt" : "Morning Star",
+      "loading" : "lazy",
+      "width" : 251,
+      "height" : 167,
+      "max_width" : 251,
+      "max_height" : 167
+    },
+    "enable_logo_link" : false,
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "logo" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/morning-start.png",
+      "alt" : "Morning Star",
+      "loading" : "lazy",
+      "width" : 251,
+      "height" : 167,
+      "max_width" : 251,
+      "max_height" : 167
+    },
+    "enable_logo_link" : false,
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ]
 }, {
   "id" : "module_overrides",
   "name" : "module_overrides",
