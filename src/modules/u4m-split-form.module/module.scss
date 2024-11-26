@@ -16,6 +16,12 @@
     margin-right: auto;
   }
 
+  .intro_content {
+    .intro_title {
+      @include h1;
+    }
+  }
+
   .left_column {
     @include tabletMin {
       width: 47.7%;

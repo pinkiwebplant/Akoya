@@ -53,6 +53,12 @@
 		{% if group.include_heading %}
 		<h2 class="intro_title">{{ group.heading }}</h2>
 		{% endif %}
+		
+		
+		{% if group.include_divider %}
+		<span class="divider"></span>
+		{% endif %}
+		
 		{% if group.include_content %}
 		<div class="intro_desc {{ group.content_style }}">
 			{{ group.content }}
