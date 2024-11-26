@@ -7,26 +7,115 @@
     }
   }
   .pricing-wrapper {
+    position: relative;
+    z-index: 9;
     .row {
       display: flex;
       flex-wrap: wrap;
       gap: 48px;
+      @include tabletvert {
+        gap: 28px;
+      }
       .pricing_item {
-        flex: 0 0 calc(33.3333% - 32px);
+        width: calc(33.333% - 32px);
+        @include tabletmid {
+          width: calc(50% - 24px);
+        }
+        @include tabletvert {
+          width: 100%;
+        }
         .pricing_item_inner {
           border: 2px solid $azure;
           border-radius: 10px;
-          .pricing_item_inner .pricing_top_title {
+          .pricing_top_title {
             padding: 12px 36px;
+            @include tabletvert {
+              padding: 12px 20px;
+            }
             h4 {
               margin: 0;
             }
+            &.theme1 {
+              background-color: $pricing_theme1;
+            }
+            &.theme2 {
+              background-color: $pricing_theme2;
+            }
+            &.theme3 {
+              background-color: $pricing_theme3;
+            }
           }
-          &.theme1{
-            background-color: #000;
+          .pricing_content {
+            padding: 36px;
+            @include tabletvert {
+              padding: 20px;
+            }
+            h2 {
+              margin-bottom: 24px;
+            }
+            .content {
+              p {
+                font-size: 16px;
+                color: $darkblack;
+                margin-bottom: 36px;
+              }
+            }
+            .button_wrapper {
+              margin-bottom: 36px;
+              a {
+                display: block;
+              }
+            }
+            .divider {
+              display: block;
+              width: 100%;
+              height: 2px;
+              background: $azure;
+            }
+            .feature_wrapper {
+              margin-top: 37px;
+              h4 {
+                margin-bottom: 25px;
+              }
+              ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li {
+                  margin-bottom: 12px;
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  @include tabletvert {
+                    gap: 5px;
+                  }
+                  img.check-img {
+                    width: 23px;
+                    margin-left: -2px;
+                  }
+                }
+              }
+            }
           }
         }
       }
+    }
+  }
+  &.reverse-text {
+    color: $white;
+    .intro_content p,
+    .pricing-wrapper
+      .page-center
+      .row
+      .pricing_item
+      .pricing_item_inner
+      .pricing_content
+      .content
+      p {
+      color: $white;
+    }
+    h2 {
+      color: $white;
     }
   }
 }
