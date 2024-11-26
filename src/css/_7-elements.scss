@@ -665,3 +665,7 @@ form {
     }
   }
 }
+
+.u4m-split-form-wrapper .bottom_content_inner ul {
+  @include check-ullist;
+}

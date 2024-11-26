@@ -1,0 +1,59 @@
+@import "../../css/_module-imports";
+
+.u4m-split-form-wrapper {
+  .u4m-splitFormWrap {
+    padding-top: 112px;
+    padding-bottom: 105px;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .flex_row {
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .left_column {
+    @include tabletMin {
+      width: 47.7%;
+    }
+  }
+
+  .logo_wrap {
+    @include tabletMin {
+      position: absolute;
+      top: -46px;
+      left: 20px;
+      z-index: 3;
+    }
+  }
+
+  .top_content_column_inner {
+    padding-top: 67px;
+  }
+
+  .intro_content {
+    max-width: 100%;
+    text-align: left;
+    margin-bottom: 0;
+    .intro_btn_wrap {
+      justify-content: flex-start;
+    }
+  }
+
+  .form_column {
+    position: relative;
+    @include tabletMin {
+      width: 46.2%;
+    }
+
+    .form_column_inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
