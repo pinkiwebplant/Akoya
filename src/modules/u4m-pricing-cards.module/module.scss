@@ -27,6 +27,7 @@
         .pricing_item_inner {
           border: 2px solid $azure;
           border-radius: 10px;
+          overflow: hidden;
           .pricing_top_title {
             padding: 12px 36px;
             @include tabletvert {
@@ -86,6 +87,7 @@
                   display: flex;
                   align-items: center;
                   gap: 12px;
+                  color: $black;
                   @include tabletvert {
                     gap: 5px;
                   }
@@ -111,10 +113,19 @@
       .pricing_item_inner
       .pricing_content
       .content
-      p {
+      p,
+    .pricing-wrapper
+      .row
+      .pricing_item
+      .pricing_item_inner
+      .pricing_content
+      .feature_wrapper
+      ul
+      li {
       color: $white;
     }
-    h2 {
+    h2,
+    h4 {
       color: $white;
     }
   }
