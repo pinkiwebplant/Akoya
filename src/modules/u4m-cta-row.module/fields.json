@@ -7,7 +7,7 @@
   "locked" : false,
   "occurrence" : {
     "min" : null,
-    "max" : null,
+    "max" : 2,
     "sorting_label_field" : null,
     "default" : 2
   },
@@ -895,7 +895,7 @@
       "opacity" : 40,
       "select_gradient" : "gradient1",
       "select_background_position" : "full_with",
-      "include_overlay_image" : false,
+      "include_overlay_image" : true,
       "overlay_image" : {
         "overlay_image" : {
           "size_type" : "auto",
@@ -938,7 +938,7 @@
       "opacity" : 40,
       "select_gradient" : "gradient1",
       "select_background_position" : "full_with",
-      "include_overlay_image" : false,
+      "include_overlay_image" : true,
       "overlay_image" : {
         "overlay_image" : {
           "size_type" : "auto",
