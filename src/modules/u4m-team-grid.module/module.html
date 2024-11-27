@@ -40,7 +40,7 @@
 						<div class="inner">
 							{% if item.member_image.src %}
 							<div class="member-image" >
-								<img class="{{ item.image_background_color }}" src="{{ item.member_image.src }}" alt="{{ item.member_image.alt|escape_attr }}">
+							<img class="{{ item.image_background_color }}" src="{{ item.member_image.src }}" alt="{{ item.member_image.alt|escape_attr }}" {% if item.image_background_color == 'purlple-bg' %} style="background-color: #efe6f5" {% endif %}>
 							</div>
 							{% endif %}
 
@@ -72,7 +72,7 @@
 										<svg class="circle2" xmlns="http://www.w3.org/2000/svg" width="270" height="270" viewBox="0 0 270 270" fill="none">
 											<circle cx="134.852" cy="134.853" r="132.642" stroke="#D9E8ED" stroke-width="4.05112" stroke-linecap="round" stroke-dasharray="0.03 13.5"/>
 										</svg>
-										<img class="{{ item.image_background_color }}" src="{{ item.member_image.src }}" alt="{{ item.member_image.alt|escape_attr }}">
+										<img class="{{ item.image_background_color }}" src="{{ item.member_image.src }}" alt="{{ item.member_image.alt|escape_attr }}" {% if item.image_background_color == 'purlple-bg' %} style="background-color: #efe6f5" {% endif %}>
 									</div>
 									{% endif %}
 									<div class="content-col">
@@ -151,11 +151,9 @@
 
 {% require_js %}
 <script>
-	$(document).ready(function() {
-		$('.{{name}} .tabber_nav .tab_nav_item:first-child').addClass('active').trigger('click');
-	});
+
 	
-		$(' .view-bio').click(function(){
+	$(' .view-bio').click(function(){
 		$(this).parents('.member').addClass('popup-active');
 		$('body').addClass('popup-activee');
 	});
@@ -166,6 +164,11 @@
 
 	$(function($) {
 		$.autofilter();
+	});
+	$(document).ready(function() {
+	setTimeout(function() {
+		$('.{{name}} .tabber_nav .tab_nav_item:first-child').addClass('active').trigger('click');
+	}, 100);
 	});
 </script>
 {% end_require_js %}
