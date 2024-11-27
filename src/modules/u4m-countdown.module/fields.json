@@ -306,7 +306,7 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : "5ee1c1b1-6cbb-c48f-9952-90e80ce12159",
-    "default" : 1
+    "default" : 5
   },
   "children" : [ {
     "id" : "c37a733b-b7b8-1f3d-6a9d-d9ea66e74de1",
@@ -347,6 +347,22 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : [ {
+    "assets" : "$250B in assets",
+    "selected_date" : 1775016000000,
+    "title" : "Days to comply"
+  }, {
+    "assets" : "$250B in assets",
+    "selected_date" : 1775016000000,
+    "title" : "Days to comply"
+  }, {
+    "assets" : "$250B in assets",
+    "selected_date" : 1775016000000,
+    "title" : "Days to comply"
+  }, {
+    "assets" : "$250B in assets",
+    "selected_date" : 1775016000000,
+    "title" : "Days to comply"
+  }, {
     "assets" : "$250B in assets",
     "selected_date" : 1775016000000,
     "title" : "Days to comply"
