@@ -1,27 +1,46 @@
 {% set moduleName = 'u4m-hero {% if module.media_section.image_overflow %} img_overflow {% endif %}' %}
 {% include "../partials/u4-module-includes.html" %}
-	<div class="hero_wrapper {% if not module.media_section.image_field.src %} no_img {% endif %} {% if module.intro_content.include_divider %}divider{% endif %} {{ module.module_settings.select_image_alignment }} {% if module.media_section.image_overflow %} img_overflow {% endif %}">
-		<div class="page-center">	
-			<div class="row">
-				<div class="left_section">
-					{{macros.introGroup(module.intro_content)}}
+<div class="hero_wrapper {% if not module.media_section.image_field.src %} no_img {% endif %} {% if module.intro_content.include_divider %}divider{% endif %} {{ module.module_settings.select_image_alignment }} {% if module.media_section.image_overflow %} img_overflow {% endif %}">
+	<div class="page-center">	
+		<div class="row">
+			<div class="left_section">
+				<div class="intro_content">
+					<div class="intro__inner">
+						{% if module.intro_content.include_eyebrow_text %}
+						<div class="eyebrow_text">
+							{{ module.intro_content.eyebrow_text }}
+						</div>
+						{% endif %}
+						{% if module.intro_content.include_heading %}
+						<h1 class="intro_title">{{ module.intro_content.heading }}</h1>
+						{% endif %}
+						{% if module.intro_content.include_divider %}
+						<span class="divider"></span>
+						{% endif %}
+						{% if module.intro_content.include_content %}
+						<div class="intro_desc {{ module.intro_content.content_style }}">
+							{{ module.intro_content.content }}
+						</div>
+						{% endif %}
+						{% if module.intro_content.button_group %}
+						{{ macros.buttonGroup(module.intro_content.button_group)}}
+						{% endif %}
+					</div>
 				</div>
-				{% if module.media_section.image_field.src %}
-				<div class="right-section">
-					{% set sizeAttrs = 'width="{{ module.media_section.image_field.width|escape_attr }}" height="{{ module.media_section.image_field.height|escape_attr }}"' %}
-					{% if module.media_section.image_field.size_type == 'auto' %}
-					{% set sizeAttrs = 'width="{{ module.media_section.image_field.width|escape_attr }}" height="{{ module.media_section.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-					{% elif module.media_section.image_field.size_type == 'auto_custom_max' %}
-					{% set sizeAttrs = 'width="{{ module.media_section.image_field.max_width|escape_attr }}" height="{{ module.media_section.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-					{% endif %}
-					{% set loadingAttr = module.media_section.image_field.loading != 'disabled' ? 'loading="{{ module.media_section.image_field.loading|escape_attr }}"' : '' %}
-					<img src="{{ module.media_section.image_field.src|escape_url }}" alt="{{ module.media_section.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
-				</div>
-			{% endif %}
 			</div>
+			{% if module.media_section.image_field.src %}
+			<div class="right-section">
+				{% set sizeAttrs = 'width="{{ module.media_section.image_field.width|escape_attr }}" height="{{ module.media_section.image_field.height|escape_attr }}"' %}
+				{% if module.media_section.image_field.size_type == 'auto' %}
+				{% set sizeAttrs = 'width="{{ module.media_section.image_field.width|escape_attr }}" height="{{ module.media_section.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+				{% elif module.media_section.image_field.size_type == 'auto_custom_max' %}
+				{% set sizeAttrs = 'width="{{ module.media_section.image_field.max_width|escape_attr }}" height="{{ module.media_section.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+				{% endif %}
+				{% set loadingAttr = module.media_section.image_field.loading != 'disabled' ? 'loading="{{ module.media_section.image_field.loading|escape_attr }}"' : '' %}
+				<img src="{{ module.media_section.image_field.src|escape_url }}" alt="{{ module.media_section.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+			</div>
+			{% endif %}
 		</div>
 	</div>
+</div>
 </section>
-
-
-

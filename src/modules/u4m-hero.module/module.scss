@@ -1,6 +1,7 @@
 @import "../../css/_module-imports";
 
 .u4m-hero {
+  margin-top: 0;
   &.reverse-text {
     color: $white;
   }
@@ -27,6 +28,7 @@
           max-width: 100%;
           margin: 0;
           .intro_title {
+            margin-bottom: 40px;
             @include tabletMin {
               font-size: 66px;
             }
@@ -34,6 +36,11 @@
           }
           .intro_btn_wrap {
             justify-content: flex-start;
+          }
+          .intro_desc {
+            p {
+              color: $black2;
+            }
           }
         }
       }
@@ -81,7 +88,7 @@
     overflow: hidden;
     .right-section {
       position: relative;
-      padding-bottom: 50%;
+      padding-bottom: 60%;
       @include tabletvert {
         padding-bottom: 0%;
       }
