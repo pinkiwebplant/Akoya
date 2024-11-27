@@ -1,6 +1,13 @@
 @import "../../css/_module-imports";
 
 section.u4m-cards {
+  .intro_content {
+    .intro_desc {
+      p {
+        color: $dark-grayish-green;
+      }
+    }
+  }
   .cardItems {
     margin: 0 -24px;
     @include navbreak {
@@ -24,6 +31,7 @@ section.u4m-cards {
         box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.05);
         border-radius: 10px;
         padding: 48px;
+        height: 100%;
         @include tabletvert {
           padding: 30px;
         }
