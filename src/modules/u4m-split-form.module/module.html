@@ -1,33 +1,15 @@
 {% set moduleName = 'u4m-splitFormWrap' %}
 
-<div class="u4m-split-form-wrapper splitOuter{{name}} ">
-
-
-
+<div class="u4m-split-form-wrapper splitOuter{{name}} {% if module.include_form and  module.form_group.select_form.form_id %}formAdded{% endif %}">
 	<div class="splitform_topwrap">
 		{% include "../partials/u4-module-includes.html" %}
 
-		{% require_js %}
-		<script>
-			function setheight(){
-				setTimeout(function(){
-					var formHeight = $('.form_column_inner').height();
-					var calcHeight = formHeight + 200;
-					$('.splitFormWrap').css('min-height',calcHeight);
-				})
-			}
-			$(window).on("resize", function() {
-				setheight();
-			});
-			$('.splitFormWrap').parents('body').addClass('formsec');
-		</script>
-		{% end_require_js %}
 
 		<div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
 			<div class="flex_row">
 
 
-				<div class="left_column top_content_colmn {% if module.intro_content.include_divider %}diiderarr{% endif %}">
+				<div class="left_column top_content_colmn {% if module.intro_content.include_divider %}diiderarr{% endif %} {% if not module.include_form %}no-form-column {% endif %}">
 					{% if module.intro_content.include_logo %}
 					<div class="logo_wrap">
 						{% if module.intro_content.logo.src %}
@@ -42,7 +24,7 @@
 				</div>
 
 
-
+				{% if module.include_form %}
 				{% if module.form_group.select_form.form_id%}
 				<div class="form_column">
 					<div class="form_column_inner">
@@ -55,22 +37,29 @@
 									region: "na1",
 									portalId: "{{ hub_id }}",
 									css: "",
+									target: ".form_column_inner",
 									formId: "{{ module.form_group.select_form.form_id }}",
-									onFormReady: function($form) {         
-									setheight();
-								}
-								}); 
+									onFormReady: function($form) {
+									$('.form_column .hs-button').click(function(){
+									setTimeout(function(){
+										var formHeight = $('.form_column_inner').outerHeight();
+										var calcHeight = formHeight + 200;
+										$('.u4m-split-form-wrapper.formAdded').css('min-height', calcHeight);
+									}, 200);
+									console.log('form_column call')
+								});    }
 
+
+								}); 
 							</script>
 						</div>
 						{% endif %}
 					</div>
 				</div>
 				{% endif %}
+				{% endif %}
 			</div>
 		</div>
-
-
 		</section>
 </div>
 
@@ -78,7 +67,7 @@
 	<div class="bottom_content_inner">
 		<div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
 			<div class="flex_row">
-				<div class="bottom_content left_column ">
+				<div class="bottom_content left_column {% if not  module.include_form %}no-form-column {% endif %} ">
 					{{ module.bottom_group.content }}
 				</div>
 			</div>
@@ -90,3 +79,36 @@
 
 </div>
 
+
+
+{% require_js %}
+<script>
+	$(document).ready(function(){
+		function checkHeight(){
+			var formHeight = $('.form_column_inner').outerHeight();
+			var calcHeight = formHeight + 200;
+			$('.u4m-split-form-wrapper.formAdded').css('min-height',calcHeight);
+			console.log('checkHeight call')
+		}
+
+		{# $(document).ready(function(){
+			$('.form_column .hs-button').click(function(){
+				setTimeout(function(){
+					var formHeight = $('.form_column_inner').outerHeight();
+					var calcHeight = formHeight + 200;
+					$('.u4m-split-form-wrapper.formAdded').css('min-height', calcHeight);
+				}, 200);
+				console.log('form_column call')
+			});
+		}); #}
+
+
+		$(window).on("load resize", function() {
+			setTimeout(function(){
+			checkHeight();
+			}, 200)
+		});
+		$('.u4m-split-form-wrapper.formAdded').parents('body').addClass('formsec');
+	});
+</script>
+{% end_require_js %}

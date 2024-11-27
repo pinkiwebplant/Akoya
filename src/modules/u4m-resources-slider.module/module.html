@@ -1,0 +1,254 @@
+{% set moduleName = 'u4m-resources-slider' %}
+{% include "../partials/u4-module-includes.html" %}
+
+{% set newname = name|replace('_','')%}
+
+
+
+
+<div class="resorces_list">
+
+	<div class="top_title_wrap">
+		<div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
+
+			{% if module.include_heading %}
+			<div class="top_title">
+				<h2>
+					{{ module.heading }}
+				</h2>
+			</div>
+			{% endif %}
+
+		</div>
+	</div>
+
+	<div class="resorces_slider_list_wrap">
+		<div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
+			<div class="resorces_slider_list">
+				{{ module.card_group.select_blog }}
+
+				{# type 1#}
+				{% if module.card_group.select_content_type == "recent_blog" %}
+
+				{% set max_posts = module.card_group.number_of_cards  %}
+				{% set rec_posts = [] %}
+				{% set rec_posts = rec_posts + blog_recent_posts(module.card_group.select_blog, max_posts + 1) %}
+				{% set i = 0 %}
+				{% for post in rec_posts %}
+				{% if content.absolute_url != post.absolute_url and i < max_posts %}
+
+				<div class="blog_card resource_card col">
+					<div class="rescard_inner">
+						{% if post.post_list_summary_featured_image %}
+						<div class="rescard_img" style="background-image: url({{ resize_image_url( post.post_list_summary_featured_image,767 ) }})">
+						</div>
+						{% endif %}
+
+						<div class="rescard_body">
+							{% for tag in post.tag_list %}
+							{% if loop.index == 1%}
+							<span class="tag">
+								{{tag.name|replace('_',' ')}}
+							</span>
+							{% endif %}
+							{% endfor %}
+
+							<h4 class="rescard_title">
+								{{ post.name}}
+							</h4>
+
+							<div class="rescard_des">
+								{{ post.post_list_content|striptags|truncatehtml(100, '..' , false) }}
+							</div>
+						</div>
+					</div>
+				</div>
+				{% set i = i + 1 %}          
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+
+				{# type 2#}
+
+
+				{% if module.card_group.select_content_type == "hubdb" %}
+
+				{% for row in hubdb_table_rows(module.card_group.select_hubdb_table, "limit="~module.card_group.number_of_cards~"") %}
+
+				<div class="hubd_card resource_card col">
+					<div class="rescard_inner">
+						{% if row.image.url %}
+						<div class="rescard_img" style="background-image: url({{ row.image.url }})">
+						</div>
+						{% endif %}
+
+						<div class="rescard_body">
+							<span class="tag">
+								{% for tag in row.category%}
+								{{tag.name|replace('_',' ')}}
+								{% endfor %}
+							</span>
+							<h4 class="rescard_title">
+								{{ row.name}}
+							</h4>
+
+							<div class="rescard_des">
+								{{ row.description}}
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+
+				{% endif %}
+
+				{# type 3#}
+
+
+				{% if module.card_group.select_content_type == "custom" %}
+
+				{% for item in module.card_group.custom_item %}
+
+				{# custom blog#}
+				{% if item.select_content_from == "blog"%}
+				<div class="blog_card resource_card col">
+					<div class="rescard_inner">
+						{% if content_by_id(item.select_page).post_list_summary_featured_image %}
+						<div class="rescard_img" style="background-image: url({{ resize_image_url( content_by_id(item.select_page).featured_image,767 ) }})">
+						</div>
+						{% endif %}
+
+						<div class="rescard_body">
+							{% for tag in content_by_id(item.select_page).tag_list %}
+							{% if loop.index == 1%}
+							<span class="tag">
+								{{tag.name|replace('_',' ')}}
+							</span>
+							{% endif %}
+							{% endfor %}
+
+							<h4 class="rescard_title">
+								{{ content_by_id(item.select_page).name}}
+							</h4>
+
+							<div class="rescard_des">
+								{{ content_by_id(item.select_page).post_list_content|striptags|truncatehtml(200, '...' , false) }}
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endif %}
+
+				{# custom hubdb#}
+
+				{% if item.select_content_from == "hubdb"%}
+				<div class="hubd_card resource_card col">
+					<div class="rescard_inner">
+						{% if item.row_title.columns.image.url %}
+						<div class="rescard_img" style="background-image: url({{ item.row_title.columns.image.url }})">
+						</div>
+						{% endif %}
+
+						<div class="rescard_body">
+							<span class="tag">
+								{% for tag in item.row_title.columns.category%}
+								{{tag.name|replace('_',' ')}}
+								{% endfor %}
+							</span>
+							<h4 class="rescard_title">
+								{{ item.row_title.columns.name}}
+							</h4>
+
+							<div class="rescard_des">
+								{{ item.row_title.columns.description}}
+							</div>
+						</div>
+					</div>
+				</div>
+
+				{% endif %}
+
+				{% endfor %}
+
+				{% endif %}
+
+
+			</div>
+		</div>
+	</div>
+
+	<div class="bottom_nav_list">
+		<div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
+			<div class="nav slick">
+
+
+				<div class="btn-wrap">
+					<button class="prev-btn prev{{newname}}">
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23369 1.23124C1.54528 0.92292 2.05047 0.92292 2.36202 1.23124L6.61737 5.44178C6.92896 5.75009 6.92896 6.24988 6.61737 6.5582L2.36203 10.7688C2.05047 11.0771 1.54528 11.0771 1.23369 10.7688C0.922103 10.4605 0.922103 9.96059 1.23369 9.65228L4.9248 5.99999L1.23369 2.34766C0.922103 2.03934 0.922103 1.53955 1.23369 1.23124Z"/>
+							</svg>
+						</span>
+					</button>
+					<button class="next-btn next{{newname}}">
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23369 1.23124C1.54528 0.92292 2.05047 0.92292 2.36202 1.23124L6.61737 5.44178C6.92896 5.75009 6.92896 6.24988 6.61737 6.5582L2.36203 10.7688C2.05047 11.0771 1.54528 11.0771 1.23369 10.7688C0.922103 10.4605 0.922103 9.96059 1.23369 9.65228L4.9248 5.99999L1.23369 2.34766C0.922103 2.03934 0.922103 1.53955 1.23369 1.23124Z"/>
+							</svg>
+						</span>
+					</button>
+				</div>
+
+			</div>
+			
+			
+			<div class="nav_btn">
+				{{macros.buttonGroup(module.button_group)}}
+			</div>
+			
+		</div>
+	</div>
+
+
+
+</div>
+</section>
+
+
+
+
+
+
+{% require_js %}
+<script>
+
+
+
+	$('.{{name}}  .resorces_slider_list').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		infinite: false,
+		prevArrow: $('.prev{{newname}}'),
+		nextArrow: $('.next{{newname}}'),
+		responsive: [
+		{
+		breakpoint: 991,
+		settings: {
+		slidesToShow: 2
+		}
+	},
+		{
+			breakpoint: 680,
+				settings: {
+					slidesToShow: 1
+				}
+		}
+	]
+	});
+</script>
+
+{% end_require_js %}
+
+
+

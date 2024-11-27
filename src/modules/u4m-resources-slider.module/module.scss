@@ -1,0 +1,103 @@
+@import "../../css/_module-imports";
+
+.u4m-resources-slider {
+  display: block;
+
+  .resorces_slider_list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 10%;
+
+    @include tabletvert {
+      padding-right: 16%;
+    }
+
+    @include phone {
+      padding-right: 8%;
+    }
+  }
+
+  .resorces_slider_list_wrap {
+    overflow: hidden;
+
+    .slick-list {
+      overflow: visible;
+      width: 100%;
+    }
+
+    .resource_card {
+      width: 25%;
+    }
+
+    .slick-track {
+      display: flex;
+      &:after,
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  .top_title_wrap {
+    margin-bottom: 67px;
+  }
+
+  .slick-arrow {
+    display: block;
+    width: 29px;
+    height: 29px;
+    background: aquamarine;
+  }
+  //   card
+
+  .resource_card {
+    .rescard_img {
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+      border-radius: $borderRadius;
+    }
+
+    .tag {
+      @include eyebrow;
+      display: block;
+      margin-top: 19px;
+      margin-bottom: 14px;
+    }
+
+    .rescard_title {
+      color: $darkblack;
+      margin-bottom: 20px;
+    }
+
+    .rescard_des {
+      @include b2;
+    }
+  }
+
+  .col {
+    padding: 0 10px;
+  }
+
+  .bottom_nav_list {
+    margin-top: 60px;
+    .btn-wrap {
+      justify-content: flex-start;
+      column-gap: 24px;
+    }
+    .page-center {
+      display: flex;
+      align-items: center;
+      gap: 0 30px;
+
+      @include phone {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    .btn-wrap {
+      margin: 0;
+    }
+  }
+}
