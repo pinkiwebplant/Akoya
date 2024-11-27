@@ -1,6 +1,19 @@
 @import "../../css/_module-imports";
 
 .u4m-countdown {
+  &.reverse-text {
+    .countdown-items {
+      .countdown-item {
+        .countdown-item-inn {
+          .remaining-days {
+            color: $white;
+          }
+          color: $white;
+        }
+      }
+    }
+  }
+
   padding-left: 40px;
   padding-right: 40px;
   @include tabletvert {
