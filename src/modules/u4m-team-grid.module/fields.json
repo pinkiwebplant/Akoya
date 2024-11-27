@@ -329,7 +329,7 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : "844ade4f-5545-4b67-b944-1c4a602f44d1",
-    "default" : 1
+    "default" : 9
   },
   "children" : [ {
     "id" : "cef2634c-a0a2-0cb0-b38f-d3330c41f5af",
@@ -343,7 +343,8 @@
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
-    "type" : "choice"
+    "type" : "choice",
+    "default" : "board_members"
   }, {
     "id" : "ed25becc-c354-2326-5ff1-c293855a18c5",
     "name" : "image_background_color",
@@ -460,7 +461,11 @@
         "locked" : false,
         "icon_set" : "fontawesome-6.4.2",
         "type" : "icon",
-        "default" : { }
+        "default" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        }
       }, {
         "id" : "17cb5f56-83c5-c799-ea4b-e9a92eb69bc1",
         "name" : "social_link",
@@ -486,7 +491,11 @@
       "group_occurrence_meta" : null,
       "type" : "group",
       "default" : [ {
-        "icon_field" : { },
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
         "social_link" : {
           "url" : {
             "content_id" : null,
@@ -497,7 +506,11 @@
           "no_follow" : false
         }
       }, {
-        "icon_field" : { },
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
         "social_link" : {
           "url" : {
             "content_id" : null,
@@ -516,7 +529,11 @@
     "default" : {
       "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
       "social_item" : [ {
-        "icon_field" : { },
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
         "social_link" : {
           "url" : {
             "content_id" : null,
@@ -527,7 +544,11 @@
           "no_follow" : false
         }
       }, {
-        "icon_field" : { },
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
         "social_link" : {
           "url" : {
             "content_id" : null,
@@ -545,6 +566,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : [ {
+    "select_tag" : "board_members",
     "image_background_color" : "purlple-bg",
     "member_image" : {
       "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
@@ -561,7 +583,11 @@
     "popup_content" : {
       "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
       "social_item" : [ {
-        "icon_field" : { },
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
         "social_link" : {
           "url" : {
             "content_id" : null,
@@ -572,7 +598,403 @@
           "no_follow" : false
         }
       }, {
-        "icon_field" : { },
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
         "social_link" : {
           "url" : {
             "content_id" : null,

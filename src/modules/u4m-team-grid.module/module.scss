@@ -1,6 +1,9 @@
 @import "../../css/_module-imports";
 
 section.u4m-team-grid {
+  .purlple-bg {
+    background-color: $pricing_theme3;
+  }
   position: relative;
   z-index: 9;
   &.reverse-text {
@@ -35,7 +38,7 @@ section.u4m-team-grid {
       margin-bottom: -2px;
       padding: 0 31px 2px;
       position: relative;
-      color: #000;
+      color: $darkblack;
       font-weight: 700;
     }
   }
@@ -119,7 +122,7 @@ section.u4m-team-grid {
             top: -28px;
             right: 20px;
             .exit {
-              border: 1px solid #fff;
+              border: 1px solid $white;
               border-radius: 100%;
               width: 30px;
               height: 30px;
