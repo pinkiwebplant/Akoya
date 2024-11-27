@@ -76,6 +76,28 @@
     "type" : "boolean",
     "default" : true
   }, {
+    "id" : "a40a939e-539f-3a8d-61d7-3dcaec231223",
+    "name" : "content_style",
+    "display_width" : null,
+    "label" : "Content Style",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_content",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "theme", "Theme" ], [ "cstyle1", "Style 1" ], [ "cstyle2", "Style 2" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "theme"
+  }, {
     "id" : "0dc03814-a33d-3284-f2d6-b130f633f03d",
     "name" : "content",
     "display_width" : null,
@@ -265,6 +287,7 @@
     "include_heading" : true,
     "heading" : "Animated Stats module.",
     "include_content" : true,
+    "content_style" : "theme",
     "content" : "<p>Up to five columns of statistics - each one can include an icon, eyebrow text, numeric statistic, statistic suffix, and a field for a brief description.</p>",
     "include_button" : false,
     "button_group" : [ {
