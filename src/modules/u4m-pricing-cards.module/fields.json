@@ -34,7 +34,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "Eyebrow Text"
+    "default" : "Optional Eyebrow Text"
   }, {
     "id" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
     "name" : "include_heading",
@@ -64,7 +64,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "U4M Accordion"
+    "default" : "Pricing Cards module headline."
   }, {
     "id" : "2f10bd6e-cf85-1cf6-5a4f-fa75e1e78238",
     "name" : "include_content",
@@ -113,7 +113,7 @@
       "access" : null
     },
     "type" : "richtext",
-    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco labo.</p>"
+    "default" : "<p>Up to three cards with pricing content can be used, cards are center justified, so if there are less than three cards they’ll still be centered within the space. Label background color adjustable.</p>"
   }, {
     "id" : "4a517c8a-8c15-a721-dca5-db7b58a8c2a7",
     "name" : "include_button",
@@ -123,7 +123,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "3d861e2f-6981-78b6-57a8-d59863169561",
     "name" : "button_group",
@@ -283,13 +283,13 @@
   "type" : "group",
   "default" : {
     "include_eyebrow_text" : true,
-    "eyebrow_text" : "Eyebrow Text",
+    "eyebrow_text" : "Optional Eyebrow Text",
     "include_heading" : true,
-    "heading" : "U4M Accordion",
+    "heading" : "Pricing Cards module headline.",
     "include_content" : true,
     "content_style" : "theme",
-    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco labo.</p>",
-    "include_button" : true,
+    "content" : "<p>Up to three cards with pricing content can be used, cards are center justified, so if there are less than three cards they’ll still be centered within the space. Label background color adjustable.</p>",
+    "include_button" : false,
     "button_group" : [ {
       "button_type" : "std",
       "button_theme" : "hs-button",
@@ -539,7 +539,7 @@
         "min" : null,
         "max" : null,
         "sorting_label_field" : "a28cfff4-139f-d968-5332-a0cece3ce118",
-        "default" : 1
+        "default" : 5
       },
       "children" : [ {
         "id" : "a28cfff4-139f-d968-5332-a0cece3ce118",
@@ -571,6 +571,18 @@
       "default" : [ {
         "feature_text" : "Lorem ipsum dolar sit.",
         "include_feature" : true
+      }, {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
       } ]
     } ],
     "tab" : "CONTENT",
@@ -580,6 +592,18 @@
     "default" : {
       "title" : "Features",
       "feature_items" : [ {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
         "feature_text" : "Lorem ipsum dolar sit.",
         "include_feature" : true
       } ]
@@ -613,30 +637,16 @@
       "feature_items" : [ {
         "feature_text" : "Lorem ipsum dolar sit.",
         "include_feature" : true
-      } ]
-    }
-  }, {
-    "select_highlight_theme" : "theme1",
-    "title" : "Free",
-    "pricing_text" : "Free",
-    "content" : "<p>Lorem ipsum dolor sit amet, adipiscing consectetur adipiscing elit, sed do elit eiusmod tempor incididunt ut.</p>",
-    "button_group" : [ {
-      "button_type" : "std",
-      "button_theme" : "hs-button",
-      "button_text" : "Sign Up for Free",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    } ],
-    "feature_group" : {
-      "title" : "Features",
-      "feature_items" : [ {
+      }, {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
         "feature_text" : "Lorem ipsum dolar sit.",
         "include_feature" : true
       } ]
@@ -663,6 +673,56 @@
     "feature_group" : {
       "title" : "Features",
       "feature_items" : [ {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      } ]
+    }
+  }, {
+    "select_highlight_theme" : "theme1",
+    "title" : "Free",
+    "pricing_text" : "Free",
+    "content" : "<p>Lorem ipsum dolor sit amet, adipiscing consectetur adipiscing elit, sed do elit eiusmod tempor incididunt ut.</p>",
+    "button_group" : [ {
+      "button_type" : "std",
+      "button_theme" : "hs-button",
+      "button_text" : "Sign Up for Free",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "feature_group" : {
+      "title" : "Features",
+      "feature_items" : [ {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
+        "feature_text" : "Lorem ipsum dolar sit.",
+        "include_feature" : true
+      }, {
         "feature_text" : "Lorem ipsum dolar sit.",
         "include_feature" : true
       } ]
