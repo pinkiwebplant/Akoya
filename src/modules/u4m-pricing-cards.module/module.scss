@@ -2,6 +2,9 @@
 
 .u4m-pricing-cards {
   .intro_content {
+    .intro_title {
+      color: $darkgray;
+    }
     p {
       color: $black2;
     }
@@ -48,11 +51,15 @@
           }
           .pricing_content {
             padding: 36px;
+            background: $white;
             @include tabletvert {
               padding: 20px;
             }
             h2 {
               margin-bottom: 24px;
+              span {
+                font-weight: 500;
+              }
             }
             .content {
               p {
@@ -101,32 +108,6 @@
           }
         }
       }
-    }
-  }
-  &.reverse-text {
-    color: $white;
-    .intro_content p,
-    .pricing-wrapper
-      .page-center
-      .row
-      .pricing_item
-      .pricing_item_inner
-      .pricing_content
-      .content
-      p,
-    .pricing-wrapper
-      .row
-      .pricing_item
-      .pricing_item_inner
-      .pricing_content
-      .feature_wrapper
-      ul
-      li {
-      color: $white;
-    }
-    h2,
-    h4 {
-      color: $white;
     }
   }
 }

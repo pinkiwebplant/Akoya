@@ -358,6 +358,20 @@
     "type" : "text",
     "default" : "Free"
   }, {
+    "id" : "4619aa58-4e92-8582-fd13-9f1f0801594c",
+    "name" : "select_pricing_type",
+    "display_width" : null,
+    "label" : "Select Pricing Type",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "free", "Free" ], [ "paid", "Paid" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "free"
+  }, {
     "id" : "3423c32c-2511-4198-f264-f33fa530a750",
     "name" : "pricing_text",
     "display_width" : null,
@@ -365,10 +379,79 @@
     "required" : false,
     "locked" : false,
     "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "pricing_items.select_pricing_type",
+      "controlling_value_regex" : "free",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
     "default" : "Free"
+  }, {
+    "id" : "3692fed5-12c9-8529-cc1a-c69837be6bce",
+    "name" : "prefix",
+    "display_width" : null,
+    "label" : "Prefix",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "pricing_items.select_pricing_type",
+      "controlling_value_regex" : "paid",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "$"
+  }, {
+    "id" : "ace7a57d-1945-96e7-eab9-751e749730da",
+    "name" : "price",
+    "display_width" : null,
+    "label" : "Price",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "pricing_items.select_pricing_type",
+      "controlling_value_regex" : "paid",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "prefix" : "",
+    "suffix" : "",
+    "type" : "number",
+    "default" : 125
+  }, {
+    "id" : "d503cf27-c8ba-eb32-f356-adb82d9fc5b3",
+    "name" : "suffix",
+    "display_width" : null,
+    "label" : "Suffix",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "pricing_items.select_pricing_type",
+      "controlling_value_regex" : "paid",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "/month"
   }, {
     "id" : "4e49bd48-a0db-0f4f-3e68-c42ef577ea22",
     "name" : "content",
@@ -616,7 +699,9 @@
   "default" : [ {
     "select_highlight_theme" : "theme1",
     "title" : "Free",
+    "select_pricing_type" : "free",
     "pricing_text" : "Free",
+    "price" : 125,
     "content" : "<p>Lorem ipsum dolor sit amet, adipiscing consectetur adipiscing elit, sed do elit eiusmod tempor incididunt ut.</p>",
     "button_group" : [ {
       "button_type" : "std",
@@ -650,11 +735,15 @@
         "feature_text" : "Lorem ipsum dolar sit.",
         "include_feature" : true
       } ]
-    }
+    },
+    "prefix" : "$",
+    "suffix" : "/month"
   }, {
     "select_highlight_theme" : "theme1",
     "title" : "Free",
+    "select_pricing_type" : "free",
     "pricing_text" : "Free",
+    "price" : 125,
     "content" : "<p>Lorem ipsum dolor sit amet, adipiscing consectetur adipiscing elit, sed do elit eiusmod tempor incididunt ut.</p>",
     "button_group" : [ {
       "button_type" : "std",
@@ -688,11 +777,15 @@
         "feature_text" : "Lorem ipsum dolar sit.",
         "include_feature" : true
       } ]
-    }
+    },
+    "prefix" : "$",
+    "suffix" : "/month"
   }, {
     "select_highlight_theme" : "theme1",
     "title" : "Free",
+    "select_pricing_type" : "free",
     "pricing_text" : "Free",
+    "price" : 125,
     "content" : "<p>Lorem ipsum dolor sit amet, adipiscing consectetur adipiscing elit, sed do elit eiusmod tempor incididunt ut.</p>",
     "button_group" : [ {
       "button_type" : "std",
@@ -726,7 +819,9 @@
         "feature_text" : "Lorem ipsum dolar sit.",
         "include_feature" : true
       } ]
-    }
+    },
+    "prefix" : "$",
+    "suffix" : "/month"
   } ]
 }, {
   "id" : "module_overrides",
@@ -1006,24 +1101,6 @@
     "step" : 1,
     "type" : "number",
     "default" : 50
-  }, {
-    "id" : "3eccf45d-b0dc-4bac-42a0-f923e4405158",
-    "name" : "reverse_text",
-    "display_width" : null,
-    "label" : "Reverse Text",
-    "required" : false,
-    "locked" : false,
-    "visibility" : {
-      "controlling_field" : "enable_overrides",
-      "controlling_field_path" : null,
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "display" : "checkbox",
-    "type" : "boolean",
-    "default" : false
   }, {
     "id" : "7147a273-6d14-b662-c439-5916062f0f4f",
     "name" : "container_full_width",
@@ -1310,7 +1387,6 @@
     "bottom_padding" : "bottom-padding-default",
     "custom_bottom_padding" : 100,
     "custom_bottom_padding_mobile" : 50,
-    "reverse_text" : false,
     "container_full_width" : false,
     "background_settings" : {
       "background_type" : "color",

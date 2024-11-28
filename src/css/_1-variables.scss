@@ -27,9 +27,17 @@ $gray3: $silver;
 $sectionbg: rgba($azure, 0.4);
 
 /* azure gradient */
-$gradient1: linear-gradient(180deg, rgba($white, 0.5) 0%, rgba($azure, 0.5) 100%);
+$gradient1: linear-gradient(
+  180deg,
+  rgba($white, 0.5) 0%,
+  rgba($azure, 0.5) 100%
+);
 
-$gradient2: linear-gradient(180deg, rgba($white, 0.5) 0%, rgba($silver, 0.5) 100%);
+$gradient2: linear-gradient(
+  180deg,
+  rgba($white, 0.5) 0%,
+  rgba($silver, 0.5) 100%
+);
 
 $font1: "Assistant";
 $font2: "Arimo";
@@ -64,3 +72,5 @@ $stats: #ebf4f5;
 $stats2: #ecf1f4;
 $statsBg: rgba($stats, 0.2);
 $statsBg2: rgba($stats2, 0.15);
+
+$darkgray: #00161d;
