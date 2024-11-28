@@ -1,0 +1,36 @@
+{% set moduleName = 'u4m-blog-post-header' %}
+<section class="u4m-blog-post-header">
+  <div class="bg_overlay {% if module.background_settings.background_type ==
+  'color' %}bg_color {{ module.background_settings.select_color }} {% endif %}
+  {% if module.background_settings.background_type == 'gradient' %} bg_gradient
+  {{ module.background_settings.select_gradient }}{% endif %}" {% if
+  module.background_settings.background_type == 'color' %}style="opacity:
+  {{module.background_settings.opacity}}"{% endif %}>
+  </div>
+  <div class="page-center">
+    <div class="date">
+      <p>{{ content.publish_date_local_time.strftime('%B %e, %Y') }}</p>
+    </div>
+    <h1>{{ content.name }}</h1>
+    {% if module.author %} {% if content.blog_post_author %}
+    <div class="post-meta">
+      {% if content.blog_post_author.avatar %}
+      <div class="author-img">
+        <img
+          src="{{ content.blog_post_author.avatar }}"
+          alt="{{ content.blog_post_author.display_name }}"
+        />
+      </div>
+      {% endif %} {% if content.blog_post_author.display_name %}
+      <div class="author-name">
+        <a
+          class="author-link"
+          href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}"
+          >{{ content.blog_post_author.display_name }}</a
+        >
+      </div>
+      {% endif %}
+    </div>
+    {% endif %} {% endif %}
+  </div>
+</section>

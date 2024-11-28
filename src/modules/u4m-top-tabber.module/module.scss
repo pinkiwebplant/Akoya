@@ -1,5 +1,22 @@
 @import "../../css/_module-imports";
 section.u4m-top-tabber {
+  &.reverse-text {
+    .tabber_pannel_item {
+      .tab_title {
+        color: $white;
+      }
+      .arrow-link {
+        color: $white;
+      }
+    }
+
+    .tabber_nav {
+      .tab_nav {
+        color: $white;
+      }
+    }
+  }
+
   display: block;
 
   // Nav
@@ -27,9 +44,11 @@ section.u4m-top-tabber {
       cursor: pointer;
       position: relative;
       padding: 0 31px;
-      padding-bottom: 2px;
+      padding-bottom: 10px;
       margin-bottom: -2px;
       border-bottom: 2px solid transparent;
+      font-weight: 700;
+      color: $darkblack;
 
       @include tablet {
         width: 100%;

@@ -33,15 +33,22 @@ section.u4m-grid-card {
           cursor: pointer;
           .grid_inr {
             border-color: $azure;
+            background: $white;
+            p {
+              color: $basecolor;
+            }
           }
           &::after {
+            opacity: 1;
+          }
+          &:hover .arrow {
+            visibility: visible;
             opacity: 1;
           }
         }
         .grid_inr {
           border: 2rem solid transparent;
           position: relative;
-          background-color: $white;
           z-index: 9;
           padding: 24rem;
           border-radius: $borderRadius;
@@ -56,6 +63,8 @@ section.u4m-grid-card {
             display: flex;
             align-items: center;
             justify-content: center;
+            visibility: hidden;
+            opacity: 0;
           }
           .grid_item_inr {
             & > p {

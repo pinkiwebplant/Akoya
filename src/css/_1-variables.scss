@@ -9,6 +9,8 @@ $charcoal: #405258;
 $gray: #a1adb1;
 $silver: #ecf1f4;
 $white: #ffffff;
+$darkblack: #000000;
+$dark-grayish-green: #373a36;
 
 $basecolor: $charcoal;
 $headingColor: $black;
@@ -38,7 +40,10 @@ $gradient2: linear-gradient(
 );
 
 $font1: "Assistant";
+$font2: "Arimo";
+
 $baseFontSize: 18rem;
+$baseFontWeight: 500;
 $baseLineHeight: 1.5; // Golden ratio
 // Border Radius
 $border1: 4rem;
@@ -57,3 +62,7 @@ $animation3: 1s ease-in;
 $introContainer: 750rem;
 
 $black2: #373a36;
+
+$pricing_theme1: #e6f2f9;
+$pricing_theme2: #fef6e8;
+$pricing_theme3: #efe6f5;

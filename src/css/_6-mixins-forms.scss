@@ -1,13 +1,22 @@
 // *********************************************************************************************************************************************************************
 @mixin form {
-  padding: 20rem 30rem;
+  padding: 40rem;
   max-width: 765rem;
   margin: 30rem auto 30rem auto;
   float: none;
   border-radius: $borderRadius;
-  background-color: $sectionbg;
+  background-color: $black;
+  color: $white;
   @include tablet {
     padding: 20rem;
+  }
+
+  ::-webkit-input-placeholder {
+    color: rgba($black, 0.5);
+  }
+
+  ::placeholder {
+    color: rgba($black, 0.5);
   }
 
   h3 {
@@ -17,7 +26,8 @@
   div.legal-consent-container {
     p,
     .hs-form-booleancheckbox label {
-      @include b6;
+      @include b3;
+      color: $white;
     }
   }
 
@@ -33,18 +43,16 @@
       margin: 0;
 
       ul.hs-error-msgs {
-        animation: fadeIn2 0.5s ease;
         margin-bottom: 20rem;
 
         li {
           margin-bottom: 0;
-
           label {
             color: red;
             font-size: 18rem;
             text-align: center;
-            padding: 10rem 0 0;
-            margin: 20rem 0 0;
+            padding: 0 0 0;
+            margin: 0 0 0;
             display: block;
             flex: 0 0 100%;
             font-weight: normal;
@@ -57,147 +65,140 @@
     .hs-form-field {
       margin-bottom: 20rem;
       > label {
-        font-size: 13rem;
-        font-weight: 400;
-        line-height: 1.61;
+        @include b2;
+        color: $white;
+        margin-bottom: 8px;
+        display: block;
       }
     }
 
-    .input {
-      input[type="text"],
-      input[type="number"],
-      input[type="tel"],
-      input[type="email"] {
-        border: 1rem solid transparent;
-        border-radius: 4rem;
-        margin-top: 0rem;
+    .field,
+    .hs-form-field {
+      .input {
+        select,
+        input:not([type="checkbox"]),
+        input:not([type="radio"]),
+        input[type="text"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="email"] {
+          @include b3;
+          background-color: $white;
+          padding: 16rem;
+          width: 100%;
+          padding: 12rem 16rem;
+          width: 100%;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          height: 48px;
+          background: $white;
+          border: 1px solid $gray;
+          border-radius: 4px;
 
-        font-size: 13rem; // Note anything below 16rem will trigger the zoom feature on iOS
-        background-color: $white;
-        padding: 16rem;
-        width: 100%;
-        padding: 12rem 16rem;
-        width: 100%;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        height: 48px;
-
-        &.error,
-        &.invalid {
-          border: 1rem solid red;
+          &.error,
+          &.invalid {
+            border: 1rem solid red;
+          }
+          ::-webkit-input-placeholder,
+          &::placeholder {
+            color: rgba($black, 0.5);
+          }
         }
 
-        &::placeholder {
-          color: rgba($gray3, 1);
+        input[type="checkbox"],
+        input[type="radio"] {
+          width: auto;
         }
-      }
 
-      input[type="checkbox"],
-      input[type="radio"] {
-        width: auto;
-      }
+        input select {
+          cursor: pointer;
+        }
 
-      input select {
-        border: 0;
-        border-radius: 4rem;
-        margin-top: 0;
-        margin-bottom: 0;
-        font-size: 16rem; // Note anything below 16rem will trigger the zoom feature on iOS
-        background-color: $white;
-        cursor: pointer;
-      }
+        select {
+          @include b2;
+          appearance: none;
+          background: url("{{ get_asset_url('/Akoya/templates/images/select-arrow.png') }}")
+            no-repeat;
+          background-size: 13rem 8rem;
+          background-position: 97% 51%;
+          background-color: $white;
 
-      input[type="file"] {
-        font-size: 16rem;
-        font-family: $font1;
-        background-color: transparent;
-        position: relative;
-        font-weight: bold;
-        margin-bottom: 23rem;
-      }
+          cursor: pointer;
 
-      select {
-        appearance: none;
-        background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png")
-          no-repeat;
-        background-size: 13rem 8rem;
-        background-position: 97% 51%;
-        border: 0;
-        border-radius: 4rem;
-        margin-top: 0;
-        margin-bottom: 0;
-        font-size: 16rem; // Note anything below 16rem will trigger the zoom feature on iOS
-        background-color: $white;
-        padding: 16rem;
-        cursor: pointer;
-        // Note anything below 16rem will trigger the zoom feature on iOS
-      }
+          // Note anything below 16rem will trigger the zoom feature on iOS
+        }
 
-      & + .hs-error-msgs {
-        position: relative;
-        width: 100%;
-        padding-left: 0;
-        list-style: none;
-        text-align: center;
-        margin: 0rem 0 20rem;
-        padding: 0;
-        animation: fadeIn1 0.3s ease;
-
-        @include phone {
+        & + .hs-error-msgs {
           position: relative;
-        }
+          width: 100%;
+          padding-left: 0;
+          list-style: none;
+          text-align: left;
+          margin: 0rem;
+          padding: 0;
+          // animation: fadeIn1 0.3s ease;
 
-        li {
-          background: red;
-          border-radius: 5rem;
-          color: #fff;
-          display: inline-block;
-          line-height: 1.2;
-          padding: 5rem 8rem;
-          position: relative;
-          text-align: center;
-          position: absolute;
-          top: calc(100% + 4px);
-          left: 50%;
-          display: block;
-          transform: translateX(-50%);
-          z-index: 3;
-          width: 90%;
-
-          &:before {
-            border-style: solid;
-            border-width: 0 8rem 8rem 8rem;
-            bottom: 100%;
-            border-color: transparent transparent red transparent;
-            position: absolute;
-            height: 8rem;
-            width: 0rem;
-            content: "";
-            left: 0;
-            right: 0;
-            margin: auto;
+          @include phone {
+            position: relative;
           }
 
-          label {
-            font-size: 12rem;
-            font-family: $font1;
-            text-transform: uppercase;
-            letter-spacing: 1rem;
+          li {
+            margin: 0;
+            // background: red;
+            // border-radius: 5rem;
+            // color: #fff;
+            // display: inline-block;
+            // line-height: 1.2;
+            // padding: 5rem 8rem;
+            // position: relative;
+            // text-align: center;
+            // position: absolute;
+            // top: calc(100% + 4px);
+            // left: 50%;
+            // display: block;
+            // transform: translateX(-50%);
+            // z-index: 3;
+            // width: 90%;
+            color: red;
             display: inline-block;
-            font-weight: bold;
-            line-height: 1.4;
-            margin-bottom: 0;
-            margin-top: 1rem;
 
-            @include phone {
-              font-size: 12rem;
+            // &:before {
+            //   border-style: solid;
+            //   border-width: 0 8rem 8rem 8rem;
+            //   bottom: 100%;
+            //   border-color: transparent transparent red transparent;
+            //   position: absolute;
+            //   height: 8rem;
+            //   width: 0rem;
+            //   content: "";
+            //   left: 0;
+            //   right: 0;
+            //   margin: auto;
+            // }
+
+            label {
+              // font-size: 12rem;
+              // font-family: $font1;
+              // letter-spacing: 1rem;
+              // display: inline-block;
+              // font-weight: bold;
+              // line-height: 1.4;
+              // margin-bottom: 0;
+              // margin-top: 1rem;
+
+              @include b3;
+              margin-bottom: 0;
+              display: block;
+
+              @include phone {
+                font-size: 12rem;
+              }
             }
           }
         }
       }
     }
-
     .hs_upload_resume {
       margin-bottom: -3rem;
     }
@@ -205,12 +206,13 @@
     textarea {
       border: 0;
       border-radius: $border2;
-      margin-top: 3rem;
-      margin-bottom: 20rem;
+      margin-top: 0;
+      margin-bottom: 0;
       min-height: 100rem;
       font-size: 16rem; // Note anything below 16rem will trigger the zoom feature on iOS
       background-color: $white;
-      width: 100%;
+      width: 100% !important;
+      height: 140rem;
 
       &.invalid {
         border: 1px solid red;
@@ -355,6 +357,10 @@
 
     .hs-button {
       @include button;
+      width: 100%;
+    }
+    .hs-form__virality-link {
+      margin-top: 20px;
     }
   }
 }
@@ -381,7 +387,7 @@
       outline: none;
       padding-right: 125px;
       &::placeholder {
-        color: $sidebarplaceholder;
+        color: rgba($black, 0.5);
       }
     }
     .hs-error-msgs {

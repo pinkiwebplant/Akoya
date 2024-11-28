@@ -1,22 +1,65 @@
 {% set moduleName = 'u4m-accordion' %}
 {% include "../partials/u4-module-includes.html" %}
-  <div class='intro'>
-    <div class="heading">
-      {% if module.include_heading %}
-      <h2>{{ module.heading }}</h2>
-      {% endif %}
-      {% if module.include_copy %}
-      <p>{{ module.copy }}</p>
-      {% endif %}     
-    </div>
-  </div>
-  <div class='accordions'>
-  {# Using details.js as a polyfill for browsers that don't suppose details/open #}
-    {% for accordion in module.accordions %}
-    <details>
-      <summary>{{ accordion.summary }}</summary>
-      <div>{{ accordion.detail }}</div>
-    </details>
-    {% endfor %}
-  </div>
+
+<div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
+
+
+	{{macros.introGroup(module.intro_content)}}
+
+
+	<div class='accordions'>
+		{# Using details.js as a polyfill for browsers that don't suppose details/open #}
+		{% for item in module.accordion_item %}
+		<div class="accorion-item">
+			<div class="accordion_title">
+				<h4>{{ item.accordion_title }}
+					<span class="accordion_icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23124 1.23369C0.92292 1.54528 0.92292 2.05047 1.23124 2.36202L5.44178 6.61737C5.75009 6.92896 6.24988 6.92896 6.5582 6.61737L10.7688 2.36203C11.0771 2.05047 11.0771 1.54528 10.7688 1.23369C10.4605 0.922103 9.96059 0.922103 9.65228 1.23369L5.99999 4.9248L2.34766 1.23369C2.03934 0.922103 1.53955 0.922103 1.23124 1.23369Z" fill="#4CAF50" stroke="#00161D"/>
+						</svg>
+					</span>
+				</h4>
+			</div>
+			<div class="accordion_content">{{ item.content }}</div>
+		</div>
+		{% endfor %}
+	</div>
+
+</div>
+
+
+
 </section>
+
+{% require_js %}
+<script>
+	$('.{{ name }} .accorion-item:first-child').addClass('active');
+		$('.{{ name }} .accorion-item:first-child').children('.accordion_content').slideDown(250);
+	$('.accordion_title').click(function(){
+		$(this).parents('.accorion-item').siblings().removeClass('active');
+		$(this).parents().siblings('.accorion-item').children('.accordion_content').slideUp(250);
+		$(this).parent('.accorion-item').toggleClass('active');
+		$(this).next('.accordion_content').slideToggle(250);
+	});
+
+</script>
+{% end_require_js %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

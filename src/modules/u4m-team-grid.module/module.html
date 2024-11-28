@@ -1,62 +1,194 @@
 {% set moduleName = 'u4m-team-grid' %}
-{% set imageMax = 150 %}
-{% set bgImageMax = 1920 %}
-
-
 {% include "../partials/u4-module-includes.html" %}
 
-<div class="top-section">
-{% if module.include_heading %}
-<h2 class="heading">{{ module.heading }}</h2>
-{% endif %}  
-{% if module.include_sub_heading %}
-<h3 class="sub-heading">{{ module.sub_heading }}</h3>
-{% endif %}       
+<div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
+
+
+	{{macros.introGroup(module.intro_content)}}
+
+
+
+	<div class="tab_main">
+		<div class="tabber_nav">
+
+			{% set category = [] %}
+			{% for row in module.member_group %}
+			{% do category.append(row.select_tag) %}
+			{% endfor %}
+			{% for item in category|unique %}
+			<div class="tab_nav_item" data-filter="{{ item|replace(' ','') }}">
+				{% if item == 'board_members'%}
+				<a class="tab_nav"> Board Members</a>
+				{% endif %}
+				{% if item == 'executive_team'%}
+				<a class="tab_nav"> Executive Team</a>
+				{% endif %}
+				{% if item == 'additional_team'%}
+				<a class="tab_nav"> Additional Team</a>
+				{% endif %}
+			</div>
+			{% endfor %}
+
+		</div>
+
+		<div class="tabber_pannel">
+			<div class="tabber_pannel_item ">
+				<div class="flex_row">
+
+					{% for item in module.member_group %}
+					<div class="member" data-tags="{{ item.select_tag|replace(' ','') }}">
+						<div class="inner">
+							{% if item.member_image.src %}
+							<div class="member-image" >
+							<img class="{{ item.image_background_color }}" src="{{ item.member_image.src }}" alt="{{ item.member_image.alt|escape_attr }}">
+							</div>
+							{% endif %}
+
+							<div class="inner__inner">
+								{% if item.member_title %}
+								<p>{{ item.member_title }}</p>
+								{% endif %}
+								{% if item.member_name %}
+								<h4>{{ item.member_name }}</h4>
+								{% endif %}
+								{% if item.read_bio_text %}
+								<a class="view-bio">
+									{{ item.read_bio_text }} 	<svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+									<path d="M15 7.99995C15 7.84065 14.9229 7.64141 14.7686 7.52196L8.21335 0.709209C7.9434 0.430264 7.51928 0.430264 7.24933 0.709209C6.97947 1.0279 6.97947 1.46615 7.24933 1.74499L12.6093 7.28286H0.694071C0.308519 7.28286 0 7.60156 0 7.99995C0 8.39844 0.308519 8.71714 0.694071 8.71714H12.6093L7.24933 14.2949C6.97947 14.5737 6.97947 15.0119 7.24933 15.2908C7.51928 15.5697 7.9434 15.5697 8.21335 15.2908L14.7686 8.51789C14.9229 8.39844 15 8.1992 15 7.99995Z" fill="#00819E"/>
+									</svg>
+								</a>
+								{% endif %}
+							</div>
+						</div>
+						<div class='popup-content'>
+							<div class="page-center">
+
+								<div class='popup-content-inner'>
+									{% if item.member_image.src %}
+									<div class="member-image" >
+										<svg class="circle1" xmlns="http://www.w3.org/2000/svg" width="316" height="316" viewBox="0 0 316 316" fill="none">
+											<circle cx="158" cy="158" r="155" stroke="#D9E8ED" stroke-width="4.05112" stroke-linecap="round" stroke-dasharray="0.03 13.5"/>
+										</svg>
+										<svg class="circle2" xmlns="http://www.w3.org/2000/svg" width="270" height="270" viewBox="0 0 270 270" fill="none">
+											<circle cx="134.852" cy="134.853" r="132.642" stroke="#D9E8ED" stroke-width="4.05112" stroke-linecap="round" stroke-dasharray="0.03 13.5"/>
+										</svg>
+										<img class="{{ item.image_background_color }}" src="{{ item.member_image.src }}" alt="{{ item.member_image.alt|escape_attr }}" {% if item.image_background_color == 'purlple-bg' %} style="background-color: #efe6f5" {% endif %}>
+									</div>
+									{% endif %}
+									<div class="content-col">
+										{% if item.member_title %}
+										<p class="member-title">{{ item.member_title }}</p>
+										{% endif %}
+										{% if item.member_name %}
+										<h4>{{ item.member_name }}</h4>
+										{% endif %}
+										{{ item.popup_content.popup_content }}
+										<div class="social-links">
+											{% for item2 in item.popup_content.social_item %}
+											<div class="social-item">
+												{% set href = item2.social_link.url.href %}
+												{% if item2.social_link.url.type is equalto "EMAIL_ADDRESS" %}
+												{% set href = "mailto:" + href %}
+												{% endif %}
+												<a
+													 {% if item2.social_link.url.type is equalto "CALL_TO_ACTION"  %}
+													 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+													 {% else %}
+													 href="{{ href|escape_url }}"
+													 {% endif %}
+													 {% if item2.social_link.open_in_new_tab %}
+													 target="_blank"
+													 {% endif %}
+													 {% if item2.social_link.rel %}
+													 rel="{{ item2.social_link.rel|escape_attr }}"
+													 {% endif %}
+													 >
+													{% icon
+			name="{{ item2.icon_field.name }}"
+			style="{{ item2.icon_field.type }}"
+			unicode="{{ item2.icon_field.unicode }}"
+			icon_set="{{ item2.icon_field.icon_set }}"
+		%}
+												</a>
+											</div>
+											{% endfor %}
+										</div>
+										{{ item.pop_up_content }}
+										<div class="exit-wrap">
+											<div class="exit simple-exit">
+												<svg xmlns="http://www.w3.org/2000/svg" width="44" height="43" viewBox="0 0 44 43" fill="none">
+													<rect x="11.2065" y="11.0312" width="0.6" height="29.4" transform="rotate(-45 11.2065 11.0312)" fill="white" stroke="white" stroke-width="0.6"/>
+													<rect x="11.2065" y="31.3945" width="29.4" height="0.6" transform="rotate(-45 11.2065 31.3945)" fill="white" stroke="white" stroke-width="0.6"/>
+												</svg>
+											</div>
+										</div>
+									</div>
+
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					{% endfor %}
+
+
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+
+
 </div>
 
 
-<div class="member-wrap">
-{% for item in module.member_group %}
-{% unless item.hide_from_listing_ %}
-<div class="member {% if !item.pop_up_content %}no-bio{% endif %}">
-  <div class="inner">
-    {% if item.headshot.src %}<div class="headshot lazy" data-bg="{{ resize_image_url(item.headshot.src, 0,0,imageMax) }}"></div>{% endif %}
 
-    <div class="inner__inner">
-      <h4>{{ item.member_name }}</h4>
-      <p>{{ item.member_position }}</p>
-      <button class="view-bio">
-        View Biography
-      </button>
-      <div class="social-links">
-        {% if item.member_twitter_link %}<a href="{{ item.member_twitter_link }}" target="_blank" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"><path d="M10.053,7.988l5.631,8.024h-1.497L8.566,7.988H10.053z M21,6v12	c0,1.657-1.343,3-3,3H6c-1.657,0-3-1.343-3-3V6c0-1.657,1.343-3,3-3h12C19.657,3,21,4.343,21,6z M17.538,17l-4.186-5.99L16.774,7	h-1.311l-2.704,3.16L10.552,7H6.702l3.941,5.633L6.906,17h1.333l3.001-3.516L13.698,17H17.538z"></path></svg></a>{% endif %}
-        {% if item.member_linkedin_link %}<a href="{{ item.member_linkedin_link }}" target="_blank" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"><path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M9,17H6.477v-7H9 V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977 C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"></path></svg></a>{% endif %}
-      </div>
-    </div>
-  </div>
-  <div class='full-screen'>
-    <div class='circle'>
-      <div class="circle-inner">
-        <div class="inner">
-          <h3>{{ item.member_name }}</h3>
-          <h4>{{ item.member_position }}</h4>
-          <div class="social-links">
-        {% if item.member_twitter_link %}<a href="{{ item.member_twitter_link }}" target="_blank" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"><path d="M10.053,7.988l5.631,8.024h-1.497L8.566,7.988H10.053z M21,6v12	c0,1.657-1.343,3-3,3H6c-1.657,0-3-1.343-3-3V6c0-1.657,1.343-3,3-3h12C19.657,3,21,4.343,21,6z M17.538,17l-4.186-5.99L16.774,7	h-1.311l-2.704,3.16L10.552,7H6.702l3.941,5.633L6.906,17h1.333l3.001-3.516L13.698,17H17.538z"></path></svg></a>{% endif %}
-        {% if item.member_linkedin_link %}<a href="{{ item.member_linkedin_link }}" target="_blank" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"><path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M9,17H6.477v-7H9 V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977 C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"></path></svg></a>{% endif %}
-          </div>
-          {{ item.pop_up_content }}
-        </div>
-
-      </div>
-    </div>
-    <div class="exit-wrap">
-      <div class="exit simple-exit">
-        ✖
-      </div>
-    </div>
-  </div>
-</div>
-{% endunless%}
-{% endfor %}
-</div>
 </section>
+
+{% require_js %}
+<script>
+
+	
+	$(' .view-bio').click(function(){
+		$(this).parents('.member').addClass('popup-active');
+		$('body').addClass('popup-activee');
+	});
+	$('.exit').click(function(){
+		$('.member').removeClass('popup-active');
+		$('body').removeClass('popup-activee');
+	});
+
+	$(function($) {
+		$.autofilter();
+	});
+	$(document).ready(function() {
+	setTimeout(function() {
+		$('.{{name}} .tabber_nav .tab_nav_item:first-child').addClass('active').trigger('click');
+	}, 100);
+	});
+</script>
+{% end_require_js %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

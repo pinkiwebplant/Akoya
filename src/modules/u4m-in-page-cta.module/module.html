@@ -1,0 +1,26 @@
+{% set moduleName = 'u4m-in-page-cta' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
+	<div class="bg-options">
+		{% if module.module_overrides.change_inner_background_settings %}
+		{% if module.module_overrides.background_inner_settings.background_type == "color" %}
+		<div class="bg_overlay bg_color {{ module.module_overrides.background_inner_settings.select_color }}" style="opacity:  {{ module.module_overrides.background_inner_settings.opacity/ 100 }}">
+		</div>
+		{% endif %}
+		{% if  module.module_overrides.background_inner_settings.background_type == "gradient" %}
+		<div class="bg_overlay bg_gradient {{ module.module_overrides.background_inner_settings.select_gradient }}">
+		</div>
+		{% endif %}
+		{% endif %}
+		<div class="row">
+			<div class="left_content">
+				{{macros.introGroup(module.intro_content)}}	
+			</div>
+			<div class="right_img" style="background-image: url({{ module.image_field.src }})">
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+

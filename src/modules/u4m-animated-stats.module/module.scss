@@ -1,76 +1,142 @@
 @import "../../css/_module-imports";
-section.u4m-animated-stats {
-  margin-top: 100rem;
-  margin-bottom: 100rem;
-  &.reverse-text {
-    color: $white;
+
+.u4m-animated-stats {
+  padding-left: 40px;
+  padding-right: 40px;
+  @include tabletvert {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  .heading {
-    @include center;
-    @include h2;
-    text-align: center;
+  .full-width-container {
+    padding-left: 0;
+    padding-right: 0;
+    .intro_content {
+      margin-bottom: 48px;
+      .intro_title {
+        margin-bottom: 27px;
+      }
+    }
   }
-  .intro {
-    @include center;
-  }
-  div.statistics {
-    @include center;
+  .stats-items {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    &.items-four {
-      div.statistics__item {
-        flex-basis: calc(25% - 40rem);
-        @include tablet {
-          flex-basis: calc(50% - 40rem);
+    row-gap: 50px;
+    @include tabletvert {
+      row-gap: 20px;
+    }
+    .stats-item {
+      width: 20%;
+      text-align: center;
+      display: inline-block;
+
+      @include midlaptop {
+        width: 33.333%;
+      }
+
+      @include tabletvert {
+        width: 100%;
+      }
+
+      .stats-item-inn {
+        @include b2;
+        text-align: center;
+        color: $charcoal;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-right: $azure 1px solid;
+        @include tabletvert {
+          border-right: 0;
+          padding-left: 0;
+          padding-right: 0;
+          border-bottom: $azure 1px solid;
+          padding-bottom: 20px;
         }
-        @include phone {
-          flex: 0 0 100%;
+        .stats_icon_box {
+          line-height: 1;
+          margin-bottom: 12px;
+          font-size: 30px;
+          .material-symbols-outlined {
+            font-size: 30px;
+            display: block;
+          }
+          .img_icon {
+            width: 30px;
+            display: inline-block;
+          }
+        }
+        .stats-assets {
+          @include size18;
+          font-weight: 800;
+          line-height: 1.2;
+          letter-spacing: 0.02em;
+          color: $purlple;
+          margin-bottom: 12px;
+        }
+        .stats-numeric {
+          @include h1;
+          line-height: 1;
+          letter-spacing: -0.03em;
+          text-align: center;
+          margin-bottom: 12px;
+        }
+        .stats-content {
+          @include size18;
+          line-height: 1.5;
+          p:last-child {
+            margin-bottom: 0;
+          }
         }
       }
     }
-    div.statistics__item {
-      text-align: center;
-      margin: 20rem;
-      flex-basis: calc(33.333% - 40rem);
-      flex-grow: 0;
-      flex-shrink: 0;
-      @include tablet {
-        flex-basis: calc(50% - 40rem);
-      }
-      @include phone {
-        flex: 0 0 100%;
-      }
-      .image {
-        min-height: 70rem;
-        img {
-          max-width: 80rem;
-          text-align: center;
-          margin: 0 auto;
-          display: block;
+
+    @include tablet {
+      .stats-item:nth-child(5n) {
+        .countdown-item-inn {
+          border-right: $azure 1px solid;
         }
       }
-      .count,
-      .number {
-        font-size: 50rem;
-        font-weight: bold;
+      .stats-item:nth-child(3n),
+      .stats-item:last-child {
+        .stats-item-inn {
+          border-right: 0;
+        }
       }
-      .currency {
-        padding-right: 5rem;
-        //vertical-align: text-bottom;
-        font-size: 50rem;
-        font-weight: bold;
+    }
+
+    @include tabletvert {
+      .stats-item:last-child {
+        .stats-item-inn {
+          border-bottom: 0;
+          padding-bottom: 0;
+        }
       }
-      .unit {
-        padding-left: 5rem;
-        //vertical-align: text-bottom;
-        font-size: 50rem;
-        font-weight: bold;
+    }
+
+    .stats-item:nth-child(5n),
+    .stats-item:last-child {
+      .stats-item-inn {
+        border-right: 0;
       }
-      .caption {
-        display: block;
-        font-weight: bold;
+    }
+  }
+
+  &.reverse-text {
+    .stats_icon_box,
+    .stats-content {
+      color: $white;
+    }
+    .stats-items {
+      .stats-item {
+        .stats-item-inn {
+          .stats-assets {
+            color: $white;
+          }
+          .stats-numeric {
+            color: $white;
+          }
+        }
       }
     }
   }

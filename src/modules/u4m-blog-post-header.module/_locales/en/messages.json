@@ -1,0 +1,207 @@
+{
+  "author.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "author.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "author.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "author.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "author.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.background_type.choices.color" : {
+    "message" : "Color",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.background_type.choices.gradient" : {
+    "message" : "Gradient",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.background_type.default" : {
+    "message" : "gradient",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.background_type.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.background_type.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.background_type.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.background_type.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.label" : {
+    "message" : "Field group",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.name" : {
+    "message" : "u4m-blog-listing",
+    "description" : "",
+    "placeholders" : null
+  },
+  "background_settings.opacity.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.opacity.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.opacity.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.opacity.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.opacity.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.select_color.choices.value 1" : {
+    "message" : "Label 1",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.select_color.choices.value 2" : {
+    "message" : "Label 2",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.select_color.default" : {
+    "message" : "azure-bg",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.select_color.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.select_color.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.select_color.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.select_color.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.select_gradient.choices.value 1" : {
+    "message" : "Label 1",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.select_gradient.choices.value 2" : {
+    "message" : "Label 2",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.select_gradient.default" : {
+    "message" : "gradient2",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.select_gradient.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.select_gradient.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.select_gradient.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_settings.select_gradient.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_type.choices.value 1" : {
+    "message" : "Label 1",
+    "description" : null,
+    "placeholders" : null
+  },
+  "background_type.choices.value 2" : {
+    "message" : "Label 2",
+    "description" : null,
+    "placeholders" : null
+  },
+  "featured_post.name" : {
+    "message" : "u4m-blog-listing",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "u4m-blog-post-header",
+    "description" : "",
+    "placeholders" : null
+  }
+}

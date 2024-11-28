@@ -64,7 +64,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "Top Tabber module headline."
+    "default" : "Left Tabber module headline."
   }, {
     "id" : "2f10bd6e-cf85-1cf6-5a4f-fa75e1e78238",
     "name" : "include_content",
@@ -75,6 +75,28 @@
     "display" : "checkbox",
     "type" : "boolean",
     "default" : true
+  }, {
+    "id" : "03244556-89bc-089c-d02a-4084a0c4bd6c",
+    "name" : "content_style",
+    "display_width" : null,
+    "label" : "Content Style",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_content",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "theme", "Theme" ], [ "cstyle1", "Style 1" ], [ "cstyle2", "Style 2" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "theme"
   }, {
     "id" : "0dc03814-a33d-3284-f2d6-b130f633f03d",
     "name" : "content",
@@ -263,8 +285,9 @@
     "include_eyebrow_text" : false,
     "eyebrow_text" : "Eyebrow Text",
     "include_heading" : true,
-    "heading" : "Top Tabber module headline.",
+    "heading" : "Left Tabber module headline.",
     "include_content" : true,
+    "content_style" : "theme",
     "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco labo.</p>",
     "include_button" : false,
     "button_group" : [ {
@@ -340,167 +363,41 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "Empower consumers"
+    "default" : "Step one headline here."
   }, {
-    "id" : "4f333dff-fded-8b66-7181-ae43a21a323b",
-    "name" : "title",
+    "id" : "0b173a42-8482-78a9-3d98-2e067c8366f9",
+    "name" : "description_style",
     "display_width" : null,
-    "label" : "Title 2",
+    "label" : "Description Style",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_content",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "theme", "Theme" ], [ "cstyle1", "Style 1" ], [ "cstyle2", "Style 2" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "cstyle1"
+  }, {
+    "id" : "1eda8629-d31f-aabe-bc14-4c5922b7d746",
+    "name" : "description",
+    "display_width" : null,
+    "label" : "Description",
     "required" : false,
     "locked" : false,
     "validation_regex" : "",
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "Reliable network"
-  }, {
-    "id" : "a0af2e35-047f-4967-4237-63668a4babc5",
-    "name" : "content",
-    "display_width" : null,
-    "label" : "Content",
-    "required" : false,
-    "locked" : false,
-    "type" : "richtext",
-    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>"
-  }, {
-    "id" : "4a32b6ca-f4db-bbf0-d33a-078921eb90d8",
-    "name" : "button_group",
-    "display_width" : null,
-    "label" : "Button Group",
-    "required" : false,
-    "locked" : false,
-    "occurrence" : {
-      "min" : null,
-      "max" : 2,
-      "sorting_label_field" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
-      "default" : 1
-    },
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "intro_content.include_button",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "children" : [ {
-      "id" : "420f43d4-eb7a-59b9-3316-491b67abc2dc",
-      "name" : "button_type",
-      "display_width" : null,
-      "label" : "Button Type",
-      "required" : false,
-      "locked" : false,
-      "display" : "select",
-      "choices" : [ [ "std", "Standard" ], [ "cta", "Call to Action" ] ],
-      "multiple" : false,
-      "reordering_enabled" : true,
-      "preset" : null,
-      "type" : "choice",
-      "default" : "std"
-    }, {
-      "id" : "9a07b26c-8467-a5f3-fe5b-118421c9f042",
-      "name" : "button_theme",
-      "display_width" : null,
-      "label" : "Button Theme",
-      "required" : false,
-      "locked" : false,
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "tabber_group.button_group.button_type",
-        "controlling_value_regex" : "std",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "display" : "select",
-      "choices" : [ [ "hs-button", "Primary" ], [ "arrow-link", "Secondary" ] ],
-      "multiple" : false,
-      "reordering_enabled" : true,
-      "preset" : null,
-      "type" : "choice",
-      "default" : "arrow-link"
-    }, {
-      "id" : "55b11f69-f797-4431-91d1-2344abc9ebdc",
-      "name" : "button_text",
-      "display_width" : null,
-      "label" : "Button Text",
-      "required" : false,
-      "locked" : false,
-      "validation_regex" : "",
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "tabber_group.button_group.button_type",
-        "controlling_value_regex" : "std",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "allow_new_line" : false,
-      "show_emoji_picker" : false,
-      "type" : "text",
-      "default" : "Learn more"
-    }, {
-      "id" : "3a19658f-1f97-34ff-7860-8d1aab80777e",
-      "name" : "link",
-      "display_width" : null,
-      "label" : "Link",
-      "required" : false,
-      "locked" : false,
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "tabber_group.button_group.button_type",
-        "controlling_value_regex" : "std",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "PHONE_NUMBER" ],
-      "show_advanced_rel_options" : false,
-      "type" : "link",
-      "default" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
-      "id" : "02a0b32e-e7c4-35a2-968e-ba2bd095f4fd",
-      "name" : "cta",
-      "display_width" : null,
-      "label" : "CTA",
-      "required" : false,
-      "locked" : false,
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "tabber_group.button_group.button_type",
-        "controlling_value_regex" : "cta",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
-      "type" : "cta"
-    } ],
-    "tab" : "CONTENT",
-    "expanded" : false,
-    "group_occurrence_meta" : null,
-    "type" : "group",
-    "default" : [ {
-      "button_type" : "std",
-      "button_theme" : "arrow-link",
-      "button_text" : "Learn more",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    } ]
+    "default" : "Nunc eget rutrum nibh, at feugiat velit. Vivamus maximus et quam vitae semper. Ut ac gravida elit."
   }, {
     "id" : "a5c3fb8a-e72f-222e-7518-5e41ef4951da",
     "name" : "include_stats",
@@ -671,23 +568,9 @@
       "max_width" : 618,
       "max_height" : 412
     },
-    "nav_text" : "Empower consumers",
-    "title" : "Reliable network",
-    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>",
-    "button_group" : [ {
-      "button_type" : "std",
-      "button_theme" : "arrow-link",
-      "button_text" : "Learn more",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    } ],
+    "nav_text" : "Step one headline here.",
+    "description_style" : "cstyle1",
+    "description" : "Nunc eget rutrum nibh, at feugiat velit. Vivamus maximus et quam vitae semper. Ut ac gravida elit.",
     "include_stats" : true,
     "stats_group" : [ {
       "select_icon_type" : "image",
@@ -731,23 +614,9 @@
       "max_width" : 618,
       "max_height" : 412
     },
-    "nav_text" : "Empower consumers",
-    "title" : "Reliable network",
-    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>",
-    "button_group" : [ {
-      "button_type" : "std",
-      "button_theme" : "arrow-link",
-      "button_text" : "Learn more",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    } ],
+    "nav_text" : "Step one headline here.",
+    "description_style" : "cstyle1",
+    "description" : "Nunc eget rutrum nibh, at feugiat velit. Vivamus maximus et quam vitae semper. Ut ac gravida elit.",
     "include_stats" : true,
     "stats_group" : [ {
       "select_icon_type" : "image",
@@ -791,23 +660,9 @@
       "max_width" : 618,
       "max_height" : 412
     },
-    "nav_text" : "Empower consumers",
-    "title" : "Reliable network",
-    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>",
-    "button_group" : [ {
-      "button_type" : "std",
-      "button_theme" : "arrow-link",
-      "button_text" : "Learn more",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    } ],
+    "nav_text" : "Step one headline here.",
+    "description_style" : "cstyle1",
+    "description" : "Nunc eget rutrum nibh, at feugiat velit. Vivamus maximus et quam vitae semper. Ut ac gravida elit.",
     "include_stats" : true,
     "stats_group" : [ {
       "select_icon_type" : "image",
@@ -851,23 +706,9 @@
       "max_width" : 618,
       "max_height" : 412
     },
-    "nav_text" : "Empower consumers",
-    "title" : "Reliable network",
-    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>",
-    "button_group" : [ {
-      "button_type" : "std",
-      "button_theme" : "arrow-link",
-      "button_text" : "Learn more",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    } ],
+    "nav_text" : "Step one headline here.",
+    "description_style" : "cstyle1",
+    "description" : "Nunc eget rutrum nibh, at feugiat velit. Vivamus maximus et quam vitae semper. Ut ac gravida elit.",
     "include_stats" : true,
     "stats_group" : [ {
       "select_icon_type" : "image",

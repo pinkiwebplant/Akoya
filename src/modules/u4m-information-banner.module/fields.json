@@ -1,0 +1,10 @@
+[ {
+  "id" : "990a03c8-dbbb-0f76-ac32-d20164864fd9",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p><a href=\"#\">Announcement banner text goes here which can be as long as needed.</a></p>"
+} ]

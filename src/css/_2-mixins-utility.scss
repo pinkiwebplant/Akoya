@@ -33,6 +33,12 @@
   }
 }
 
+@mixin midlaptop {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
 @mixin navbreak {
   @media (max-width: 1280px) {
     @content;

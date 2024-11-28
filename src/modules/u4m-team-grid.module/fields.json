@@ -1,534 +1,1613 @@
-[{
-  "default": true,
-  "display": "checkbox",
-  "display_width": null,
-  "id": "22ea157e-aa5a-06e3-df76-b78f4f1ce94e",
-  "label": "Include Heading",
-  "locked": false,
-  "name": "include_heading",
-  "required": false,
-  "type": "boolean"
-}, {
-  "allow_new_line": false,
-  "default": "Heading Text Here",
-  "display_width": null,
-  "id": "9905f5ff-7880-57de-f150-0508567addb3",
-  "label": "Heading",
-  "locked": false,
-  "name": "heading",
-  "required": false,
-  "show_emoji_picker": false,
-  "type": "text",
-  "validation_regex": "",
-  "visibility": {
-    "controlling_field": "22ea157e-aa5a-06e3-df76-b78f4f1ce94e",
-    "controlling_value_regex": "true",
-    "operator": "EQUAL"
+[ {
+  "id" : "081bfb60-a75d-a475-e7fb-44c8a8969c1a",
+  "name" : "intro_content",
+  "display_width" : null,
+  "label" : "Intro Content",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "c5ccdda8-6960-e255-a51f-c61077a633ca",
+    "name" : "include_eyebrow_text",
+    "display_width" : null,
+    "label" : "Include Eyebrow Text",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "5baff6ad-02e1-6b84-3429-260a0ded7ef6",
+    "name" : "eyebrow_text",
+    "display_width" : null,
+    "label" : "Eyebrow Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_eyebrow_text",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Optional Eyebrow Text"
+  }, {
+    "id" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
+    "name" : "include_heading",
+    "display_width" : null,
+    "label" : "Include Heading",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "c7aa6b72-58e0-4caa-9b63-4da765e70069",
+    "name" : "heading",
+    "display_width" : null,
+    "label" : "Heading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Team Grid module headline."
+  }, {
+    "id" : "2f10bd6e-cf85-1cf6-5a4f-fa75e1e78238",
+    "name" : "include_content",
+    "display_width" : null,
+    "label" : "Include Content",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "50e79c36-b6a5-5ab0-1502-e7248fc5b7ed",
+    "name" : "content_style",
+    "display_width" : null,
+    "label" : "Content Style",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_content",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "theme", "Theme" ], [ "cstyle1", "Style 1" ], [ "cstyle2", "Style 2" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "theme"
+  }, {
+    "id" : "0dc03814-a33d-3284-f2d6-b130f633f03d",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_content",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "richtext",
+    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>"
+  }, {
+    "id" : "4a517c8a-8c15-a721-dca5-db7b58a8c2a7",
+    "name" : "include_button",
+    "display_width" : null,
+    "label" : "Include Button",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "3d861e2f-6981-78b6-57a8-d59863169561",
+    "name" : "button_group",
+    "display_width" : null,
+    "label" : "Button Group",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : 2,
+      "sorting_label_field" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
+      "default" : 2
+    },
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_button",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
+      "name" : "button_type",
+      "display_width" : null,
+      "label" : "Button Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "std", "Standard" ], [ "cta", "Call to Action" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "std"
+    }, {
+      "id" : "9d5fe057-d461-68d1-9845-607ec6d892ff",
+      "name" : "button_theme",
+      "display_width" : null,
+      "label" : "Button Theme",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "hs-button", "Primary" ], [ "arrow-link", "Secondary" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "hs-button"
+    }, {
+      "id" : "105bbd69-dccc-fd6b-3d3d-3f4063128744",
+      "name" : "button_text",
+      "display_width" : null,
+      "label" : "Button Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Button"
+    }, {
+      "id" : "f1ccd7fd-a18d-1262-3c67-476cdf5424cd",
+      "name" : "link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "PHONE_NUMBER" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "ef46548d-bcc7-841c-4635-d4d035ae7022",
+      "name" : "cta",
+      "display_width" : null,
+      "label" : "CTA",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "cta",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "type" : "cta"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : [ {
+      "button_type" : "std",
+      "button_theme" : "hs-button",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "button_type" : "std",
+      "button_theme" : "hs-button",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "include_eyebrow_text" : true,
+    "eyebrow_text" : "Optional Eyebrow Text",
+    "include_heading" : true,
+    "heading" : "Team Grid module headline.",
+    "include_content" : true,
+    "content_style" : "theme",
+    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>",
+    "include_button" : false,
+    "button_group" : [ {
+      "button_type" : "std",
+      "button_theme" : "hs-button",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "button_type" : "std",
+      "button_theme" : "hs-button",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
   }
 }, {
-  "default": true,
-  "display": "checkbox",
-  "display_width": null,
-  "id": "18a91992-6ec3-ed61-76e0-ac4b96fd83ba",
-  "label": "Include Sub Heading",
-  "locked": false,
-  "name": "include_sub_heading",
-  "required": false,
-  "type": "boolean"
+  "id" : "a86e97ed-45e2-43bd-129b-ae82b3a5f70a",
+  "name" : "member_group",
+  "display_width" : null,
+  "label" : "Member Group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "844ade4f-5545-4b67-b944-1c4a602f44d1",
+    "default" : 9
+  },
+  "children" : [ {
+    "id" : "cef2634c-a0a2-0cb0-b38f-d3330c41f5af",
+    "name" : "select_tag",
+    "display_width" : null,
+    "label" : "Select Tag",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "board_members", "Board Members" ], [ "executive_team", "Executive Team" ], [ "additional_team", "Additional Team" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "board_members"
+  }, {
+    "id" : "ed25becc-c354-2326-5ff1-c293855a18c5",
+    "name" : "image_background_color",
+    "display_width" : null,
+    "label" : "Image Background Color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.background_settings.background_type",
+      "controlling_value_regex" : "color",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "primary-teal-bg", "Primary Teal" ], [ "secondary-teal-bg", "Secondary Teal" ], [ "azure-bg", "Azure" ], [ "purlple-bg", "Purlple" ], [ "black-bg", "Rich Black" ], [ "charcoal-bg", "Charcoal" ], [ "gray-bg", "Gray" ], [ "silver-bg", "Silver" ], [ "white-bg", "White" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "purlple-bg"
+  }, {
+    "id" : "5d1e5eda-076f-e55d-e11f-996170496d68",
+    "name" : "member_image",
+    "display_width" : null,
+    "label" : "Member Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    }
+  }, {
+    "id" : "7bac0074-f5df-8ffc-59e4-c01f257af666",
+    "name" : "member_name",
+    "display_width" : null,
+    "label" : "Member Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Firstname Longlastname"
+  }, {
+    "id" : "844ade4f-5545-4b67-b944-1c4a602f44d1",
+    "name" : "member_title",
+    "display_width" : null,
+    "label" : "Member Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Person’s Title Goes Here"
+  }, {
+    "id" : "f6409499-8f5c-8381-d46d-3300b128fc62",
+    "name" : "read_bio_text",
+    "display_width" : null,
+    "label" : "Read Bio Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Read Bio"
+  }, {
+    "id" : "2bf8fa6d-8c13-d3aa-7b57-10f8fd2ba5ab",
+    "name" : "popup_content",
+    "display_width" : null,
+    "label" : "Popup Content",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "c6402112-ff12-6796-f98f-75e5394d5c0e",
+      "name" : "popup_content",
+      "display_width" : null,
+      "label" : "Content",
+      "required" : false,
+      "locked" : false,
+      "type" : "richtext",
+      "default" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>"
+    }, {
+      "id" : "968d1b79-1890-a537-1b76-9e5ce1d493f0",
+      "name" : "social_item",
+      "display_width" : null,
+      "label" : "Social Item",
+      "required" : false,
+      "locked" : false,
+      "occurrence" : {
+        "min" : null,
+        "max" : null,
+        "sorting_label_field" : "e42cbdd3-a599-b816-a9e4-92982b6ddb22",
+        "default" : 2
+      },
+      "children" : [ {
+        "id" : "e42cbdd3-a599-b816-a9e4-92982b6ddb22",
+        "name" : "icon_field",
+        "display_width" : null,
+        "label" : "Icon",
+        "required" : false,
+        "locked" : false,
+        "icon_set" : "fontawesome-6.4.2",
+        "type" : "icon",
+        "default" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        }
+      }, {
+        "id" : "17cb5f56-83c5-c799-ea4b-e9a92eb69bc1",
+        "name" : "social_link",
+        "display_width" : null,
+        "label" : "Social Link",
+        "required" : false,
+        "locked" : false,
+        "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+        "show_advanced_rel_options" : false,
+        "type" : "link",
+        "default" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "default" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : [ {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "Facebook F",
+          "unicode" : "f39e",
+          "type" : "REGULAR"
+        },
+        "social_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  } ]
 }, {
-  "allow_new_line": false,
-  "default": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.",
-  "display_width": null,
-  "id": "e324c31c-2b23-7e41-fb55-8a78d7b4fe4b",
-  "label": "Sub Heading",
-  "locked": false,
-  "name": "sub_heading",
-  "required": false,
-  "show_emoji_picker": false,
-  "type": "text",
-  "validation_regex": "",
-  "visibility": {
-    "controlling_field": "18a91992-6ec3-ed61-76e0-ac4b96fd83ba",
-    "controlling_value_regex": "true",
-    "operator": "EQUAL"
+  "id" : "module_overrides",
+  "name" : "module_overrides",
+  "display_width" : null,
+  "label" : "Module Overrides",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "enable_overrides",
+    "name" : "enable_overrides",
+    "display_width" : null,
+    "label" : "Enable Overrides",
+    "help_text" : "Toggle to override section ID and vertical margin. ",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "module_overrides.section_id",
+    "name" : "section_id",
+    "display_width" : null,
+    "label" : "Section ID",
+    "help_text" : "The value you type here will be the anchor link for this section. Should be all lowercase and include dashes instead of spaces. This should be a unique value per module.",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "module_overrides.top_margin",
+    "name" : "top_margin",
+    "display_width" : null,
+    "label" : "Top Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "top-margin-default", "Default" ], [ "top-margin-none", "None" ], [ "top-margin-small", "Small" ], [ "top-margin-medium", "Medium" ], [ "top-margin-large", "Large" ], [ "top-margin-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "top-margin-default"
+  }, {
+    "id" : "custom_top_margin",
+    "name" : "custom_top_margin",
+    "display_width" : null,
+    "label" : "Custom Top Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 100
+  }, {
+    "id" : "custom_top_margin_mobile",
+    "name" : "custom_top_margin_mobile",
+    "display_width" : null,
+    "label" : "Custom Top Margin Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 50
+  }, {
+    "id" : "module_overrides.bottom_margin",
+    "name" : "bottom_margin",
+    "display_width" : null,
+    "label" : "Bottom Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "bottom-margin-default", "Default" ], [ "bottom-margin-none", "None" ], [ "bottom-margin-small", "Small" ], [ "bottom-margin-medium", "Medium" ], [ "bottom-margin-large", "Large" ], [ "bottom-margin-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "bottom-margin-default"
+  }, {
+    "id" : "custom_bottom_margin",
+    "name" : "custom_bottom_margin",
+    "display_width" : null,
+    "label" : "Custom Bottom Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 100
+  }, {
+    "id" : "custom_bottom_margin_mobile",
+    "name" : "custom_bottom_margin_mobile",
+    "display_width" : null,
+    "label" : "Custom Bottom Margin Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 50
+  }, {
+    "id" : "module_overrides.top_padding",
+    "name" : "top_padding",
+    "display_width" : null,
+    "label" : "Top Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "top-padding-default", "Default" ], [ "top-padding-none", "None" ], [ "top-padding-small", "Small" ], [ "top-padding-medium", "Medium" ], [ "top-padding-large", "Large" ], [ "top-padding-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "top-padding-default"
+  }, {
+    "id" : "custom_top_padding",
+    "name" : "custom_top_padding",
+    "display_width" : null,
+    "label" : "Custom Top Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 100
+  }, {
+    "id" : "custom_top_padding_mobile",
+    "name" : "custom_top_padding_mobile",
+    "display_width" : null,
+    "label" : "Custom Top Padding Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 50
+  }, {
+    "id" : "module_overrides.bottom_padding",
+    "name" : "bottom_padding",
+    "display_width" : null,
+    "label" : "Bottom Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "bottom-padding-default", "Default" ], [ "bottom-padding-none", "None" ], [ "bottom-padding-small", "Small" ], [ "bottom-padding-medium", "Medium" ], [ "bottom-padding-large", "Large" ], [ "bottom-padding-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "bottom-padding-default"
+  }, {
+    "id" : "custom_bottom_padding",
+    "name" : "custom_bottom_padding",
+    "display_width" : null,
+    "label" : "Custom Bottom Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 100
+  }, {
+    "id" : "custom_bottom_padding_mobile",
+    "name" : "custom_bottom_padding_mobile",
+    "display_width" : null,
+    "label" : "Custom Bottom Padding Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 50
+  }, {
+    "id" : "3eccf45d-b0dc-4bac-42a0-f923e4405158",
+    "name" : "reverse_text",
+    "display_width" : null,
+    "label" : "Reverse Text",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "7147a273-6d14-b662-c439-5916062f0f4f",
+    "name" : "container_full_width",
+    "display_width" : null,
+    "label" : "Container Full Width",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.enable_overrides",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "94e04306-ecc1-4735-09fd-9b66482a8101",
+    "name" : "background_settings",
+    "display_width" : null,
+    "label" : "Background Settings",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.enable_overrides",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "3c812905-0c66-421d-6e7e-7a7109acdd49",
+      "name" : "background_type",
+      "display_width" : null,
+      "label" : "Background Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "color", "Color" ], [ "gradient", "Gradient" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "color"
+    }, {
+      "id" : "4ea36da9-c8a6-adf2-7460-cbf4d98190fd",
+      "name" : "select_color",
+      "display_width" : null,
+      "label" : "Select Color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "color",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "primary-teal-bg", "Primary Teal" ], [ "secondary-teal-bg", "Secondary Teal" ], [ "azure-bg", "Azure" ], [ "purlple-bg", "Purlple" ], [ "black-bg", "Rich Black" ], [ "charcoal-bg", "Charcoal" ], [ "gray-bg", "Gray" ], [ "silver-bg", "Silver" ], [ "white-bg", "White" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "azure-bg"
+    }, {
+      "id" : "6a1736ef-8211-436a-9aee-797310e60c0f",
+      "name" : "opacity",
+      "display_width" : null,
+      "label" : "Opacity",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "color",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "slider",
+      "min" : 0,
+      "max" : 100,
+      "step" : 10,
+      "suffix" : "%",
+      "type" : "number",
+      "default" : 40
+    }, {
+      "id" : "b8c2d9fa-1401-0767-9600-41b009a18cb8",
+      "name" : "select_gradient",
+      "display_width" : null,
+      "label" : "Select Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "gradient1", "Gradient 1" ], [ "gradient2", "Gradient 2" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "gradient1"
+    }, {
+      "id" : "aa05dd2c-e2fc-09ed-683f-27cb86b832db",
+      "name" : "select_background_position",
+      "display_width" : null,
+      "label" : "Select Background Position",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : null,
+        "property" : null,
+        "operator" : null,
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "inside", "Inside" ], [ "full_with", "Full Width" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "full_with"
+    }, {
+      "id" : "c75b6549-ea08-5066-611a-1f74bcc03b0a",
+      "name" : "include_overlay_image",
+      "display_width" : null,
+      "label" : "Include Overlay Image",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "e957ef56-6597-8c82-e7ed-3330bf04e2bb",
+      "name" : "overlay_image",
+      "display_width" : null,
+      "label" : "Overlay Image",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.include_overlay_image",
+        "controlling_value_regex" : "true",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "children" : [ {
+        "id" : "1965e4f3-7991-b422-3270-f292401a6d07",
+        "name" : "overlay_image",
+        "display_width" : null,
+        "label" : "Overlay Image",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "module_overrides.background_settings.include_overlay_image",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "responsive" : true,
+        "resizable" : false,
+        "show_loading" : false,
+        "type" : "image",
+        "default" : {
+          "size_type" : "auto",
+          "src" : "",
+          "alt" : null,
+          "loading" : "lazy"
+        }
+      }, {
+        "id" : "4307fa0c-f421-4fd2-c857-ffd919526a5c",
+        "name" : "overlay_image_size",
+        "display_width" : null,
+        "label" : "Overlay Image Size",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "module_overrides.background_settings.overlay_image.overlay_image",
+          "controlling_value_regex" : "true",
+          "property" : "src",
+          "operator" : "NOT_EMPTY",
+          "access" : null
+        },
+        "display" : "select",
+        "choices" : [ [ "cover", "Full" ], [ "auto", "Auto" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "cover"
+      }, {
+        "id" : "157c690e-a323-5991-bdcc-5d89c6a5e210",
+        "name" : "overlay_image_position",
+        "display_width" : null,
+        "label" : "Overlay Image Position",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "module_overrides.background_settings.overlay_image.overlay_image",
+          "controlling_value_regex" : "true",
+          "property" : "src",
+          "operator" : "NOT_EMPTY",
+          "access" : null
+        },
+        "display" : "select",
+        "choices" : [ [ "left", "Lelft" ], [ "right", "Right" ], [ "center", "Center" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "center"
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "default" : {
+        "overlay_image" : {
+          "size_type" : "auto",
+          "src" : "",
+          "alt" : null,
+          "loading" : "lazy"
+        },
+        "overlay_image_size" : "cover",
+        "overlay_image_position" : "center"
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : true,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : {
+      "background_type" : "color",
+      "select_color" : "azure-bg",
+      "opacity" : 40,
+      "select_gradient" : "gradient1",
+      "select_background_position" : "full_with",
+      "include_overlay_image" : false,
+      "overlay_image" : {
+        "overlay_image" : {
+          "size_type" : "auto",
+          "src" : "",
+          "alt" : null,
+          "loading" : "lazy"
+        },
+        "overlay_image_size" : "cover",
+        "overlay_image_position" : "center"
+      }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "enable_overrides" : true,
+    "top_margin" : "top-margin-default",
+    "custom_top_margin" : 100,
+    "custom_top_margin_mobile" : 50,
+    "bottom_margin" : "bottom-margin-default",
+    "custom_bottom_margin" : 100,
+    "custom_bottom_margin_mobile" : 50,
+    "top_padding" : "top-padding-default",
+    "custom_top_padding" : 100,
+    "custom_top_padding_mobile" : 50,
+    "bottom_padding" : "bottom-padding-default",
+    "custom_bottom_padding" : 100,
+    "custom_bottom_padding_mobile" : 50,
+    "reverse_text" : false,
+    "container_full_width" : false,
+    "background_settings" : {
+      "background_type" : "color",
+      "select_color" : "azure-bg",
+      "opacity" : 40,
+      "select_gradient" : "gradient1",
+      "select_background_position" : "full_with",
+      "include_overlay_image" : false,
+      "overlay_image" : {
+        "overlay_image" : {
+          "size_type" : "auto",
+          "src" : "",
+          "alt" : null,
+          "loading" : "lazy"
+        },
+        "overlay_image_size" : "cover",
+        "overlay_image_position" : "center"
+      }
+    }
   }
-}, {
-  "children": [{
-    "default": false,
-    "display": "checkbox",
-    "display_width": null,
-    "help_text": "Check this to hide this item from the current page. ",
-    "id": "5aad1e05-fe24-703e-7d00-b6cdc7796865",
-    "label": "Hide from Listing?",
-    "locked": false,
-    "name": "hide_from_listing_",
-    "required": false,
-    "type": "boolean"
-  }, {
-    "default": {
-      "src": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/patrick-headshot.jpg",
-      "alt": "Patrick"
-    },
-    "display_width": null,
-    "help_text": "",
-    "id": "7aef3045-fbf1-dae1-77b0-8f0b660f6eae",
-    "label": "Headshot",
-    "locked": false,
-    "name": "headshot",
-    "required": false,
-    "resizable": true,
-    "responsive": false,
-    "show_loading": false,
-    "type": "image"
-  }, {
-    "allow_new_line": false,
-    "default": "Firstname Lastname",
-    "display_width": null,
-    "id": "051db38d-f122-b792-cba2-5a80a230dbba",
-    "label": "Member Name",
-    "locked": false,
-    "name": "member_name",
-    "required": false,
-    "show_emoji_picker": false,
-    "type": "text",
-    "validation_regex": ""
-  }, {
-    "allow_new_line": false,
-    "default": "Director of Marketing, Title Division",
-    "display_width": null,
-    "id": "f0d3b5d3-e1d4-0190-b485-069861a4486f",
-    "label": "Member Position",
-    "locked": false,
-    "name": "member_position",
-    "required": false,
-    "show_emoji_picker": false,
-    "type": "text",
-    "validation_regex": ""
-  }, {
-    "default": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-    "display_width": null,
-    "id": "1be46cfa-d852-1f4e-7b55-2f7a7e0ac9df",
-    "label": "Pop Up Content",
-    "locked": false,
-    "name": "pop_up_content",
-    "required": false,
-    "type": "richtext"
-  }, {
-    "allow_new_line": false,
-    "default": "https://twitter.com/NewBreedRevenue",
-    "display_width": null,
-    "id": "76191295-e74a-675b-c62d-4ce88be4bb93",
-    "label": "Member Twitter Link",
-    "locked": false,
-    "name": "member_twitter_link",
-    "required": false,
-    "show_emoji_picker": false,
-    "type": "text",
-    "validation_regex": ""
-  }, {
-    "allow_new_line": false,
-    "default": "https://www.linkedin.com/company/new-breed-revenue/",
-    "display_width": null,
-    "id": "71b386fd-dbeb-6c95-fa08-d4bf08c6da6a",
-    "label": "Member Linkedin Link",
-    "locked": false,
-    "name": "member_linkedin_link",
-    "required": false,
-    "show_emoji_picker": false,
-    "type": "text",
-    "validation_regex": ""
-  }],
-  "default": [{
-    "hide_from_listing_": false,
-    "headshot": {
-      "src": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/patrick-headshot.jpg",
-      "alt": "Patrick"
-    },
-    "member_name": "Firstname Lastname",
-    "member_position": "Director of Marketing, Title Division",
-    "pop_up_content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-    "member_twitter_link": "https://twitter.com/NewBreedRevenue",
-    "member_linkedin_link": "https://www.linkedin.com/company/new-breed-revenue/",
-    "boolean_field": false
-  }, {
-    "hide_from_listing_": false,
-    "headshot": {
-      "src": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/patrick-headshot.jpg",
-      "alt": "Patrick"
-    },
-    "member_name": "Firstname Lastname",
-    "member_position": "Director of Marketing, Title Division",
-    "pop_up_content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-    "member_twitter_link": "https://twitter.com/NewBreedRevenue",
-    "member_linkedin_link": "https://www.linkedin.com/company/new-breed-revenue/",
-    "boolean_field": false
-  }, {
-    "hide_from_listing_": false,
-    "headshot": {
-      "src": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/patrick-headshot.jpg",
-      "alt": "Patrick"
-    },
-    "member_name": "Firstname Lastname",
-    "member_position": "Director of Marketing, Title Division",
-    "pop_up_content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-    "member_twitter_link": "https://twitter.com/NewBreedRevenue",
-    "member_linkedin_link": "https://www.linkedin.com/company/new-breed-revenue/",
-    "boolean_field": false
-  }],
-  "display_width": null,
-  "expanded": false,
-  "id": "4d0869ff-0acb-c3fd-cda8-06889f89f651",
-  "label": "Member Group",
-  "locked": false,
-  "name": "member_group",
-  "occurrence": {
-    "default": 3,
-    "min": 1,
-    "sorting_label_field": "051db38d-f122-b792-cba2-5a80a230dbba"
-  },
-  "required": false,
-  "tab": "CONTENT",
-  "type": "group"
-}, {
-  "children": [{
-    "default": false,
-    "display": "checkbox",
-    "display_width": null,
-    "help_text": "Toggle to override section ID and vertical margin. ",
-    "id": "enable_overrides",
-    "label": "Enable Overrides",
-    "locked": false,
-    "name": "enable_overrides",
-    "required": false,
-    "type": "boolean"
-  }, {
-    "allow_new_line": false,
-    "display_width": null,
-    "help_text": "The value you type here will be the anchor link for this section. Should be all lowercase and include dashes instead of spaces. This should be a unique value per module.",
-    "id": "module_overrides.section_id",
-    "label": "Section ID",
-    "locked": false,
-    "name": "section_id",
-    "required": false,
-    "show_emoji_picker": false,
-    "type": "text",
-    "validation_regex": "",
-    "visibility": {
-      "controlling_field": "enable_overrides",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
-    }
-  }, {
-    "choices": [
-      ["top-margin-default", "Default"],
-      ["top-margin-none", "None"],
-      ["top-margin-small", "Small"],
-      ["top-margin-medium", "Medium"],
-      ["top-margin-large", "Large"],
-      ["top-margin-custom", "Custom"]
-    ],
-    "default": "top-margin-default",
-    "display": "select",
-    "display_width": null,
-    "id": "module_overrides.top_margin",
-    "label": "Top Margin",
-    "locked": false,
-    "name": "top_margin",
-    "required": false,
-    "type": "choice",
-    "visibility": {
-      "controlling_field": "enable_overrides",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": 100,
-    "display": "text",
-    "display_width": null,
-    "id": "custom_top_margin",
-    "label": "Custom Top Margin",
-    "locked": false,
-    "name": "custom_top_margin",
-    "required": false,
-    "step": 1,
-    "type": "number",
-    "visibility": {
-      "controlling_field": "module_overrides.top_margin",
-      "controlling_value_regex": "top-margin-custom",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": 50,
-    "display": "text",
-    "display_width": null,
-    "id": "custom_top_margin_mobile",
-    "label": "Custom Top Margin Mobile",
-    "locked": false,
-    "name": "custom_top_margin_mobile",
-    "required": false,
-    "step": 1,
-    "type": "number",
-    "visibility": {
-      "controlling_field": "module_overrides.top_margin",
-      "controlling_value_regex": "top-margin-custom",
-      "operator": "EQUAL"
-    }
-  }, {
-    "choices": [
-      ["bottom-margin-default", "Default"],
-      ["bottom-margin-none", "None"],
-      ["bottom-margin-small", "Small"],
-      ["bottom-margin-medium", "Medium"],
-      ["bottom-margin-large", "Large"],
-      ["bottom-margin-custom", "Custom"]
-    ],
-    "default": "bottom-margin-default",
-    "display": "select",
-    "display_width": null,
-    "id": "module_overrides.bottom_margin",
-    "label": "Bottom Margin",
-    "locked": false,
-    "name": "bottom_margin",
-    "required": false,
-    "type": "choice",
-    "visibility": {
-      "controlling_field": "enable_overrides",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": 100,
-    "display": "text",
-    "display_width": null,
-    "id": "custom_bottom_margin",
-    "label": "Custom Bottom Margin",
-    "locked": false,
-    "name": "custom_bottom_margin",
-    "required": false,
-    "step": 1,
-    "type": "number",
-    "visibility": {
-      "controlling_field": "module_overrides.bottom_margin",
-      "controlling_value_regex": "bottom-margin-custom",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": 50,
-    "display": "text",
-    "display_width": null,
-    "id": "custom_bottom_margin_mobile",
-    "label": "Custom Bottom Margin Mobile",
-    "locked": false,
-    "name": "custom_bottom_margin_mobile",
-    "required": false,
-    "step": 1,
-    "type": "number",
-    "visibility": {
-      "controlling_field": "module_overrides.bottom_margin",
-      "controlling_value_regex": "bottom-margin-custom",
-      "operator": "EQUAL"
-    }
-  }, {
-    "choices": [
-      ["top-padding-default", "Default"],
-      ["top-padding-none", "None"],
-      ["top-padding-small", "Small"],
-      ["top-padding-medium", "Medium"],
-      ["top-padding-large", "Large"],
-      ["top-padding-custom", "Custom"]
-    ],
-    "default": "top-padding-default",
-    "display": "select",
-    "display_width": null,
-    "id": "module_overrides.top_padding",
-    "label": "Top Padding",
-    "locked": false,
-    "name": "top_padding",
-    "required": false,
-    "type": "choice",
-    "visibility": {
-      "controlling_field": "enable_overrides",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": 100,
-    "display": "text",
-    "display_width": null,
-    "id": "custom_top_padding",
-    "label": "Custom Top Padding",
-    "locked": false,
-    "name": "custom_top_padding",
-    "required": false,
-    "step": 1,
-    "type": "number",
-    "visibility": {
-      "controlling_field": "module_overrides.top_padding",
-      "controlling_value_regex": "top-padding-custom",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": 50,
-    "display": "text",
-    "display_width": null,
-    "id": "custom_top_padding_mobile",
-    "label": "Custom Top Padding Mobile",
-    "locked": false,
-    "name": "custom_top_padding_mobile",
-    "required": false,
-    "step": 1,
-    "type": "number",
-    "visibility": {
-      "controlling_field": "module_overrides.top_padding",
-      "controlling_value_regex": "top-padding-custom",
-      "operator": "EQUAL"
-    }
-  }, {
-    "choices": [
-      ["bottom-padding-default", "Default"],
-      ["bottom-padding-none", "None"],
-      ["bottom-padding-small", "Small"],
-      ["bottom-padding-medium", "Medium"],
-      ["bottom-padding-large", "Large"],
-      ["bottom-padding-custom", "Custom"]
-    ],
-    "default": "bottom-padding-default",
-    "display": "select",
-    "display_width": null,
-    "id": "module_overrides.bottom_padding",
-    "label": "Bottom Padding",
-    "locked": false,
-    "name": "bottom_padding",
-    "required": false,
-    "type": "choice",
-    "visibility": {
-      "controlling_field": "enable_overrides",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": 100,
-    "display": "text",
-    "display_width": null,
-    "id": "custom_bottom_padding",
-    "label": "Custom Bottom Padding",
-    "locked": false,
-    "name": "custom_bottom_padding",
-    "required": false,
-    "step": 1,
-    "type": "number",
-    "visibility": {
-      "controlling_field": "module_overrides.bottom_padding",
-      "controlling_value_regex": "bottom-padding-custom",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": 50,
-    "display": "text",
-    "display_width": null,
-    "id": "custom_bottom_padding_mobile",
-    "label": "Custom Bottom Padding Mobile",
-    "locked": false,
-    "name": "custom_bottom_padding_mobile",
-    "required": false,
-    "step": 1,
-    "type": "number",
-    "visibility": {
-      "controlling_field": "module_overrides.bottom_padding",
-      "controlling_value_regex": "bottom-padding-custom",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": {
-      "color": null,
-      "opacity": null
-    },
-    "display_width": null,
-    "help_text": "If a module has formal settings for a background color they will take priority over this value.",
-    "id": "6c8bfd0e-1629-1268-e01c-17b4047ecfce",
-    "inline_help_text": "",
-    "label": "Background Color",
-    "locked": false,
-    "name": "background_color",
-    "required": false,
-    "type": "color",
-    "visibility": {
-      "controlling_field": "enable_overrides",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": {
-      "size_type": "auto",
-      "src": "",
-      "alt": null,
-      "loading": "disabled"
-    },
-    "display_width": null,
-    "help_text": "If a module has formal settings for a background image they will take priority over this value.",
-    "id": "878364f4-31ac-6917-e76f-65307d7d36e5",
-    "label": "Background Image",
-    "locked": false,
-    "name": "background_image",
-    "required": false,
-    "resizable": false,
-    "responsive": true,
-    "show_loading": false,
-    "type": "image",
-    "visibility": {
-      "controlling_field": "enable_overrides",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": false,
-    "display": "checkbox",
-    "display_width": null,
-    "id": "3eccf45d-b0dc-4bac-42a0-f923e4405158",
-    "label": "Reverse Text",
-    "locked": false,
-    "name": "reverse_text",
-    "required": false,
-    "type": "boolean",
-    "visibility": {
-      "controlling_field": "enable_overrides",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
-    }
-  }],
-  "default": {
-    "enable_overrides": false,
-    "top_margin": "top-margin-default",
-    "custom_top_margin": 100,
-    "custom_top_margin_mobile": 50,
-    "bottom_margin": "bottom-margin-default",
-    "custom_bottom_margin": 100,
-    "custom_bottom_margin_mobile": 50,
-    "top_padding": "top-padding-default",
-    "custom_top_padding": 100,
-    "custom_top_padding_mobile": 50,
-    "bottom_padding": "bottom-padding-default",
-    "custom_bottom_padding": 100,
-    "custom_bottom_padding_mobile": 50,
-    "background_color": {
-      "color": null,
-      "opacity": null
-    },
-    "background_image": {
-      "size_type": "auto",
-      "src": "",
-      "alt": null,
-      "loading": "disabled"
-    },
-    "reverse_text": false
-  },
-  "display_width": null,
-  "expanded": false,
-  "id": "module_overrides",
-  "label": "Module Overrides",
-  "locked": false,
-  "name": "module_overrides",
-  "required": false,
-  "tab": "CONTENT",
-  "type": "group"
-}]
+} ]

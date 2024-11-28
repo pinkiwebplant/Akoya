@@ -103,6 +103,7 @@
   font-family: $font1;
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
+  font-weight: $baseFontWeight;
 
   @include phone {
     font-size: 16rem;
@@ -261,4 +262,35 @@
 
 @mixin size12 {
   font-size: 12rem;
+}
+
+@mixin check-ullist {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  @include b2;
+
+  li {
+    display: inline-flex;
+    width: 100%;
+    padding-left: 28px;
+    line-height: 1.5;
+    position: relative;
+    margin-bottom: 12px;
+
+    &:before {
+      content: "";
+      display: block;
+      height: 20px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 20px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      background-image: url("{{ get_asset_url('../templates/images/check-icon.png') }}");
+    }
+  }
 }

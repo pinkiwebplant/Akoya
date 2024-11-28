@@ -1,0 +1,150 @@
+{% set moduleName = 'u4m-testimonial-slider' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
+	{{macros.introGroup(module.intro_content)}}
+	<div class="testimonial-slider-row slick">
+		<div class="testimonial-slider-items">
+			{% for item in module.items_group %}
+			<div class="testimonial-slider-item item{{loop.index}}">
+				<div class="slider-item-inner flex_row">
+					<div class="left-col {% if  item.right_content.title or item.right_content.include_button %}col8{% else %}col12 all-side-border{% endif %} col">
+						<div class="testi-content">
+							{% if item.image_field.src %}
+							{% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
+							<img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} class="testi-img">
+							{% endif %}
+							{% if item.quote %}
+							<div class="testi-quote">
+							<strong>“</strong>
+								{{ item.quote }}
+							<strong>”</strong>
+							</div>
+							{% endif %}
+							{% if item.author_name or item.author_designation %}
+							<div class="testi-author">
+								{% if item.author_name %}<strong>{{ item.author_name }},</strong>{% endif %} {% if item.author_designation %}{{ item.author_designation }}{% endif %}
+							</div>
+							{% endif %}
+						</div>
+					</div>
+					{% if  item.right_content.title or item.right_content.include_button %}
+					<div class="right-col col4 col">
+						<div class="testi-sidebar">
+							<div class="testi-sidebar-inner">
+								<h4>
+									{{ item.right_content.title }}
+								</h4>
+								<div class="right-btn">
+									{% if item.right_content.include_button %}
+									{% if item.right_content.button_group.button_type == "std" %}
+									{% set href = item.right_content.button_group.link.url.href %}
+									{% if item.right_content.button_group.link.url.type is equalto "EMAIL_ADDRESS" %}
+									{% set href = "mailto:" + href %}
+									{% endif %}
+									<a class="{{ item.right_content.button_group.button_theme ? item.right_content.button_group.button_theme : "hs-button" }}" 
+										 {% if item.right_content.button_group.link.url.type is equalto "CALL_TO_ACTION"  %}
+										 href="{{ href }}" 
+										 {% else %}
+										 href="{{ href|escape_url }}"
+										 {% endif %}
+										 {% if item.right_content.button_group.link.open_in_new_tab %}
+										 target="_blank"
+										 {% endif %}
+										 {% if item.right_content.button_group.link.rel %}
+										 rel="{{ item.right_content.button_group.link.rel|escape_attr }}"
+										 {% endif %}
+										 >
+										<span>{{ item.right_content.button_group.button_text }}</span>
+										{% if item.right_content.button_group.button_theme == "arrow-link"%}
+										<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M15 7.49995C15 7.34065 14.9229 7.14141 14.7686 7.02196L8.21335 0.209209C7.9434 -0.0697364 7.51928 -0.0697364 7.24933 0.209209C6.97947 0.527904 6.97947 0.966148 7.24933 1.24499L12.6093 6.78286H0.694071C0.308519 6.78286 0 7.10156 0 7.49995C0 7.89844 0.308519 8.21714 0.694071 8.21714H12.6093L7.24933 13.7949C6.97947 14.0737 6.97947 14.5119 7.24933 14.7908C7.51928 15.0697 7.9434 15.0697 8.21335 14.7908L14.7686 8.01789C14.9229 7.89844 15 7.6992 15 7.49995Z" fill="#00819E"/>
+										</svg> {% endif %}
+									</a>
+									{% endif %}
+									{% if item.right_content.button_group.button_type == "cta" %}
+									{% cta guid="{{ item.right_content.button_group.cta }}" %}
+									{% endif %}
+									{% endif %}
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<div class="btn-wrap">
+			<button class="prev-btn">
+				<span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23369 1.23124C1.54528 0.92292 2.05047 0.92292 2.36202 1.23124L6.61737 5.44178C6.92896 5.75009 6.92896 6.24988 6.61737 6.5582L2.36203 10.7688C2.05047 11.0771 1.54528 11.0771 1.23369 10.7688C0.922103 10.4605 0.922103 9.96059 1.23369 9.65228L4.9248 5.99999L1.23369 2.34766C0.922103 2.03934 0.922103 1.53955 1.23369 1.23124Z"/>
+					</svg>
+				</span>
+			</button>
+			<button class="next-btn">
+				<span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23369 1.23124C1.54528 0.92292 2.05047 0.92292 2.36202 1.23124L6.61737 5.44178C6.92896 5.75009 6.92896 6.24988 6.61737 6.5582L2.36203 10.7688C2.05047 11.0771 1.54528 11.0771 1.23369 10.7688C0.922103 10.4605 0.922103 9.96059 1.23369 9.65228L4.9248 5.99999L1.23369 2.34766C0.922103 2.03934 0.922103 1.53955 1.23369 1.23124Z"/>
+					</svg>
+				</span>
+			</button>
+		</div>
+	</div>
+</div>
+</section>
+
+
+{% require_css %}
+<style>
+	{% for item in module.items_group %}
+	.{{name}} .item{{loop.index}} .testi-sidebar{
+		background-color:rgba({{ item.right_content.background_color.color|convert_rgb }},{{ item.right_content.background_color.opacity*0.01 }});
+		background-image:url({{ item.right_content.background_image.src }});
+	}
+	{% endfor %}
+</style>
+{% end_require_css %}
+
+{% require_js %}
+
+	<script>
+	$('.{{name}} .testimonial-slider-items').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	dots:false,
+	arrows:true,
+	adaptiveHeight: true,
+	infinite: false,
+	autoplay: false
+});
+$(".{{name}} .prev-btn").click(function () {
+	$(".{{name}} .testimonial-slider-items").slick("slickPrev");
+});
+
+$(".{{name}} .next-btn").click(function () {
+	$(".{{name}} .testimonial-slider-items").slick("slickNext");
+});
+
+$(".{{name}} .prev-btn").addClass("slick-disabled");
+$(".{{name}} .testimonial-slider-items").on("afterChange", function () {
+	if ($(".{{name}} .slick-prev").hasClass("slick-disabled")) {
+		$(".{{name}} .prev-btn").addClass("slick-disabled");
+	} else {
+		$(".{{name}} .prev-btn").removeClass("slick-disabled");
+	}
+	if ($(".{{name}} .slick-next").hasClass("slick-disabled")) {
+		$(".{{name}} .next-btn").addClass("slick-disabled");
+	} else {
+		$(".{{name}} .next-btn").removeClass("slick-disabled");
+	}
+});
+	</script>
+
+{% end_require_js %}
+
+
+
+
+

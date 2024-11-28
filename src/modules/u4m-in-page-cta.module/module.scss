@@ -1,0 +1,58 @@
+@import "../../css/_module-imports";
+
+.u4m-in-page-cta {
+  .page-center {
+    .bg-options {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 9;
+        .left_content {
+          width: 66%;
+          padding: 54px 20px 54px 60px;
+          @include tabletvert {
+            padding: 30px;
+            width: 100%;
+          }
+          .intro_content {
+            text-align: left;
+            margin: 0;
+            .intro_btn_wrap {
+              justify-content: flex-start;
+            }
+          }
+        }
+        .right_img {
+          background-position: 100%;
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          top: auto;
+          width: 34%;
+          bottom: -23px;
+          @include laptop {
+            bottom: -20%;
+          }
+          @include tablet {
+            bottom: -30%;
+          }
+          @include tabletvert {
+            position: static;
+            width: 100%;
+            min-height: 210px;
+            background-position: right;
+          }
+        }
+      }
+    }
+    @include tabletvert {
+      padding: 0;
+    }
+  }
+}

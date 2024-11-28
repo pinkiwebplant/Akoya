@@ -21,7 +21,7 @@ body {
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
   color: $basecolor;
-  font-weight: normal;
+  font-weight: $baseFontWeight;
 }
 
 @mixin bodyContent {
@@ -513,7 +513,7 @@ section[class*="u4m-"] {
   background-color: $black;
 }
 .charcoal-bg {
-  background-color: $black;
+  background-color: $charcoal;
 }
 .gray-bg {
   background-color: $gray;
@@ -583,6 +583,14 @@ section[class*="u4m-"] {
       margin: 0;
     }
   }
+
+  .divider {
+    display: block;
+    width: 60px;
+    height: 2px;
+    margin: 30px 0;
+    background-color: $azure;
+  }
 }
 
 .intro_btn_wrap {
@@ -607,4 +615,65 @@ section[class*="u4m-"] {
   .intro_title {
     color: $white;
   }
+}
+
+.cstyle1 {
+  @include b2;
+}
+
+.cstyle2 {
+  @include b3;
+}
+
+//
+
+.bg_pos_inside {
+  .full-width-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+form.hs-form,
+form {
+  @include form;
+}
+
+//
+.slick {
+  .btn-wrap {
+    text-align: center;
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 36px;
+    justify-content: center;
+    align-items: center;
+    button {
+      width: 50px;
+      height: 50px;
+      background: $azure;
+      display: inline-block;
+      border-radius: 50px;
+      border: none;
+      line-height: normal;
+      padding: 0;
+      svg {
+        fill: $black;
+        width: 10px;
+      }
+      &.prev-btn {
+        transform: rotate(180deg);
+      }
+      &.slick-disabled {
+        svg {
+          opacity: 0.33;
+        }
+      }
+    }
+  }
+}
+
+.u4m-split-form-wrapper .bottom_content_inner ul {
+  @include check-ullist;
 }
