@@ -27,17 +27,9 @@ $gray3: $silver;
 $sectionbg: rgba($azure, 0.4);
 
 /* azure gradient */
-$gradient1: linear-gradient(
-  180deg,
-  rgba($white, 0.5) 0%,
-  rgba($azure, 0.5) 100%
-);
+$gradient1: linear-gradient(180deg, rgba($white, 0.5) 0%, rgba($azure, 0.5) 100%);
 
-$gradient2: linear-gradient(
-  180deg,
-  rgba($white, 0.5) 0%,
-  rgba($silver, 0.5) 100%
-);
+$gradient2: linear-gradient(180deg, rgba($white, 0.5) 0%, rgba($silver, 0.5) 100%);
 
 $font1: "Assistant";
 $font2: "Arimo";
@@ -54,6 +46,7 @@ $shadow1: 0rem 1rem 12rem 0 rgba($black, 0.1);
 $shadow2: 0 5rem 25rem 0 rgba($black, 0.2);
 $shadow3: 0 10rem 50rem 0 rgba($black, 0.3);
 $textShadow1: 0 0 4rem rgba($black, 0.3);
+$shadow4: 0px 0px 22px 0px rgba($black, 0.05);
 // Animation
 $animation1: 0.1s ease-in;
 $animation2: 0.25s ease-in;
@@ -66,3 +59,8 @@ $black2: #373a36;
 $pricing_theme1: #e6f2f9;
 $pricing_theme2: #fef6e8;
 $pricing_theme3: #efe6f5;
+
+$stats: #ebf4f5;
+$stats2: #ecf1f4;
+$statsBg: rgba($stats, 0.2);
+$statsBg2: rgba($stats2, 0.15);

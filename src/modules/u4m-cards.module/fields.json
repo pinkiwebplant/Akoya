@@ -444,7 +444,7 @@
       "min" : null,
       "max" : null,
       "sorting_label_field" : "e1a9d2bc-72ec-743f-7139-db01ac92c247",
-      "default" : null
+      "default" : 1
     },
     "visibility" : {
       "controlling_field" : null,
@@ -478,7 +478,7 @@
       "visibility" : {
         "controlling_field" : null,
         "controlling_field_path" : "card_items.stats_group.select_icon_type",
-        "controlling_value_regex" : "custom",
+        "controlling_value_regex" : "image",
         "property" : null,
         "operator" : "EQUAL",
         "access" : null
@@ -546,7 +546,22 @@
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
-    "default" : [ ]
+    "default" : [ {
+      "select_icon_type" : "image",
+      "image_icon" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/iconcard.png",
+        "alt" : "iconcard",
+        "loading" : "lazy",
+        "width" : 21,
+        "height" : 19,
+        "max_width" : 21,
+        "max_height" : 19
+      },
+      "custom_icon" : "account_circle",
+      "title" : "Statistic headline here",
+      "stats" : "$85,314,427"
+    } ]
   }, {
     "id" : "a43b6228-a8a8-c233-7281-a4db6f6afe6b",
     "name" : "include_button",
@@ -572,7 +587,7 @@
     },
     "visibility" : {
       "controlling_field" : null,
-      "controlling_field_path" : "intro_content.include_button",
+      "controlling_field_path" : "card_items.include_button",
       "controlling_value_regex" : "true",
       "property" : null,
       "operator" : "EQUAL",
@@ -717,7 +732,22 @@
     "title" : "Card title goes here",
     "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>",
     "include_stats" : false,
-    "stats_group" : [ ],
+    "stats_group" : [ {
+      "select_icon_type" : "image",
+      "image_icon" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/iconcard.png",
+        "alt" : "iconcard",
+        "loading" : "lazy",
+        "width" : 21,
+        "height" : 19,
+        "max_width" : 21,
+        "max_height" : 19
+      },
+      "custom_icon" : "account_circle",
+      "title" : "Statistic headline here",
+      "stats" : "$85,314,427"
+    } ],
     "include_button" : true,
     "button_group" : [ {
       "button_type" : "std",
@@ -749,7 +779,22 @@
     "title" : "Card title goes here",
     "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>",
     "include_stats" : false,
-    "stats_group" : [ ],
+    "stats_group" : [ {
+      "select_icon_type" : "image",
+      "image_icon" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/iconcard.png",
+        "alt" : "iconcard",
+        "loading" : "lazy",
+        "width" : 21,
+        "height" : 19,
+        "max_width" : 21,
+        "max_height" : 19
+      },
+      "custom_icon" : "account_circle",
+      "title" : "Statistic headline here",
+      "stats" : "$85,314,427"
+    } ],
     "include_button" : true,
     "button_group" : [ {
       "button_type" : "std",

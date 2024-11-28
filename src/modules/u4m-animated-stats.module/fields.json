@@ -366,9 +366,13 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "",
-      "alt" : null,
-      "loading" : "lazy"
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/doller.png",
+      "alt" : "doller",
+      "loading" : "lazy",
+      "width" : 30,
+      "height" : 30,
+      "max_width" : 30,
+      "max_height" : 30
     }
   }, {
     "id" : "1ce01db8-e69e-9996-6db2-6d3dce889a1a",
@@ -389,7 +393,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "Dollar"
+    "default" : "paid"
   }, {
     "id" : "5ee1c1b1-6cbb-c48f-9952-90e80ce12159",
     "name" : "top_title",
@@ -456,11 +460,15 @@
     "select_icon_type" : "icon",
     "image_field" : {
       "size_type" : "auto",
-      "src" : "",
-      "alt" : null,
-      "loading" : "lazy"
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/doller.png",
+      "alt" : "doller",
+      "loading" : "lazy",
+      "width" : 30,
+      "height" : 30,
+      "max_width" : 30,
+      "max_height" : 30
     },
-    "custom_icon" : "Dollar",
+    "custom_icon" : "paid",
     "top_title" : "Stat Eyebrow",
     "prefix" : "",
     "numeric_stat" : 100,
@@ -470,11 +478,15 @@
     "select_icon_type" : "icon",
     "image_field" : {
       "size_type" : "auto",
-      "src" : "",
-      "alt" : null,
-      "loading" : "lazy"
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/doller.png",
+      "alt" : "doller",
+      "loading" : "lazy",
+      "width" : 30,
+      "height" : 30,
+      "max_width" : 30,
+      "max_height" : 30
     },
-    "custom_icon" : "Dollar",
+    "custom_icon" : "paid",
     "top_title" : "Stat Eyebrow",
     "prefix" : "",
     "numeric_stat" : 100,
@@ -484,11 +496,15 @@
     "select_icon_type" : "icon",
     "image_field" : {
       "size_type" : "auto",
-      "src" : "",
-      "alt" : null,
-      "loading" : "lazy"
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/doller.png",
+      "alt" : "doller",
+      "loading" : "lazy",
+      "width" : 30,
+      "height" : 30,
+      "max_width" : 30,
+      "max_height" : 30
     },
-    "custom_icon" : "Dollar",
+    "custom_icon" : "paid",
     "top_title" : "Stat Eyebrow",
     "prefix" : "",
     "numeric_stat" : 100,
@@ -498,11 +514,15 @@
     "select_icon_type" : "icon",
     "image_field" : {
       "size_type" : "auto",
-      "src" : "",
-      "alt" : null,
-      "loading" : "lazy"
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/doller.png",
+      "alt" : "doller",
+      "loading" : "lazy",
+      "width" : 30,
+      "height" : 30,
+      "max_width" : 30,
+      "max_height" : 30
     },
-    "custom_icon" : "Dollar",
+    "custom_icon" : "paid",
     "top_title" : "Stat Eyebrow",
     "prefix" : "",
     "numeric_stat" : 100,
@@ -512,11 +532,15 @@
     "select_icon_type" : "icon",
     "image_field" : {
       "size_type" : "auto",
-      "src" : "",
-      "alt" : null,
-      "loading" : "lazy"
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/doller.png",
+      "alt" : "doller",
+      "loading" : "lazy",
+      "width" : 30,
+      "height" : 30,
+      "max_width" : 30,
+      "max_height" : 30
     },
-    "custom_icon" : "Dollar",
+    "custom_icon" : "paid",
     "top_title" : "Stat Eyebrow",
     "prefix" : "",
     "numeric_stat" : 100,
