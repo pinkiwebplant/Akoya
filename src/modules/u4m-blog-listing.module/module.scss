@@ -262,11 +262,14 @@ section.u4m-blog-listing {
         align-items: center;
         justify-content: center;
         border-radius: 100%;
-        background-color: $azure;
+        background-color: $paginationBg;
         @include eyebrow;
         color: $black;
         &.prev-link {
           transform: rotate(180deg);
+        }
+        &.active {
+          background-color: $azure;
         }
       }
     }

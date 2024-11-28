@@ -59,6 +59,7 @@
               margin-bottom: 24px;
               span {
                 font-weight: 500;
+                @include size30;
               }
             }
             .content {
