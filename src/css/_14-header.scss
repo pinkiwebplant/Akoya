@@ -239,6 +239,9 @@
         padding: 20px 60px 10px 0;
         width: 100%;
         display: block;
+        &::placeholder {
+          color: $white;
+        }
       }
       .search-overlay-close {
         display: none;
@@ -303,6 +306,7 @@ body.search-open {
                       position: relative;
                     }
                   }
+
                   margin: 0;
                   padding: 0;
                   list-style: none;
@@ -658,6 +662,13 @@ body.search-open {
             float: none !important;
             &:before {
               display: none;
+            }
+            &.child-active {
+              > a {
+                svg {
+                  transform: rotate(180deg);
+                }
+              }
             }
           }
           display: block;

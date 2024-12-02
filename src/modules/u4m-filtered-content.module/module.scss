@@ -358,7 +358,6 @@ section.u4m-filtered-content {
 
         button {
           @include eyebrow;
-
           width: 50px;
           height: 50px;
           display: flex;
@@ -366,8 +365,17 @@ section.u4m-filtered-content {
           justify-content: center;
           border-radius: 100%;
           border: 0;
-          background-color: $azure;
+          background-color: $paginationBg;
           color: $darkblack;
+          span {
+            pointer-events: none;
+          }
+          &.active {
+            background-color: $azure;
+          }
+          &:disabled {
+            display: none;
+          }
         }
 
         button[disabled].cursor-not-allowed.next-button,

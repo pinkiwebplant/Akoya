@@ -57,6 +57,7 @@
           line-height: 1;
           margin-bottom: 12px;
           font-size: 30px;
+          color: $primary-teal;
           .material-symbols-outlined {
             font-size: 30px;
             display: block;
@@ -123,13 +124,15 @@
   }
 
   &.reverse-text {
-    .stats_icon_box,
     .stats-content {
       color: $white;
     }
     .stats-items {
       .stats-item {
         .stats-item-inn {
+          .stats_icon_box {
+            color: $white;
+          }
           .stats-assets {
             color: $white;
           }

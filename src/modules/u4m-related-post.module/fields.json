@@ -1,4 +1,39 @@
 [ {
+  "id" : "412ef66f-dfa9-604a-b8c4-1c15dcd6d6a1",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Related articles headline."
+}, {
+  "id" : "b004f382-1995-32d8-20d8-1c15fc4008ac",
+  "name" : "view_all_posts_text",
+  "display_width" : null,
+  "label" : "View all posts Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "View all posts"
+}, {
+  "id" : "fd7528b8-407b-0f6d-167e-56498c0fdef0",
+  "name" : "number_of_posts",
+  "display_width" : null,
+  "label" : "Number of Posts",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "step" : 1,
+  "type" : "number",
+  "default" : 3
+}, {
   "id" : "f38be4d7-70f9-e2a3-391e-e44a36e75899",
   "name" : "background_settings",
   "display_width" : null,

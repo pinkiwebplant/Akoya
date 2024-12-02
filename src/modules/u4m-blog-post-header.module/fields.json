@@ -94,7 +94,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "gradient1"
+    "default" : "gradient2"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -104,6 +104,6 @@
     "background_type" : "gradient",
     "select_color" : "azure-bg",
     "opacity" : 40,
-    "select_gradient" : "gradient1"
+    "select_gradient" : "gradient2"
   }
 } ]

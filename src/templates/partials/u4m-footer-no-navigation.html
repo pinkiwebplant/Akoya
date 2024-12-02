@@ -1,0 +1,39 @@
+<!--
+    templateType: global_partial
+    label: Footer no navigation
+-->
+
+<footer class="u4m-footer lp">
+	<div class="site-footer-inner">
+		<div class="page-center">
+			<div class="footer-bottom">
+				<div class="footer-bottom-inner flex_row">
+					<div class="col4 col copyright-col">
+						<div class="copyright-text">
+							{% module_block module "copyright" path="@hubspot/rich_text" label="Copyright" %}
+							{% module_attribute "html" %}
+							<p>
+								© {{year}} Akoya. All Rights Reserved.
+							</p>
+							{% end_module_attribute %}
+							{% end_module_block %}
+						</div>
+					</div>
+					<div class="col8 col disclaimer-col">
+						<div class="disclaimer-text">
+							{% module_block module "disclaimer" path="@hubspot/rich_text" label="Disclaimer" %}
+							{% module_attribute "html" %}
+							<p>
+								By using this site, you agree to the use of cookies in connection with accessing and viewing the site content.
+							</p>
+							{% end_module_attribute %}
+							{% end_module_block %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
