@@ -377,12 +377,12 @@
       "controlling_field_path" : "media_section.image_field",
       "controlling_value_regex" : null,
       "property" : "src",
-      "operator" : null,
+      "operator" : "NOT_EMPTY",
       "access" : null
     },
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -399,7 +399,7 @@
       "max_width" : 1464,
       "max_height" : 1163
     },
-    "image_overflow" : false
+    "image_overflow" : true
   }
 }, {
   "id" : "70fc3ac5-f42d-ccbc-70a5-3df1b0810e94",
@@ -780,7 +780,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "color"
+      "default" : "gradient"
     }, {
       "id" : "4ea36da9-c8a6-adf2-7460-cbf4d98190fd",
       "name" : "select_color",
@@ -984,7 +984,7 @@
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "select_color" : "azure-bg",
       "opacity" : 40,
       "select_gradient" : "gradient1",
@@ -1023,7 +1023,7 @@
     "reverse_text" : false,
     "container_full_width" : false,
     "background_settings" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "select_color" : "azure-bg",
       "opacity" : 40,
       "select_gradient" : "gradient1",
