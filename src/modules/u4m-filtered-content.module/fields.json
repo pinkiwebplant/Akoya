@@ -11,15 +11,6 @@
   "type" : "text",
   "default" : "Filtered Content module headline."
 }, {
-  "id" : "c97caa8a-ed19-990c-f6ab-02d341276b67",
-  "name" : "select_table",
-  "display_width" : null,
-  "label" : "Select Table",
-  "required" : false,
-  "locked" : false,
-  "type" : "hubdbtable",
-  "default" : 102977618
-}, {
   "id" : "bc2fc6fc-cd15-2747-835c-04c1c24e691d",
   "name" : "featured_post",
   "display_width" : null,
@@ -180,4 +171,13 @@
     "opacity" : 40,
     "select_gradient" : "gradient1"
   }
+}, {
+  "id" : "ac73a125-2219-dcd1-7ea2-9b11cf39e681",
+  "name" : "select_table",
+  "display_width" : null,
+  "label" : "Select Table",
+  "required" : false,
+  "locked" : false,
+  "type" : "hubdbtable",
+  "default" : 103342659
 } ]

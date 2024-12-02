@@ -36,7 +36,7 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/Akoya-Logo.png",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/Akoya-Logo.png",
       "alt" : "Akoya-Logo",
       "loading" : "lazy",
       "width" : 150,
@@ -334,7 +334,7 @@
     "include_logo" : true,
     "logo" : {
       "size_type" : "auto",
-      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/Akoya-Logo.png",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/Akoya-Logo.png",
       "alt" : "Akoya-Logo",
       "loading" : "lazy",
       "width" : 150,

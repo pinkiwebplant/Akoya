@@ -80,7 +80,8 @@
       "operator" : "EQUAL",
       "access" : null
     },
-    "type" : "hubdbtable"
+    "type" : "hubdbtable",
+    "default" : 103342662
   }, {
     "id" : "568e418e-cc38-7d94-65d0-e5ca29788ea9",
     "name" : "number_of_cards",
@@ -152,7 +153,7 @@
       },
       "type" : "page"
     }, {
-      "id" : "29b2e0d2-4588-ee3a-2a87-e69ee058acfb",
+      "id" : "fdce34ad-2c35-e5f7-6712-defa5f065dd3",
       "name" : "row_title",
       "display_width" : null,
       "label" : "Row Title",
@@ -166,12 +167,11 @@
         "operator" : "EQUAL",
         "access" : null
       },
-      "table_name_or_id" : "103067932",
-      "columns_to_fetch" : [ ],
+      "table_name_or_id" : "103342662",
       "display_columns" : [ "name" ],
       "type" : "hubdbrow",
       "default" : {
-        "id" : 183249092448
+        "id" : null
       }
     } ],
     "tab" : "CONTENT",
@@ -181,47 +181,47 @@
     "default" : [ {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     }, {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     }, {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     }, {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     }, {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     }, {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     }, {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     }, {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     }, {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     } ]
   } ],
@@ -231,51 +231,52 @@
   "type" : "group",
   "default" : {
     "select_content_type" : "recent_blog",
+    "select_hubdb_table" : 103342662,
     "number_of_cards" : 9,
     "custom_item" : [ {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     }, {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     }, {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     }, {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     }, {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     }, {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     }, {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     }, {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     }, {
       "select_content_from" : "blog",
       "row_title" : {
-        "id" : 183249092448
+        "id" : null
       }
     } ]
   }
