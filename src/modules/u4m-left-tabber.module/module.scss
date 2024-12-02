@@ -45,6 +45,7 @@
       border-left: 2px solid transparent;
       padding: 25px 36px;
       border-radius: 0 10rem 10rem 0;
+      background-color: transparent;
       @include tabletvert {
         padding: 25rem;
       }
@@ -60,6 +61,51 @@
             transition: 0.2s ease;
           }
         }
+      }
+
+      &.active.primary-teal-bg {
+        border-left: 2px solid $primary-teal;
+        background-color: rgba($primary-teal, 0.1);
+      }
+      &.active.secondary-teal-bg {
+        background-color: $secondary-teal;
+        border-left: 2px solid $secondary-teal;
+        background-color: rgba($secondary-teal, 0.1);
+      }
+      &.active.azure-bg {
+        background-color: $azure;
+        border-left: 2px solid $azure;
+        background-color: rgba($azure, 0.1);
+      }
+      &.active.purlple-bg {
+        background-color: $purlple;
+        border-left: 2px solid $purlple;
+        background-color: rgba($purlple, 0.1);
+      }
+      &.active.black-bg {
+        background-color: $black;
+        border-left: 2px solid $black;
+        background-color: rgba($black, 0.1);
+      }
+      &.active.charcoal-bg {
+        background-color: $charcoal;
+        border-left: 2px solid $charcoal;
+        background-color: rgba($charcoal, 0.1);
+      }
+      &.active.gray-bg {
+        background-color: $gray;
+        border-left: 2px solid $gray;
+        background-color: rgba($gray, 0.1);
+      }
+      &.active.silver-bg {
+        background-color: $silver;
+        border-left: 2px solid $silver;
+        background-color: rgba($silver, 0.1);
+      }
+      &.active.white-bg {
+        background-color: $white;
+        border-left: 2px solid $white;
+        background-color: rgba($white, 0.1);
       }
 
       .nav_text_col {

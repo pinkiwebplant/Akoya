@@ -9,7 +9,7 @@
 	<div class="lefttab_main">
 		<div class="lefttabber_nav">
 			{% for item in module.tabber_group %}
-			<div class="lefttab_nav_item {% if loop.index == 1 %}active animated{% endif %}">
+			<div class="lefttab_nav_item {% if loop.index == 1 %}active animated{% endif %} {{ module.module_overrides.active_tab_background }}">
 				<div class="lefttab_nav" >
 					<div class="nav_text_col">
 

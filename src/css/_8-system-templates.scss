@@ -28,6 +28,11 @@ section.u4m-backup-unsubscribe {
 
   form {
     @include form;
+    .hs-form-field {
+      input + label {
+        display: inline-block;
+      }
+    }
 
     h3 {
       font-size: 12rem;
@@ -82,6 +87,11 @@ section.u4m-password-prompt {
       background-color: $white;
     }
 
+    [type="checkbox"],
+    [type="radio"] {
+      width: auto !important ;
+    }
+
     input#hs-login-widget-remember {
       width: auto !important;
       margin-bottom: 0;
@@ -94,6 +104,16 @@ section.u4m-password-prompt {
     }
 
     padding-bottom: 50rem;
+
+    .hs-form-field {
+      input + label {
+        display: inline-block;
+      }
+    }
+
+    .hs-button {
+      white-space: normal;
+    }
   }
 
   p a {
@@ -127,6 +147,12 @@ section.u4m-subscription-preferences {
     @include form;
     max-width: 1000rem;
     padding-bottom: 50rem;
+
+    .hs-form-field {
+      input + label {
+        display: inline-block;
+      }
+    }
 
     div.item {
       border-bottom: 2rem solid $gray2;
@@ -170,10 +196,15 @@ section.u4m-subscriptions-confirmation {
 }
 
 section.u4m-subscription-preferences form {
-  color: $black !important;
+  color: $white !important;
   p,
   h1,
   h2 {
-    color: $black !important;
+    color: $white !important;
   }
+}
+
+section.u4m-password-prompt form input {
+  height: 48px !important;
+  margin-top: 0 !important;
 }
