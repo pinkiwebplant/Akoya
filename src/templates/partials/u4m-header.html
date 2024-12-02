@@ -2,7 +2,8 @@
  templateType: global_partial
  label: Website Header
  -->
-<div class="header-outer">
+
+<div class="header-outer" data-label="header">
 
 	{% dnd_area "top_section" %}
 	{% dnd_section full_width=true %} 
@@ -23,7 +24,195 @@
 						{% module "logo" path="@hubspot/logo", label="Logo", link="/", img={src="{{logo_file}}", alt="Akoya", width= 500, override_inherited_src= true } %}
 					</div>
 					<div class="hdr_nav">
-						{% module "header_menu" path="../../modules/u4m-mega-menu", label="Menu" %}
+						{% module "header__menu" path="../../modules/u4m-mega-menu", label="Menu",
+						mega_menu=[ {
+          "enable_child_menu" : false,
+          "menu_link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "menu_text" : "Financial Institutions "
+        }, {
+          "child_menu" : {
+            "content" : "<h6>Fintechs overview</h6>\n<p>Opened menu items can have an introductory area, like this space here, followed by 1+ columns of links beneath. Hovering an item adds an arrow.</p>",
+            "menu_group" : [ {
+              "menu_item" : [ {
+                "menu_link" : {
+                  "no_follow" : false,
+                  "open_in_new_tab" : false,
+                  "url" : {
+                    "href" : "",
+                    "type" : "EXTERNAL"
+                  }
+                },
+                "menu_text" : "Account Opening"
+              }, {
+                "menu_link" : {
+                  "no_follow" : false,
+                  "open_in_new_tab" : false,
+                  "url" : {
+                    "href" : "",
+                    "type" : "EXTERNAL"
+                  }
+                },
+                "menu_text" : "Personal Finance Management"
+              }, {
+                "menu_link" : {
+                  "no_follow" : false,
+                  "open_in_new_tab" : false,
+                  "url" : {
+                    "href" : "",
+                    "type" : "EXTERNAL"
+                  }
+                },
+                "menu_text" : "Wealth Management and Investing"
+              }, {
+                "menu_link" : {
+                  "no_follow" : false,
+                  "open_in_new_tab" : false,
+                  "url" : {
+                    "href" : "",
+                    "type" : "EXTERNAL"
+                  }
+                },
+                "menu_text" : "Lending and Credit"
+              }, {
+                "menu_link" : {
+                  "no_follow" : false,
+                  "open_in_new_tab" : false,
+                  "url" : {
+                    "href" : "",
+                    "type" : "EXTERNAL"
+                  }
+                },
+                "menu_text" : "Payment Enablement"
+              }, {
+                "menu_link" : {
+                  "no_follow" : false,
+                  "open_in_new_tab" : false,
+                  "url" : {
+                    "href" : "",
+                    "type" : "EXTERNAL"
+                  }
+                },
+                "menu_text" : "Business Financial Management"
+              } ],
+              "menu_title" : "Use Cases"
+            }, {
+              "menu_item" : [ {
+                "menu_link" : {
+                  "no_follow" : false,
+                  "open_in_new_tab" : false,
+                  "url" : {
+                    "href" : "",
+                    "type" : "EXTERNAL"
+                  }
+                },
+                "menu_text" : "Pricing"
+              }, {
+                "menu_link" : {
+                  "no_follow" : false,
+                  "open_in_new_tab" : false,
+                  "url" : {
+                    "href" : "",
+                    "type" : "EXTERNAL"
+                  }
+                },
+                "menu_text" : "Balances"
+              }, {
+                "menu_link" : {
+                  "no_follow" : false,
+                  "open_in_new_tab" : false,
+                  "url" : {
+                    "href" : "",
+                    "type" : "EXTERNAL"
+                  }
+                },
+                "menu_text" : "Customers"
+              }, {
+                "menu_link" : {
+                  "no_follow" : false,
+                  "open_in_new_tab" : false,
+                  "url" : {
+                    "href" : "",
+                    "type" : "EXTERNAL"
+                  }
+                },
+                "menu_text" : "Payments"
+              }, {
+                "menu_link" : {
+                  "no_follow" : false,
+                  "open_in_new_tab" : false,
+                  "url" : {
+                    "href" : "",
+                    "type" : "EXTERNAL"
+                  }
+                },
+                "menu_text" : "Accounts & Investments"
+              }, {
+                "menu_link" : {
+                  "no_follow" : false,
+                  "open_in_new_tab" : false,
+                  "url" : {
+                    "href" : "",
+                    "type" : "EXTERNAL"
+                  }
+                },
+                "menu_text" : "Transactions"
+              } ],
+              "menu_title" : "Products"
+            } ]
+          },
+          "enable_child_menu" : true,
+          "menu_link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "menu_text" : "Fintechs"
+        }, {
+          "enable_child_menu" : false,
+          "menu_link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "menu_text" : "Docs"
+        }, {
+          "enable_child_menu" : false,
+          "menu_link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "menu_text" : "Resources"
+        }, {
+          "enable_child_menu" : false,
+          "menu_link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "menu_text" : "Company"
+        } ]
+						
+						%}
 						<div class="mobile_content">
 							<div class="hdr_login_menu">
 								{% menu "login_menu" id=183172432192, flyouts='false', max_levels='5', flow='horizontal', label='Login Menu' %}
