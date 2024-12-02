@@ -357,7 +357,7 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/hero-img.png",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/hero-img.png",
       "alt" : "Hero Image",
       "loading" : "lazy",
       "width" : 1464,
@@ -391,7 +391,7 @@
   "default" : {
     "image_field" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/hero-img.png",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/hero-img.png",
       "alt" : "Hero Image",
       "loading" : "lazy",
       "width" : 1464,
