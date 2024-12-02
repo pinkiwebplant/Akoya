@@ -24,13 +24,14 @@ section.u4m-blog-listing {
     box-sizing: border-box;
     width: 100%;
   }
-  .hs-search-field__bar button svg {
-    height: 10px;
-  }
   .hs-search-field__suggestions {
     margin: 0;
     padding: 0;
     list-style: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: #fff;
   }
   .hs-search-field--open .hs-search-field__suggestions {
     border: 1px solid $silver;
@@ -162,7 +163,9 @@ section.u4m-blog-listing {
     .search-col,
     .tag-col {
       width: 50%;
-      padding: 0 12px;
+      @include tabletvertmin {
+        padding: 0 12px;
+      }
       @include tabletvert {
         width: 100%;
       }
@@ -175,12 +178,23 @@ section.u4m-blog-listing {
         max-width: 100%;
         border-radius: 0;
         background: transparent;
+        position: relative;
+        button {
+          background: no-repeat;
+          border: none;
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          padding: 0;
+        }
       }
       .hs-search-field__input {
         border: 2px solid $silver;
         outline: none;
         border-radius: 4px;
         padding: 12px;
+        padding-right: 42px;
         @include b2;
         &::placeholder {
           color: $black;
@@ -203,16 +217,27 @@ section.u4m-blog-listing {
   .listing-wrap {
     margin-bottom: 120px;
     .flex-row {
-      margin: 0 -20px;
-      margin-bottom: 60px;
+      margin: 0 -20px 60px;
+      row-gap: 72px;
+      @include tabletvert {
+        row-gap: 40px;
+      }
+      @include tabletvertmin {
+        margin: 0 -24px;
+      }
     }
 
     .post-item {
       padding: 0 24px;
-      width: 33.3333%;
+      width: 100%;
+      @include tabletvertmin {
+        width: 50%;
+        padding: 0 20px;
+      }
+      @include tabletmidmin {
+        width: 33.3333%;
+      }
       @include tabletvert {
-        width: 100%;
-        margin-bottom: 20px;
         padding: 0 20px;
       }
       .featured-img {
@@ -245,6 +270,7 @@ section.u4m-blog-listing {
         }
         p {
           @include b2;
+          margin: 0;
         }
       }
     }

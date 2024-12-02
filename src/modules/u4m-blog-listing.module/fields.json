@@ -75,7 +75,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   }, {
     "id" : "results",
     "name" : "results",
@@ -228,7 +228,7 @@
   "type" : "group",
   "default" : {
     "placeholder" : "Search",
-    "include_search_button" : false,
+    "include_search_button" : true,
     "results" : {
       "use_custom_search_results_template" : false
     },
