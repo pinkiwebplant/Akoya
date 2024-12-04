@@ -80,7 +80,7 @@
 										<p class="member-title">{{ item.member_title }}</p>
 										{% endif %}
 										{% if item.member_name %}
-										<h4>{{ item.member_name }}</h4>
+										<h2>{{ item.member_name }}</h2>
 										{% endif %}
 										{{ item.popup_content.popup_content }}
 										<div class="social-links">
@@ -153,8 +153,8 @@
 <script>
 
 	
-	$(' .view-bio').click(function(){
-		$(this).parents('.member').addClass('popup-active');
+	$(' .inner').click(function(){
+		$(this).parent('.member').addClass('popup-active');
 		$('body').addClass('popup-activee');
 	});
 	$('.exit').click(function(){
