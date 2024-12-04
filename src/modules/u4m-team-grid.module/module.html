@@ -37,6 +37,7 @@
 
 					{% for item in module.member_group %}
 					<div class="member" data-tags="{{ item.select_tag|replace(' ','') }}">
+					<div class="inner_wrap">
 						<div class="inner">
 							{% if item.member_image.src %}
 							<div class="member-image" >
@@ -59,6 +60,7 @@
 								</a>
 								{% endif %}
 							</div>
+						</div>
 						</div>
 						<div class='popup-content'>
 							<div class="page-center">
@@ -153,7 +155,7 @@
 <script>
 
 	
-	$(' .inner').click(function(){
+	$(' .inner_wrap').click(function(){
 		$(this).parent('.member').addClass('popup-active');
 		$('body').addClass('popup-activee');
 	});
