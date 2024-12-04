@@ -124,7 +124,7 @@
 						{% for item in my_topics %}
 						{% if item=="featured"%}
 						{% else %}
-						<option value="{{ blog_tag_url(group.id, item.slug) }}" {% if content.absolute_url == blog_tag_url(group.id, item.slug) %} selected{% endif %}>{{ item }}</option>
+						<option value="{{ blog_tag_url(group.id, item.slug) }}" {% if content.absolute_url == blog_tag_url(group.id, item.slug) %} selected{% endif %}>{{ item|capitalize}}</option>
 						{% endif %}
 						{% endfor %}
 					</select>  

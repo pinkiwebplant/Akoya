@@ -14,8 +14,8 @@ section.u4m-blog-post-header {
     .post-meta {
       display: flex;
       align-items: center;
+      gap: 12px;
       .author-img {
-        margin-right: 5px;
         img {
           width: 36px;
           height: 36px;
