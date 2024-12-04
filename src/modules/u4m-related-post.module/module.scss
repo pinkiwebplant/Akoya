@@ -7,7 +7,11 @@ section.u4m-related-post {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 60px;
-    column-gap: 20px;
+    gap: 20px;
+    @include tabletvert {
+      flex-direction: column;
+      align-items: start;
+    }
     h2 {
       margin: 0;
     }
@@ -16,11 +20,15 @@ section.u4m-related-post {
         color: $black;
         font-weight: 700;
         line-height: 1.25;
+        display: flex;
+        gap: 5px;
         svg {
           vertical-align: middle;
           margin-left: 5px;
         }
       }
+      display: flex;
+      gap: 5px;
     }
   }
   .flex-row {

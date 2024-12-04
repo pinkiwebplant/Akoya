@@ -93,7 +93,7 @@
                 li {
                   margin-bottom: 12px;
                   display: flex;
-                  align-items: center;
+                  align-items: start;
                   gap: 12px;
                   color: $black;
                   @include tabletvert {

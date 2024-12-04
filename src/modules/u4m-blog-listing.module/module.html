@@ -40,14 +40,16 @@
 							<div class='featured-topic'>
 								{% set included_topics = tag_post.topic_list | rejectattr("slug", "equalto", "featured") | list %}
 								{% for topic in included_topics %}
-									<a class="{{ topic.slug }}" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>{% if not loop.last %},{% endif %}
+									{% if loop.first %}
+									<a class="{{ topic.slug }}" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
+								{% endif %}
 								{% endfor %}
 							</div>
 						{% endif %}
 							<h4>
 								<a href="{{ tag_post.absolute_url }}">{{ tag_post.name }}</a>
 							</h4>
-							<p> {{ tag_post.post_list_content|safe|truncatehtml(200, '.' , false)|striptags}}
+							<p> {{ tag_post.post_list_content|safe|truncatehtml(160, '.' , false)|striptags}}
 							</p>
 							{% if module.featured_post.read_more_text %}
 							<div class='read-more'>
@@ -118,7 +120,7 @@
 				<div class="tag-col">
 					{% set my_topics = blog_topics('default', 50) %}
 					<select id="tinynav1" class="tinynav tinynav1" style="background-image: url({{ get_asset_url('../../templates/images/Arrow-Down.png') }});">
-						<option value="{{ group.absolute_url }}">Select type...</option>
+						<option value="{{ group.absolute_url }}">Select topic...</option>
 						{% for item in my_topics %}
 						{% if item=="featured"%}
 						{% else %}
@@ -151,7 +153,9 @@
 
 							{% set included_topics = content.topic_list | rejectattr("slug", "equalto", "featured") | list %}
 								{% for topic in included_topics %}
-									<a class="{{ topic.slug }}" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>{% if not loop.last %},{% endif %}
+									{% if loop.first %}
+									<a class="{{ topic.slug }}" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
+								{% endif %}
 								{% endfor %}
 
 								
@@ -164,7 +168,7 @@
 							</h4>
 							{% endif %}
 							{% if module.post_item.description %}
-							<p> {{ content.post_list_content|safe|truncatehtml(200, '.' , false)|striptags}}
+							<p> {{ content.post_list_content|safe|truncatehtml(130, '.' , false)|striptags}}
 							</p>
 							{% endif %}
 						</div>

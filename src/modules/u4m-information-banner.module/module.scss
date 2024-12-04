@@ -7,6 +7,8 @@
     padding: 10px 35px 10px 20px;
     position: relative;
     text-align: center;
+    @include size16;
+    line-height: 1.25;
     @include tabletvert {
         @include size14;
     }
@@ -20,8 +22,8 @@
         align-items: center;
         justify-content: center;
         svg {
+            color: $white;
             * {
-                stroke: $white;
                 opacity: 0.5;
             }
         }

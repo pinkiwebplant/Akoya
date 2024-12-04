@@ -233,9 +233,10 @@ section.u4m-blog-post {
       &::after {
         clear: both;
       }
+      max-width: 860rem;
     }
     .blog-social-wrap {
-      width: 100px;
+      width: 90px;
       padding-right: 50px;
       position: sticky;
       top: 30px;
@@ -282,7 +283,7 @@ section.u4m-blog-post {
       }
     }
     .blog-post-body {
-      width: calc(100% - 100px);
+      width: calc(100% - 90px);
       float: left;
       @include tabletvert {
         width: 100%;
@@ -328,6 +329,12 @@ section.u4m-blog-post {
           font-family: $font2;
         }
       }
+      ul {
+        font-size: $baseFontSize;
+      }
+      ol {
+        font-size: $baseFontSize;
+      }
     }
     .topics {
       margin-top: 60px;
@@ -348,6 +355,13 @@ section.u4m-blog-post {
         color: $black;
         margin-right: 12px;
       }
+    }
+  }
+  .blog-post-divider {
+    padding-bottom: 120px;
+    hr {
+      margin: 0;
+      border-top: 2px solid $silver;
     }
   }
 }

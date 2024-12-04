@@ -4,79 +4,82 @@
  label: Akoya - Blog Post
 -->
 {% extends './base.html' %} {% block body %}
-<main id="main-content" class="body-container-wrapper">
-	{% set imageMax = 100 %}
-	<section class="u4m-blog-post">
-
-		{% module "u4m-blog-post-header" path="../modules/u4m-blog-post-header", label="Blog Post Header" %}
-
-		<div class="blog-post-wrap">
-			<div class="page-center">
-
-
-				<div class="blog-social-wrap">
-					<div class="social-share">
-						<p>
-							Share
-						</p>
-						<ul>
-							<li>
-								<a href="https://www.stumbleupon.com/badge/?url={{content.absolute_url}}"  target="_blank">
-									<svg xmlns="http://www.w3.org/2000/svg" width="9" height="18" viewBox="0 0 9 18" fill="none">
-										<path d="M2.03634 10.5223V18H5.61536V10.5223H8.2842L8.83956 7.08398H5.61536V5.86758C5.61536 4.05 6.24169 3.35391 7.85842 3.35391C8.36133 3.35391 8.76551 3.36797 9 3.39609V0.277734C8.55879 0.140625 7.47892 0 6.85567 0C3.55742 0 2.03634 1.77539 2.03634 5.60391V7.08398H0V10.5223H2.03634Z" fill="white"/>
-									</svg>
-								</a>
-							</li>
-							<li>
-								<a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url={{content.absolute_url }}">
-									<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-										<path d="M3.13438 14H0.23125V4.65312H3.13438V14ZM1.68125 3.37812C0.753125 3.37812 0 2.60938 0 1.68125C0 1.23535 0.177131 0.807722 0.492427 0.492427C0.807722 0.177131 1.23535 0 1.68125 0C2.12715 0 2.55478 0.177131 2.87007 0.492427C3.18537 0.807722 3.3625 1.23535 3.3625 1.68125C3.3625 2.60938 2.60938 3.37812 1.68125 3.37812ZM13.9969 14H11.1V9.45C11.1 8.36562 11.0781 6.975 9.59062 6.975C8.08125 6.975 7.85 8.15312 7.85 9.37187V14H4.95V4.65312H7.73438V5.92812H7.775C8.1625 5.19375 9.10938 4.41875 10.5219 4.41875C13.4594 4.41875 14 6.35313 14 8.86563V14H13.9969Z" fill="white"/>
-									</svg>
-								</a>
-							</li>
-							<li>
-								<a href="http://twitter.com/intent/tweet?url={{content.absolute_url}}&text={{ content.name | striptags|replace("'",'') }}"  target="_blank">
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
-										<path d="M12.5997 0H15.0543L9.69318 5.92981L16 14H11.063L7.19339 9.10673L2.77097 14H0.312907L6.04607 7.65625L0 0H5.06215L8.55628 4.4726L12.5997 0ZM11.7375 12.5798H13.0969L4.3216 1.34615H2.86136L11.7375 12.5798Z" fill="white"/>
-									</svg>
-								</a>
-							</li>
-							<li>
-								<a  href="mailto:?body={{content.absolute_url}}" title="email">
-									<svg xmlns="http://www.w3.org/2000/svg" width="17" height="12" viewBox="0 0 17 12" fill="none">
-										<path d="M1.59375 0C0.713867 0 0 0.671875 0 1.5C0 1.97187 0.235742 2.41562 0.6375 2.7L7.8625 7.8C8.24102 8.06563 8.75898 8.06563 9.1375 7.8L16.3625 2.7C16.7643 2.41562 17 1.97187 17 1.5C17 0.671875 16.2861 0 15.4062 0H1.59375ZM0 3.5V10C0 11.1031 0.95293 12 2.125 12H14.875C16.0471 12 17 11.1031 17 10V3.5L9.775 8.6C9.01797 9.13438 7.98203 9.13438 7.225 8.6L0 3.5Z" fill="white"/>
-									</svg>
-								</a>
-							</li>
-						</ul>
+	<main id="main-content" class="body-container-wrapper">
+		{% set imageMax = 100 %}
+		<section class="u4m-blog-post">
+	
+			{% module "u4m-blog-post-header" path="../modules/u4m-blog-post-header", label="Blog Post Header" %}
+	
+			<div class="blog-post-wrap">
+				<div class="page-center">
+	
+	
+					<div class="blog-social-wrap">
+						<div class="social-share">
+							<p>
+								Share
+							</p>
+							<ul>
+								<li>
+									<a href="https://www.stumbleupon.com/badge/?url={{content.absolute_url}}"  target="_blank">
+										<svg xmlns="http://www.w3.org/2000/svg" width="9" height="18" viewBox="0 0 9 18" fill="none">
+											<path d="M2.03634 10.5223V18H5.61536V10.5223H8.2842L8.83956 7.08398H5.61536V5.86758C5.61536 4.05 6.24169 3.35391 7.85842 3.35391C8.36133 3.35391 8.76551 3.36797 9 3.39609V0.277734C8.55879 0.140625 7.47892 0 6.85567 0C3.55742 0 2.03634 1.77539 2.03634 5.60391V7.08398H0V10.5223H2.03634Z" fill="white"/>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url={{content.absolute_url }}">
+										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+											<path d="M3.13438 14H0.23125V4.65312H3.13438V14ZM1.68125 3.37812C0.753125 3.37812 0 2.60938 0 1.68125C0 1.23535 0.177131 0.807722 0.492427 0.492427C0.807722 0.177131 1.23535 0 1.68125 0C2.12715 0 2.55478 0.177131 2.87007 0.492427C3.18537 0.807722 3.3625 1.23535 3.3625 1.68125C3.3625 2.60938 2.60938 3.37812 1.68125 3.37812ZM13.9969 14H11.1V9.45C11.1 8.36562 11.0781 6.975 9.59062 6.975C8.08125 6.975 7.85 8.15312 7.85 9.37187V14H4.95V4.65312H7.73438V5.92812H7.775C8.1625 5.19375 9.10938 4.41875 10.5219 4.41875C13.4594 4.41875 14 6.35313 14 8.86563V14H13.9969Z" fill="white"/>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="http://twitter.com/intent/tweet?url={{content.absolute_url}}&text={{ content.name | striptags|replace("'",'') }}"  target="_blank">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+											<path d="M12.5997 0H15.0543L9.69318 5.92981L16 14H11.063L7.19339 9.10673L2.77097 14H0.312907L6.04607 7.65625L0 0H5.06215L8.55628 4.4726L12.5997 0ZM11.7375 12.5798H13.0969L4.3216 1.34615H2.86136L11.7375 12.5798Z" fill="white"/>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a  href="mailto:?body={{content.absolute_url}}" title="email">
+										<svg xmlns="http://www.w3.org/2000/svg" width="17" height="12" viewBox="0 0 17 12" fill="none">
+											<path d="M1.59375 0C0.713867 0 0 0.671875 0 1.5C0 1.97187 0.235742 2.41562 0.6375 2.7L7.8625 7.8C8.24102 8.06563 8.75898 8.06563 9.1375 7.8L16.3625 2.7C16.7643 2.41562 17 1.97187 17 1.5C17 0.671875 16.2861 0 15.4062 0H1.59375ZM0 3.5V10C0 11.1031 0.95293 12 2.125 12H14.875C16.0471 12 17 11.1031 17 10V3.5L9.775 8.6C9.01797 9.13438 7.98203 9.13438 7.225 8.6L0 3.5Z" fill="white"/>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				<div class='blog-post-body'>
-					{% if content.post_list_summary_featured_image %}
-					<div class="hs-featured-image-wrapper">
-						<img src="{{ content.post_list_summary_featured_image }}" alt="{{ content.name | striptags }}">
-					</div>
-					{% endif %}
-
-					{{ content.post_body }}
-
-					<div class="topics">
-						<span class="label">Topics:</span>
-
-						{% set included_topics = content.topic_list | rejectattr("slug", "equalto", "featured") | list %}
-						{% for topic in included_topics %}
-						<a href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
-						{% endfor %}
-
+					<div class='blog-post-body'>
+						{% if content.post_list_summary_featured_image %}
+						<div class="hs-featured-image-wrapper">
+							<img src="{{ content.post_list_summary_featured_image }}" alt="{{ content.name | striptags }}">
+						</div>
+						{% endif %}
+	
+						{{ content.post_body }}
+	
+						<div class="topics">
+							<span class="label">Topics:</span>
+	
+							{% set included_topics = content.topic_list | rejectattr("slug", "equalto", "featured") | list %}
+							{% for topic in included_topics %}
+							<a href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
+							{% endfor %}
+	
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		{% module "related-post" path="../modules/u4m-related-post", label="Related Articles" %}
-
-
-	</section>
-
-</main>
-{% endblock body %}
-
+			<div class="blog-post-divider">
+				<div class="page-center"><hr></div>
+			</div>
+			{% module "related-post" path="../modules/u4m-related-post", label="Related Articles" %}
+	
+	
+		</section>
+	
+	</main>
+	{% endblock body %}
+	
