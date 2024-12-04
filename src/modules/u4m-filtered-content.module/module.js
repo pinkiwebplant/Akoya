@@ -8,7 +8,8 @@ const searchField = document.querySelector(".resourceInput");
 
 function filterItems(el, keyword, type) {
   const title = el.querySelector(".restitle").innerText.toLowerCase();
-  const hasKeyword = !keyword || title.includes(keyword);
+	 const topic_text = el.querySelector(".topic_text").innerText.toLowerCase();
+  const hasKeyword = !keyword || title.includes(keyword)|| topic_text.includes(keyword);
   const isOfType = !type || el.classList.contains(type);
 
   return hasKeyword && isOfType;

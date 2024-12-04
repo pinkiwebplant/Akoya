@@ -8,6 +8,10 @@
     "autoload" : true,
     "path" : "../../js/slick.js",
     "name" : "slick.js"
+  }, {
+    "autoload" : true,
+    "path" : "../../js/fancybox.js",
+    "name" : "fancybox.js"
   } ],
   "label" : "Image Gallery",
   "is_available_for_new_content" : true

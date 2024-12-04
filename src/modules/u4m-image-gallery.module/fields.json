@@ -299,24 +299,24 @@
   "label" : "Slide Section",
   "required" : false,
   "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
   "children" : [ {
     "id" : "7ec16377-64c1-7c91-5fa9-c5763fd1e6c2",
-    "name" : "image_field",
+    "name" : "image",
     "display_width" : null,
     "label" : "Image",
     "required" : false,
     "locked" : false,
-    "occurrence" : {
-      "min" : null,
-      "max" : null,
-      "sorting_label_field" : null,
-      "default" : 5
-    },
     "responsive" : true,
     "resizable" : false,
     "show_loading" : false,
     "type" : "image",
-    "default" : [ {
+    "default" : {
       "size_type" : "auto",
       "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/slider_img.png",
       "alt" : "Slide Image",
@@ -325,50 +325,14 @@
       "height" : 1126,
       "max_width" : 2000,
       "max_height" : 1126
-    }, {
-      "size_type" : "auto",
-      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/slider_img.png",
-      "alt" : "Slide Image",
-      "loading" : "lazy",
-      "width" : 2000,
-      "height" : 1126,
-      "max_width" : 2000,
-      "max_height" : 1126
-    }, {
-      "size_type" : "auto",
-      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/slider_img.png",
-      "alt" : "Slide Image",
-      "loading" : "lazy",
-      "width" : 2000,
-      "height" : 1126,
-      "max_width" : 2000,
-      "max_height" : 1126
-    }, {
-      "size_type" : "auto",
-      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/slider_img.png",
-      "alt" : "Slide Image",
-      "loading" : "lazy",
-      "width" : 2000,
-      "height" : 1126,
-      "max_width" : 2000,
-      "max_height" : 1126
-    }, {
-      "size_type" : "auto",
-      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/slider_img.png",
-      "alt" : "Slide Image",
-      "loading" : "lazy",
-      "width" : 2000,
-      "height" : 1126,
-      "max_width" : 2000,
-      "max_height" : 1126
-    } ]
+    }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
-  "default" : {
-    "image_field" : [ {
+  "default" : [ {
+    "image_field" : {
       "size_type" : "auto",
       "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/slider_img.png",
       "alt" : "Slide Image",
@@ -377,7 +341,9 @@
       "height" : 1126,
       "max_width" : 2000,
       "max_height" : 1126
-    }, {
+    }
+  }, {
+    "image_field" : {
       "size_type" : "auto",
       "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/slider_img.png",
       "alt" : "Slide Image",
@@ -386,7 +352,9 @@
       "height" : 1126,
       "max_width" : 2000,
       "max_height" : 1126
-    }, {
+    }
+  }, {
+    "image_field" : {
       "size_type" : "auto",
       "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/slider_img.png",
       "alt" : "Slide Image",
@@ -395,7 +363,9 @@
       "height" : 1126,
       "max_width" : 2000,
       "max_height" : 1126
-    }, {
+    }
+  }, {
+    "image_field" : {
       "size_type" : "auto",
       "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/slider_img.png",
       "alt" : "Slide Image",
@@ -404,7 +374,9 @@
       "height" : 1126,
       "max_width" : 2000,
       "max_height" : 1126
-    }, {
+    }
+  }, {
+    "image_field" : {
       "size_type" : "auto",
       "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/slider_img.png",
       "alt" : "Slide Image",
@@ -413,8 +385,8 @@
       "height" : 1126,
       "max_width" : 2000,
       "max_height" : 1126
-    } ]
-  }
+    }
+  } ]
 }, {
   "id" : "module_overrides",
   "name" : "module_overrides",

@@ -35,7 +35,7 @@
 <script>
 	$('.{{ name }} .accorion-item:first-child').addClass('active');
 		$('.{{ name }} .accorion-item:first-child').children('.accordion_content').slideDown(250);
-	$('.accordion_title').click(function(){
+		$('.accordion_title').click(function(){
 		$(this).parents('.accorion-item').siblings().removeClass('active');
 		$(this).parents().siblings('.accorion-item').children('.accordion_content').slideUp(250);
 		$(this).parent('.accorion-item').toggleClass('active');
@@ -46,8 +46,18 @@
 {% end_require_js %}
 
 
-
-
+{% if module.module_overrides.change_inner_content_width %}
+{% require_css %}
+<style>
+	.{{name}}	.accordions{
+		max-width: {{ module.module_overrides.inner_content_width }}px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+</style>
+{% end_require_css %}
+{% endif %}
 
 
 
