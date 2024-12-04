@@ -84,7 +84,8 @@ section.u4m-cards {
       }
       .cardItemIn.light {
         .cardItemCon {
-          * {
+          color: $gray;
+          h3 {
             color: $white;
           }
         }

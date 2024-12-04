@@ -40,12 +40,15 @@
     }
 
     .lefttab_nav_item {
-      opacity: 0.3;
+      opacity: 0.6;
       margin-left: -2px;
       border-left: 2px solid transparent;
       padding: 25px 36px;
       border-radius: 0 10rem 10rem 0;
       background-color: transparent;
+      &:hover {
+        opacity: 1;
+      }
       @include tabletvert {
         padding: 25rem;
       }
@@ -115,6 +118,14 @@
       .nav_content_block {
         padding-top: 13px;
         color: $basecolor;
+        margin-right: 36px;
+        @include tabletvert {
+          margin-right: 0;
+          .nav_descr.cstyle1 {
+            margin-right: 20px;
+            display: block;
+          }
+        }
       }
 
       .nav_trigger_wrap {

@@ -27,13 +27,14 @@ section.u4m-grid-card {
           right: 4%;
           width: 92%;
           opacity: 0;
+          transition: all 0.2s linear;
         }
         &:hover {
           transform: translateY(-5px);
           cursor: pointer;
           .grid_inr {
             border-color: $azure;
-            background: $white;
+
             p {
               color: $basecolor;
             }
@@ -52,6 +53,9 @@ section.u4m-grid-card {
           z-index: 9;
           padding: 24rem;
           border-radius: $borderRadius;
+          background: $white;
+          transition: all 0.2s linear;
+          height: 100%;
           .arrow {
             width: 24rem;
             height: 24rem;
@@ -65,10 +69,12 @@ section.u4m-grid-card {
             justify-content: center;
             visibility: hidden;
             opacity: 0;
+            transition: all 0.2s linear;
           }
           .grid_item_inr {
             & > p {
               margin-bottom: 12rem;
+              color: $darkgray;
             }
             .cnt {
               @include size16;
