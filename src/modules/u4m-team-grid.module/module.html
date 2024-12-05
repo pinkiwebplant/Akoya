@@ -37,6 +37,7 @@
 
 					{% for item in module.member_group %}
 					<div class="member" data-tags="{{ item.select_tag|replace(' ','') }}">
+					<div class="inner_wrap">
 						<div class="inner">
 							{% if item.member_image.src %}
 							<div class="member-image" >
@@ -60,6 +61,7 @@
 								{% endif %}
 							</div>
 						</div>
+						</div>
 						<div class='popup-content'>
 							<div class="page-center">
 
@@ -80,7 +82,7 @@
 										<p class="member-title">{{ item.member_title }}</p>
 										{% endif %}
 										{% if item.member_name %}
-										<h4>{{ item.member_name }}</h4>
+										<h2>{{ item.member_name }}</h2>
 										{% endif %}
 										{{ item.popup_content.popup_content }}
 										<div class="social-links">
@@ -153,8 +155,8 @@
 <script>
 
 	
-	$(' .view-bio').click(function(){
-		$(this).parents('.member').addClass('popup-active');
+	$(' .inner_wrap').click(function(){
+		$(this).parent('.member').addClass('popup-active');
 		$('body').addClass('popup-activee');
 	});
 	$('.exit').click(function(){

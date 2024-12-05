@@ -3,27 +3,30 @@ section.u4m-blog-post-header {
   padding-top: 105px;
   padding-bottom: 60px;
   position: relative;
-  .date {
-    @include eyebrow;
-  }
-  h1 {
-    margin-bottom: 36px;
-  }
-  .post-meta {
-    display: flex;
-    align-items: center;
-    .author-img {
-      margin-right: 5px;
-      img {
-        width: 36px;
-        height: 36px;
-        border-radius: 100%;
-        object-fit: cover;
-      }
+  .page-center {
+    max-width: 860px;
+    .date {
+      @include eyebrow;
     }
-    .author-name {
-      a {
-        color: $black2;
+    h1 {
+      margin-bottom: 36px;
+    }
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      .author-img {
+        img {
+          width: 36px;
+          height: 36px;
+          border-radius: 100%;
+          object-fit: cover;
+        }
+      }
+      .author-name {
+        a {
+          color: $black2;
+        }
       }
     }
   }

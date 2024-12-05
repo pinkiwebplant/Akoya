@@ -379,7 +379,7 @@
     "show_loading" : false,
     "type" : "image",
     "default" : {
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/member%20img1.png",
       "alt" : "member img1",
       "width" : 1991,
       "height" : 2258,
@@ -462,8 +462,8 @@
         "icon_set" : "fontawesome-6.4.2",
         "type" : "icon",
         "default" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
+          "name" : "X Twitter",
+          "unicode" : "e61b",
           "type" : "REGULAR"
         }
       }, {
@@ -492,8 +492,8 @@
       "type" : "group",
       "default" : [ {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
+          "name" : "X Twitter",
+          "unicode" : "e61b",
           "type" : "REGULAR"
         },
         "social_link" : {
@@ -505,22 +505,21 @@
           "open_in_new_tab" : false,
           "no_follow" : false
         }
-      }, {
+      },{
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
-          "type" : "REGULAR"
+          "name" : "LinkedIn In",
+          "type" : "REGULAR",
+          "unicode" : "f0e1"
         },
         "social_link" : {
-          "url" : {
-            "content_id" : null,
-            "type" : "EXTERNAL",
-            "href" : ""
-          },
+          "no_follow" : false,
           "open_in_new_tab" : false,
-          "no_follow" : false
+          "url" : {
+            "href" : "",
+            "type" : "EXTERNAL"
+          }
         }
-      } ]
+      }]
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
@@ -530,8 +529,8 @@
       "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
       "social_item" : [ {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
+          "name" : "X Twitter",
+          "unicode" : "e61b",
           "type" : "REGULAR"
         },
         "social_link" : {
@@ -545,18 +544,17 @@
         }
       }, {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
-          "type" : "REGULAR"
+          "name" : "LinkedIn In",
+          "type" : "REGULAR",
+          "unicode" : "f0e1"
         },
         "social_link" : {
-          "url" : {
-            "content_id" : null,
-            "type" : "EXTERNAL",
-            "href" : ""
-          },
+          "no_follow" : false,
           "open_in_new_tab" : false,
-          "no_follow" : false
+          "url" : {
+            "href" : "",
+            "type" : "EXTERNAL"
+          }
         }
       } ]
     }
@@ -569,7 +567,7 @@
     "select_tag" : "board_members",
     "image_background_color" : "purlple-bg",
     "member_image" : {
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/member%20img1.png",
       "alt" : "member img1",
       "width" : 1991,
       "height" : 2258,
@@ -584,8 +582,8 @@
       "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
       "social_item" : [ {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
+          "name" : "X Twitter",
+          "unicode" : "e61b",
           "type" : "REGULAR"
         },
         "social_link" : {
@@ -599,18 +597,17 @@
         }
       }, {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
-          "type" : "REGULAR"
+          "name" : "LinkedIn In",
+          "type" : "REGULAR",
+          "unicode" : "f0e1"
         },
         "social_link" : {
-          "url" : {
-            "content_id" : null,
-            "type" : "EXTERNAL",
-            "href" : ""
-          },
+          "no_follow" : false,
           "open_in_new_tab" : false,
-          "no_follow" : false
+          "url" : {
+            "href" : "",
+            "type" : "EXTERNAL"
+          }
         }
       } ]
     }
@@ -618,7 +615,7 @@
     "select_tag" : "board_members",
     "image_background_color" : "purlple-bg",
     "member_image" : {
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/member%20img1.png",
       "alt" : "member img1",
       "width" : 1991,
       "height" : 2258,
@@ -633,8 +630,8 @@
       "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
       "social_item" : [ {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
+          "name" : "X Twitter",
+          "unicode" : "e61b",
           "type" : "REGULAR"
         },
         "social_link" : {
@@ -648,18 +645,17 @@
         }
       }, {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
-          "type" : "REGULAR"
+          "name" : "LinkedIn In",
+          "type" : "REGULAR",
+          "unicode" : "f0e1"
         },
         "social_link" : {
-          "url" : {
-            "content_id" : null,
-            "type" : "EXTERNAL",
-            "href" : ""
-          },
+          "no_follow" : false,
           "open_in_new_tab" : false,
-          "no_follow" : false
+          "url" : {
+            "href" : "",
+            "type" : "EXTERNAL"
+          }
         }
       } ]
     }
@@ -667,7 +663,7 @@
     "select_tag" : "board_members",
     "image_background_color" : "purlple-bg",
     "member_image" : {
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/member%20img1.png",
       "alt" : "member img1",
       "width" : 1991,
       "height" : 2258,
@@ -682,8 +678,8 @@
       "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
       "social_item" : [ {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
+          "name" : "X Twitter",
+          "unicode" : "e61b",
           "type" : "REGULAR"
         },
         "social_link" : {
@@ -697,18 +693,17 @@
         }
       }, {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
-          "type" : "REGULAR"
+          "name" : "LinkedIn In",
+          "type" : "REGULAR",
+          "unicode" : "f0e1"
         },
         "social_link" : {
-          "url" : {
-            "content_id" : null,
-            "type" : "EXTERNAL",
-            "href" : ""
-          },
+          "no_follow" : false,
           "open_in_new_tab" : false,
-          "no_follow" : false
+          "url" : {
+            "href" : "",
+            "type" : "EXTERNAL"
+          }
         }
       } ]
     }
@@ -716,7 +711,7 @@
     "select_tag" : "board_members",
     "image_background_color" : "purlple-bg",
     "member_image" : {
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/member%20img1.png",
       "alt" : "member img1",
       "width" : 1991,
       "height" : 2258,
@@ -731,8 +726,8 @@
       "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
       "social_item" : [ {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
+          "name" : "X Twitter",
+          "unicode" : "e61b",
           "type" : "REGULAR"
         },
         "social_link" : {
@@ -746,18 +741,17 @@
         }
       }, {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
-          "type" : "REGULAR"
+          "name" : "LinkedIn In",
+          "type" : "REGULAR",
+          "unicode" : "f0e1"
         },
         "social_link" : {
-          "url" : {
-            "content_id" : null,
-            "type" : "EXTERNAL",
-            "href" : ""
-          },
+          "no_follow" : false,
           "open_in_new_tab" : false,
-          "no_follow" : false
+          "url" : {
+            "href" : "",
+            "type" : "EXTERNAL"
+          }
         }
       } ]
     }
@@ -765,7 +759,7 @@
     "select_tag" : "board_members",
     "image_background_color" : "purlple-bg",
     "member_image" : {
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/member%20img1.png",
       "alt" : "member img1",
       "width" : 1991,
       "height" : 2258,
@@ -780,8 +774,8 @@
       "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
       "social_item" : [ {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
+          "name" : "X Twitter",
+          "unicode" : "e61b",
           "type" : "REGULAR"
         },
         "social_link" : {
@@ -795,18 +789,17 @@
         }
       }, {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
-          "type" : "REGULAR"
+          "name" : "LinkedIn In",
+          "type" : "REGULAR",
+          "unicode" : "f0e1"
         },
         "social_link" : {
-          "url" : {
-            "content_id" : null,
-            "type" : "EXTERNAL",
-            "href" : ""
-          },
+          "no_follow" : false,
           "open_in_new_tab" : false,
-          "no_follow" : false
+          "url" : {
+            "href" : "",
+            "type" : "EXTERNAL"
+          }
         }
       } ]
     }
@@ -814,7 +807,7 @@
     "select_tag" : "board_members",
     "image_background_color" : "purlple-bg",
     "member_image" : {
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/member%20img1.png",
       "alt" : "member img1",
       "width" : 1991,
       "height" : 2258,
@@ -829,8 +822,8 @@
       "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
       "social_item" : [ {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
+          "name" : "X Twitter",
+          "unicode" : "e61b",
           "type" : "REGULAR"
         },
         "social_link" : {
@@ -844,18 +837,17 @@
         }
       }, {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
-          "type" : "REGULAR"
+          "name" : "LinkedIn In",
+          "type" : "REGULAR",
+          "unicode" : "f0e1"
         },
         "social_link" : {
-          "url" : {
-            "content_id" : null,
-            "type" : "EXTERNAL",
-            "href" : ""
-          },
+          "no_follow" : false,
           "open_in_new_tab" : false,
-          "no_follow" : false
+          "url" : {
+            "href" : "",
+            "type" : "EXTERNAL"
+          }
         }
       } ]
     }
@@ -863,7 +855,7 @@
     "select_tag" : "board_members",
     "image_background_color" : "purlple-bg",
     "member_image" : {
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/member%20img1.png",
       "alt" : "member img1",
       "width" : 1991,
       "height" : 2258,
@@ -878,8 +870,8 @@
       "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
       "social_item" : [ {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
+          "name" : "X Twitter",
+          "unicode" : "e61b",
           "type" : "REGULAR"
         },
         "social_link" : {
@@ -893,8 +885,41 @@
         }
       }, {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
+          "name" : "LinkedIn In",
+          "type" : "REGULAR",
+          "unicode" : "f0e1"
+        },
+        "social_link" : {
+          "no_follow" : false,
+          "open_in_new_tab" : false,
+          "url" : {
+            "href" : "",
+            "type" : "EXTERNAL"
+          }
+        }
+      }]
+    }
+  }, {
+    "select_tag" : "board_members",
+    "image_background_color" : "purlple-bg",
+    "member_image" : {
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/member%20img1.png",
+      "alt" : "member img1",
+      "width" : 1991,
+      "height" : 2258,
+      "max_width" : 1763.5075287865368,
+      "max_height" : 2000,
+      "size_type" : "auto_custom_max"
+    },
+    "member_name" : "Firstname Longlastname",
+    "member_title" : "Person’s Title Goes Here",
+    "read_bio_text" : "Read Bio",
+    "popup_content" : {
+      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
+      "social_item" : [ {
+        "icon_field" : {
+          "name" : "X Twitter",
+          "unicode" : "e61b",
           "type" : "REGULAR"
         },
         "social_link" : {
@@ -905,6 +930,20 @@
           },
           "open_in_new_tab" : false,
           "no_follow" : false
+        }
+      }, {
+        "icon_field" : {
+          "name" : "LinkedIn In",
+          "type" : "REGULAR",
+          "unicode" : "f0e1"
+        },
+        "social_link" : {
+          "no_follow" : false,
+          "open_in_new_tab" : false,
+          "url" : {
+            "href" : "",
+            "type" : "EXTERNAL"
+          }
         }
       } ]
     }
@@ -912,7 +951,7 @@
     "select_tag" : "board_members",
     "image_background_color" : "purlple-bg",
     "member_image" : {
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/member%20img1.png",
       "alt" : "member img1",
       "width" : 1991,
       "height" : 2258,
@@ -927,8 +966,8 @@
       "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
       "social_item" : [ {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
+          "name" : "X Twitter",
+          "unicode" : "e61b",
           "type" : "REGULAR"
         },
         "social_link" : {
@@ -942,67 +981,17 @@
         }
       }, {
         "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
-          "type" : "REGULAR"
+          "name" : "LinkedIn In",
+          "type" : "REGULAR",
+          "unicode" : "f0e1"
         },
         "social_link" : {
-          "url" : {
-            "content_id" : null,
-            "type" : "EXTERNAL",
-            "href" : ""
-          },
+          "no_follow" : false,
           "open_in_new_tab" : false,
-          "no_follow" : false
-        }
-      } ]
-    }
-  }, {
-    "select_tag" : "board_members",
-    "image_background_color" : "purlple-bg",
-    "member_image" : {
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/member%20img1.png",
-      "alt" : "member img1",
-      "width" : 1991,
-      "height" : 2258,
-      "max_width" : 1763.5075287865368,
-      "max_height" : 2000,
-      "size_type" : "auto_custom_max"
-    },
-    "member_name" : "Firstname Longlastname",
-    "member_title" : "Person’s Title Goes Here",
-    "read_bio_text" : "Read Bio",
-    "popup_content" : {
-      "popup_content" : "<p>Quisque ipsum libero, efficitur in nisl quis, ullamcorper pharetra nunc. Curabitur gravida porta nisi sed tristique. Pellentesque elit ligula, accumsan tincidunt ultrices sed, feugiat sollicitudin ligula. Vivamus iaculis, mi ut aliquam tristique, purus dolor accumsan metus, sit amet pretium elit lacus eu sapien. Donec blandit ullamcorper finibus. Aenean convallis, neque vel semper porta, mi velit mattis neque, ultrices dapibus diam est id purus. Quisque suscipit elit leo, vel interdum urna sagittis eget. Nullam ex magna, pellentesque et tempus et, semper id turpis. Fusce lacus sapien, consequat vel quam sed, vestibulum consectetur nisl. Integer eu commodo ipsum, sed vulputate ipsum. Morbi feugiat elementum blandit.</p>",
-      "social_item" : [ {
-        "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
-          "type" : "REGULAR"
-        },
-        "social_link" : {
           "url" : {
-            "content_id" : null,
-            "type" : "EXTERNAL",
-            "href" : ""
-          },
-          "open_in_new_tab" : false,
-          "no_follow" : false
-        }
-      }, {
-        "icon_field" : {
-          "name" : "Facebook F",
-          "unicode" : "f39e",
-          "type" : "REGULAR"
-        },
-        "social_link" : {
-          "url" : {
-            "content_id" : null,
-            "type" : "EXTERNAL",
-            "href" : ""
-          },
-          "open_in_new_tab" : false,
-          "no_follow" : false
+            "href" : "",
+            "type" : "EXTERNAL"
+          }
         }
       } ]
     }

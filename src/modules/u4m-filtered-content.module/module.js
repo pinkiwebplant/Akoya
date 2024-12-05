@@ -5,34 +5,21 @@ let filteredItems = items;
 let currPage = 1;
 const TagSelect = document.querySelector(".resourceSelect");
 const searchField = document.querySelector(".resourceInput");
-const categoryField = document.querySelectorAll(".topFilter .hs-out-btn");
 
-function filterItems(el, keyword, type, category) {
-  const title = el.querySelector(".restitle").innerText;
-  console.log(title);
-  const hasKeyword = !keyword || title.includes(keyword);
+function filterItems(el, keyword, type) {
+  const title = el.querySelector(".restitle").innerText.toLowerCase();
+	 const topic_text = el.querySelector(".topic_text").innerText.toLowerCase();
+  const hasKeyword = !keyword || title.includes(keyword)|| topic_text.includes(keyword);
   const isOfType = !type || el.classList.contains(type);
-  const isOfCategory = !category || el.classList.contains(category);
 
-  return hasKeyword && isOfType && isOfCategory;
+  return hasKeyword && isOfType;
 }
 
 function MainLogic() {
   const keyword = searchField.value;
   const type = TagSelect.value;
 
-  let activeCategory = null;
-
-  // Iterate through categories to find the latest active category
-  categoryField.forEach((ele) => {
-    if (ele.classList.contains("active")) {
-      activeCategory = ele.value;
-    }
-  });
-
-  filteredItems = items.filter((el) =>
-    filterItems(el, keyword, type, activeCategory)
-  );
+  filteredItems = items.filter((el) => filterItems(el, keyword, type));
   currPage = 1;
 
   if (filteredItems.length !== 0) {
@@ -40,62 +27,15 @@ function MainLogic() {
     setHTML(filteredItems);
   } else {
     pagination.style.display = "none";
-    wrapper.innerHTML = "<p>No Data Found.</p>";
+    wrapper.innerHTML =
+      "<p style='text-align:center;margin: 0 auto;'>No results found. Try again with other combination.</p>";
   }
-}
-
-function setHTML(items) {
-  wrapper.innerHTML = "";
-  pagination.innerHTML = "";
-
-  const {
-    totalItems,
-    currentPage,
-    pageSize,
-    totalPages,
-    startPage,
-    endPage,
-    startIndex,
-    endIndex,
-    pages,
-  } = calculatePagination(items.length, currPage, 9, 3);
-
-  const nav = document.createElement("nav");
-  nav.classList.add(
-    "relative",
-    "z-0",
-    "inline-flex",
-    "rounded-md",
-    "shadow-sm",
-    "-space-x-px"
-  );
-
-  let paginationHTML = "";
-  paginationHTML += `<button ${currentPage === 1 && "disabled"} class="${currentPage === 1 ? "cursor-not-allowed" : "prev"} prev-button para gray_border black_color light_bg relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">\n<span class="material-symbols-outlined">chevron_left</span>\n</button>`;
-
-  pages.forEach((page) => {
-    paginationHTML +=
-      currentPage === page
-        ? `<button class=" active para gray_border black_color light_bg z-10 bg-indigo-50 border-indigo-500 text-indigo-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium" page="${page}" disabled>${page}</button>`
-        : `<button class="para gray_border black_color light_bg page bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium" page="${page}" disabled>${page}</button>`;
-  });
-
-  paginationHTML += `<button ${currentPage === endPage && "disabled"} class="${currentPage === endPage ? "cursor-not-allowed" : "next"} next-button para gray_border black_color light_bg relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">\n<span class="material-symbols-outlined">chevron_right</span>\n</button>`;
-
-  nav.innerHTML = paginationHTML;
-  pagination.append(nav);
-
-  const start = (currentPage - 1) * pageSize;
-  const end = currentPage * pageSize;
-  items.slice(start, end).forEach((el) => {
-    wrapper.append(el);
-  });
 }
 
 function calculatePagination(
   totalItems,
   currentPage = 1,
-  pageSize = 9,
+  pageSize = 6,
   maxPages = 3
 ) {
   let startPage,
@@ -146,21 +86,58 @@ function calculatePagination(
   };
 }
 
-categoryField.forEach((ele) => {
-  ele.addEventListener("click", (m) => {
-    m.preventDefault();
+function setHTML(items) {
+  wrapper.innerHTML = "";
+  pagination.innerHTML = "";
 
-    // Remove "active" class from siblings
-    categoryField.forEach((sibling) => {
-      if (sibling !== ele) {
-        sibling.classList.remove("active");
-      }
-    });
+  const {
+    totalItems,
+    currentPage,
+    pageSize,
+    totalPages,
+    startPage,
+    endPage,
+    startIndex,
+    endIndex,
+    pages,
+  } = calculatePagination(items.length, currPage, 6, 3);
 
-    ele.classList.add("active");
-    MainLogic();
+  const nav = document.createElement("nav");
+  nav.classList.add(
+    "relative",
+    "z-0",
+    "inline-flex",
+    "rounded-md",
+    "shadow-sm",
+    "-space-x-px"
+  );
+
+  let paginationHTML = "";
+
+  paginationHTML += `<button ${currentPage === 1 && "disabled"} class=" ${
+    currentPage === 1 ? "cursor-not-allowed" : "prev"
+  } para gray_border black_color light_bg relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">\n<span class="material-symbols-outlined">chevron_left</span>\n</button>`;
+
+  pages.forEach((page) => {
+    paginationHTML += `<button class="${currentPage === page ? "active" : ""} ${
+      endPage === 1 ? "end" : ""
+    } 
+    para gray_border black_color light_bg page bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium" page="${page}">${page}</button>`;
   });
-});
+
+  paginationHTML += `<button ${currentPage === endPage && "disabled"} class="${
+    currentPage === endPage ? "cursor-not-allowed" : "next"
+  } para gray_border black_color light_bg relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">\n<span class="material-symbols-outlined">chevron_right</span>\n</button>`;
+
+  nav.innerHTML = paginationHTML;
+  pagination.append(nav);
+
+  const start = (currentPage - 1) * pageSize;
+  const end = currentPage * pageSize;
+  items.slice(start, end).forEach((el) => {
+    wrapper.append(el);
+  });
+}
 
 TagSelect.addEventListener("change", (f) => {
   f.preventDefault();

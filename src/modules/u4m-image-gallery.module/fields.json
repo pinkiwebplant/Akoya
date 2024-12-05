@@ -34,7 +34,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "Eyebrow Text"
+    "default" : "Optional Eyebrow Text"
   }, {
     "id" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
     "name" : "include_heading",
@@ -64,7 +64,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "U4M Accordion"
+    "default" : "Gallery module headline."
   }, {
     "id" : "2f10bd6e-cf85-1cf6-5a4f-fa75e1e78238",
     "name" : "include_content",
@@ -113,7 +113,7 @@
       "access" : null
     },
     "type" : "richtext",
-    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco labo.</p>"
+    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>"
   }, {
     "id" : "4a517c8a-8c15-a721-dca5-db7b58a8c2a7",
     "name" : "include_button",
@@ -135,7 +135,7 @@
       "min" : null,
       "max" : 2,
       "sorting_label_field" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
-      "default" : 2
+      "default" : 1
     },
     "visibility" : {
       "controlling_field" : null,
@@ -200,7 +200,7 @@
       "allow_new_line" : false,
       "show_emoji_picker" : false,
       "type" : "text",
-      "default" : "Button"
+      "default" : "Primary call-to-action"
     }, {
       "id" : "f1ccd7fd-a18d-1262-3c67-476cdf5424cd",
       "name" : "link",
@@ -252,20 +252,7 @@
     "default" : [ {
       "button_type" : "std",
       "button_theme" : "hs-button",
-      "button_text" : "Button",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
-      "button_type" : "std",
-      "button_theme" : "hs-button",
-      "button_text" : "Button",
+      "button_text" : "Primary call-to-action",
       "link" : {
         "url" : {
           "content_id" : null,
@@ -283,30 +270,17 @@
   "type" : "group",
   "default" : {
     "include_eyebrow_text" : true,
-    "eyebrow_text" : "Eyebrow Text",
+    "eyebrow_text" : "Optional Eyebrow Text",
     "include_heading" : true,
-    "heading" : "U4M Accordion",
+    "heading" : "Gallery module headline.",
     "include_content" : true,
     "content_style" : "theme",
-    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco labo.</p>",
+    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>",
     "include_button" : true,
     "button_group" : [ {
       "button_type" : "std",
       "button_theme" : "hs-button",
-      "button_text" : "Button",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
-      "button_type" : "std",
-      "button_theme" : "hs-button",
-      "button_text" : "Button",
+      "button_text" : "Primary call-to-action",
       "link" : {
         "url" : {
           "content_id" : null,
@@ -325,50 +299,94 @@
   "label" : "Slide Section",
   "required" : false,
   "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
   "children" : [ {
     "id" : "7ec16377-64c1-7c91-5fa9-c5763fd1e6c2",
-    "name" : "image_field",
+    "name" : "image",
     "display_width" : null,
     "label" : "Image",
     "required" : false,
     "locked" : false,
-    "occurrence" : {
-      "min" : null,
-      "max" : null,
-      "sorting_label_field" : null,
-      "default" : 1
-    },
     "responsive" : true,
     "resizable" : false,
     "show_loading" : false,
     "type" : "image",
-    "default" : [ {
+    "default" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/slider_img.png",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/slider_img.png",
       "alt" : "Slide Image",
       "loading" : "lazy",
       "width" : 2000,
       "height" : 1126,
       "max_width" : 2000,
       "max_height" : 1126
-    } ]
+    }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
-  "default" : {
-    "image_field" : [ {
+  "default" : [ {
+    "image_field" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/slider_img.png",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/slider_img.png",
       "alt" : "Slide Image",
       "loading" : "lazy",
       "width" : 2000,
       "height" : 1126,
       "max_width" : 2000,
       "max_height" : 1126
-    } ]
-  }
+    }
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/slider_img.png",
+      "alt" : "Slide Image",
+      "loading" : "lazy",
+      "width" : 2000,
+      "height" : 1126,
+      "max_width" : 2000,
+      "max_height" : 1126
+    }
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/slider_img.png",
+      "alt" : "Slide Image",
+      "loading" : "lazy",
+      "width" : 2000,
+      "height" : 1126,
+      "max_width" : 2000,
+      "max_height" : 1126
+    }
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/slider_img.png",
+      "alt" : "Slide Image",
+      "loading" : "lazy",
+      "width" : 2000,
+      "height" : 1126,
+      "max_width" : 2000,
+      "max_height" : 1126
+    }
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/slider_img.png",
+      "alt" : "Slide Image",
+      "loading" : "lazy",
+      "width" : 2000,
+      "height" : 1126,
+      "max_width" : 2000,
+      "max_height" : 1126
+    }
+  } ]
 }, {
   "id" : "module_overrides",
   "name" : "module_overrides",

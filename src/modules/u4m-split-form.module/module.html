@@ -27,31 +27,21 @@
 				{% if module.include_form %}
 				{% if module.form_group.select_form.form_id%}
 				<div class="form_column">
-					<div class="form_column_inner">
+					<div class="form_column_inner form_column_inner_splitOuter{{name}}">
 
 						{% if module.form_group.select_form.form_id %}              
 						<div class="form_box">
-							<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-							<script>
-								hbspt.forms.create({
-									region: "na1",
-									portalId: "{{ hub_id }}",
-									css: "",
-									target: ".form_column_inner",
-									formId: "{{ module.form_group.select_form.form_id }}",
-									onFormReady: function($form) {
-									$('.form_column .hs-button').click(function(){
-									setTimeout(function(){
-										var formHeight = $('.form_column_inner').outerHeight();
-										var calcHeight = formHeight + 200;
-										$('.u4m-split-form-wrapper.formAdded').css('min-height', calcHeight);
-									}, 200);
-									console.log('form_column call')
-								});    }
+
+							{% form
+								form_to_use="{{ module.form_group.select_form.form_id }}"
+								response_response_type="{{ module.form_group.select_form.response_type }}"
+								response_message="{{ module.form_group.select_form.message }}"
+								response_redirect_id="{{ module.form_group.select_form.redirect_id }}"
+								response_redirect_url="{{module.form_group.select_form.redirect_url}}"
+								gotowebinar_webinar_key="{{ module.form_group.select_form.gotowebinar_webinar_key }}"
+							%}
 
 
-								}); 
-							</script>
 						</div>
 						{% endif %}
 					</div>
@@ -63,7 +53,7 @@
 		</section>
 </div>
 
-<div class=" splitFormbotom Bnrr dnd_padd bott{{name}}"> 
+<section class=" splitFormbotom Bnrr dnd_padd bott{{name}} {{ module.module_overrides.bottom_margin }}"> 
 	<div class="bottom_content_inner">
 		<div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
 			<div class="flex_row">
@@ -74,7 +64,7 @@
 		</div> 
 	</div>
 
-</div>
+</section>
 
 
 </div>
@@ -83,32 +73,56 @@
 
 {% require_js %}
 <script>
-	$(document).ready(function(){
-		function checkHeight(){
+
+	function checkHeight(){
+		setTimeout(function(){
 			var formHeight = $('.form_column_inner').outerHeight();
 			var calcHeight = formHeight + 200;
-			$('.u4m-split-form-wrapper.formAdded').css('min-height',calcHeight);
-			console.log('checkHeight call')
-		}
+			$('.u4m-split-form-wrapper.formAdded').css('min-height', calcHeight);
+		}, 300);
+	}
 
-		{# $(document).ready(function(){
-			$('.form_column .hs-button').click(function(){
-				setTimeout(function(){
-					var formHeight = $('.form_column_inner').outerHeight();
-					var calcHeight = formHeight + 200;
-					$('.u4m-split-form-wrapper.formAdded').css('min-height', calcHeight);
-				}, 200);
-				console.log('form_column call')
-			});
-		}); #}
-
-
-		$(window).on("load resize", function() {
-			setTimeout(function(){
-			checkHeight();
-			}, 200)
-		});
-		$('.u4m-split-form-wrapper.formAdded').parents('body').addClass('formsec');
+	$(document).ready(function(){
+		$('.form_column .hs-button').click(function(){
+			checkHeight()
+		});  
 	});
+
+	$(window).on("load resize", function() {
+		setTimeout(function(){
+			checkHeight();
+		}, 200)
+	});
+
+	$(window).on("load", function() {
+		$('.form_column .hs-button').click(function(){
+			checkHeight()
+		});  
+		setTimeout(function(){
+			$('.form_column .hs-button').click(function(){
+				checkHeight()
+			});  
+		}, 1000)
+	});
+	$('.u4m-split-form-wrapper.formAdded').parents('body').addClass('formsec');
+
 </script>
 {% end_require_js %}
+
+{% require_css %}
+<style>
+	.{{name}}	.form_column_inner{
+		width: 100%
+	}
+
+	.{{name}}	.legal-consent-container {
+		margin-bottom: 20px;
+	}
+
+	{% if module.module_overrides.bottom_margin == 'bottom-margin-custom' %}
+	section.{{ moduleName}}.{{ name }} .bott{{name}} {margin-bottom:{{ module.module_overrides.custom_bottom_margin }}rem; }
+	@media (max-width: 767px) { section.{{ moduleName}}.{{ name }} .bott{{name}} { margin-bottom:{{ module.module_overrides.custom_bottom_margin_mobile }}rem; } }
+	{% endif %}
+
+</style>
+{% end_require_css %}

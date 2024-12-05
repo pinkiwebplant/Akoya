@@ -42,18 +42,19 @@
 						<div class="post-item-topic">
 							{% set included_topics = post.topic_list | rejectattr("slug",
 				"equalto", "featured") | list %} {% for topic in included_topics %}
+					{% if loop.first %}
 							<a
 								 class="{{ topic.slug }}"
 								 href="{{ blog_tag_url(group.id, topic.slug) }}"
 								 >{{ topic.name }}</a
-								>{% if not loop.last %},{% endif %} {% endfor %}
+								>{% endif %} {% endfor %}
 						</div>
 						{% endif %}
 						<h4>
 							<a href="{{ post.absolute_url }}">{{ post.name }}</a>
 						</h4>
 						<p>
-							{{ post.post_list_content|safe|truncatehtml(200, '.' ,
+							{{ post.post_list_content|safe|truncatehtml(120, '.' ,
 				false)|striptags}}
 						</p>
 					</div>

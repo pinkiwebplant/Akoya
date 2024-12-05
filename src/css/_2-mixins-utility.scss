@@ -160,11 +160,11 @@
 @mixin link {
   text-decoration: none;
   /* Remove default underline */
-  color: $action1;
+  color: $secondary-teal;
   transition: $animation1;
   display: inline-block;
 
   &:hover {
-    color: $action1;
+    color: $primary-teal;
   }
 }

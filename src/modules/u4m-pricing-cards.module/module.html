@@ -20,7 +20,7 @@
 					<div class="pricing_content">
 						{% if item.pricing_text %}
 						<h2>
-							{{ item.pricing_text }}
+							{% if item.select_pricing_type == "free" %}{{ item.pricing_text }}{% endif %}{% if item.select_pricing_type == "paid" %}{{ item.prefix }}{{ item.price }}<span>{{ item.suffix }}</span>{% endif %}
 						</h2>
 						{% endif %}
 						{% if item.content %}
@@ -77,3 +77,4 @@
 	</div>
 </div>
 </section>
+

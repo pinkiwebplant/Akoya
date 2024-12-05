@@ -3,9 +3,6 @@
 
 {% set newname = name|replace('_','')%}
 
-
-
-
 <div class="resorces_list">
 
 	<div class="top_title_wrap">
@@ -40,7 +37,7 @@
 				<div class="blog_card resource_card col">
 					<div class="rescard_inner">
 						{% if post.post_list_summary_featured_image %}
-						<div class="rescard_img" style="background-image: url({{ resize_image_url( post.post_list_summary_featured_image,767 ) }})">
+						<div class="rescard_img" style="background-image: url({{ resize_image_url( post.post_list_summary_featured_image,767 ) }})">		<a class="overlaybg" href="{{ post.absolute_url }}"></a>
 						</div>
 						{% endif %}
 
@@ -48,15 +45,14 @@
 							{% for tag in post.tag_list %}
 							{% if loop.index == 1%}
 							<span class="tag">
-								{{tag.name|replace('_',' ')}}
+								<a href="{{ blog_tag_url(group.id, tag.slug) }}">{{tag.name|replace('_',' ')}}</a>
 							</span>
 							{% endif %}
 							{% endfor %}
 
 							<h4 class="rescard_title">
-								{{ post.name}}
+								<a href="{{ post.absolute_url}}">{{ post.name}}</a>
 							</h4>
-
 							<div class="rescard_des">
 								{{ post.post_list_content|striptags|truncatehtml(100, '..' , false) }}
 							</div>
@@ -79,6 +75,7 @@
 					<div class="rescard_inner">
 						{% if row.image.url %}
 						<div class="rescard_img" style="background-image: url({{ row.image.url }})">
+										<a class="overlaybg" href="{{ row.link }}"></a>
 						</div>
 						{% endif %}
 
@@ -89,9 +86,8 @@
 								{% endfor %}
 							</span>
 							<h4 class="rescard_title">
-								{{ row.name}}
+								<a href="{{ row.link }}">{{ row.name}}</a>
 							</h4>
-
 							<div class="rescard_des">
 								{{ row.description}}
 							</div>
@@ -115,6 +111,7 @@
 					<div class="rescard_inner">
 						{% if content_by_id(item.select_page).post_list_summary_featured_image %}
 						<div class="rescard_img" style="background-image: url({{ resize_image_url( content_by_id(item.select_page).featured_image,767 ) }})">
+							<a class="overlaybg" href="{{ content_by_id(item.select_page).absolute_url}}"></a>
 						</div>
 						{% endif %}
 
@@ -122,13 +119,13 @@
 							{% for tag in content_by_id(item.select_page).tag_list %}
 							{% if loop.index == 1%}
 							<span class="tag">
-								{{tag.name|replace('_',' ')}}
+								<a href="{{ blog_tag_url(group.id, tag.slug) }}">{{tag.name|replace('_',' ')}}</a>
 							</span>
 							{% endif %}
 							{% endfor %}
 
 							<h4 class="rescard_title">
-								{{ content_by_id(item.select_page).name}}
+								<a href="{{ content_by_id(item.select_page).absolute_url}}">{{ content_by_id(item.select_page).name}}</a>
 							</h4>
 
 							<div class="rescard_des">
@@ -146,6 +143,7 @@
 					<div class="rescard_inner">
 						{% if item.row_title.columns.image.url %}
 						<div class="rescard_img" style="background-image: url({{ item.row_title.columns.image.url }})">
+													<a class="overlaybg" href="{{ item.row_title.columns.link }}"></a>
 						</div>
 						{% endif %}
 
@@ -156,7 +154,8 @@
 								{% endfor %}
 							</span>
 							<h4 class="rescard_title">
-								{{ item.row_title.columns.name}}
+								<a href="{{ item.row_title.columns.link}}">{{ item.row_title.columns.name}}</a>
+
 							</h4>
 
 							<div class="rescard_des">
@@ -200,12 +199,12 @@
 				</div>
 
 			</div>
-			
-			
+
+
 			<div class="nav_btn">
 				{{macros.buttonGroup(module.button_group)}}
 			</div>
-			
+
 		</div>
 	</div>
 
@@ -249,6 +248,5 @@
 </script>
 
 {% end_require_js %}
-
 
 

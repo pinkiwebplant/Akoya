@@ -263,6 +263,9 @@
 @mixin size12 {
   font-size: 12rem;
 }
+@mixin size30 {
+  font-size: 30rem;
+}
 
 @mixin check-ullist {
   padding: 0;

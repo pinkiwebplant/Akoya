@@ -27,6 +27,7 @@ section.u4m-team-grid {
       &.active {
         .tab_nav {
           border-color: $purlple;
+          opacity: 1;
         }
       }
     }
@@ -36,10 +37,14 @@ section.u4m-team-grid {
       cursor: pointer;
       display: block;
       margin-bottom: -2px;
-      padding: 0 31px 2px;
+      padding: 0 31px 7px;
       position: relative;
       color: $darkblack;
       font-weight: 700;
+      opacity: 0.6;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
@@ -49,11 +54,35 @@ section.u4m-team-grid {
     }
     .member {
       display: none;
-      width: 33.333%;
-      padding: 0 24px;
+      width: calc(33.3% - 48px);
+      margin: 0 24px;
+      margin-bottom: 60px;
       @include tabletvert {
         width: 100%;
-        padding: 0 20px;
+      }
+      .inner_wrap {
+        position: relative;
+        transition: all 0.3s linear;
+        &:hover {
+          cursor: pointer;
+          transform: translateY(-10px);
+        }
+        &:hover:after {
+          opacity: 1;
+        }
+        &::after {
+          background-color: $primary-teal;
+          border-radius: 5rem;
+          bottom: -6rem;
+          content: "";
+          height: 12rem;
+          left: 4%;
+          opacity: 0;
+          position: absolute;
+          right: 4%;
+          transition: all 0.2s linear;
+          width: 92%;
+        }
       }
       &.show {
         display: block;
@@ -64,7 +93,9 @@ section.u4m-team-grid {
         border: 2px solid $silver;
         padding: 36px 24px;
         padding-top: 0;
-        margin-bottom: 60px;
+        position: relative;
+        z-index: 1;
+        height: 100%;
         .member-image {
           margin-top: -36px;
           margin-bottom: 24px;
@@ -101,7 +132,7 @@ section.u4m-team-grid {
         width: 100%;
         left: 0;
         z-index: 9;
-        background-color: $primary-teal;
+        background-color: rgba($primary-teal, 0.98);
         padding: 160px 0;
         height: 100%;
         overflow-y: auto;
@@ -124,9 +155,16 @@ section.u4m-team-grid {
             .exit {
               border: 1px solid $white;
               border-radius: 100%;
-              width: 30px;
-              height: 30px;
+              height: 48px;
+              width: 48px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
               cursor: pointer;
+              svg {
+                width: 42px;
+                height: 42px;
+              }
             }
           }
           .popup-content-inner {
@@ -187,8 +225,9 @@ section.u4m-team-grid {
             .member-title {
               @include size16;
               font-weight: 700;
+              text-transform: uppercase;
             }
-            h4 {
+            h2 {
               color: $white;
               margin-bottom: 22px;
             }

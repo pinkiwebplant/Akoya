@@ -178,5 +178,90 @@
     "message" : "u4m-related-post",
     "description" : "",
     "placeholders" : null
+  },
+  "number_of_posts.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "number_of_posts.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "number_of_posts.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "number_of_posts.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "number_of_posts.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "title.default" : {
+    "message" : "Related articles headline.",
+    "description" : null,
+    "placeholders" : null
+  },
+  "title.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "title.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "title.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "title.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "title.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "view_all_posts_text.default" : {
+    "message" : "View all posts",
+    "description" : null,
+    "placeholders" : null
+  },
+  "view_all_posts_text.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "view_all_posts_text.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "view_all_posts_text.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "view_all_posts_text.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "view_all_posts_text.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
   }
 }

@@ -21,6 +21,40 @@ section.u4m-top-tabber {
 
   // Nav
 
+  .desktop_tabber {
+    @include tablet {
+      display: none;
+    }
+
+    .tabber_nav .slick-track {
+      width: 100% !important;
+      transform: none !important;
+    }
+
+    .tabber_nav .slick-track:after,
+    .tabber_nav .slick-track:before {
+      display: none;
+    }
+
+    .tabber_nav .slick-track {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px 23px;
+    }
+
+    .tabber_nav .slick-list {
+      width: 100%;
+      overflow: visible;
+    }
+  }
+
+  .mobile_tabber {
+    @include tabletMin {
+      display: none;
+    }
+  }
+
   .tabber_nav {
     display: flex;
     justify-content: center;
@@ -30,9 +64,30 @@ section.u4m-top-tabber {
 
     @include tablet {
       flex-wrap: wrap;
+      gap: 0 23px;
+      margin-bottom: 0;
+    }
+
+    .tab_nav_icon {
+      width: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transform-origin: center;
+      transition: 0.3s ease;
+
+      transform: rotate(0deg);
+      @include tabletMin {
+        display: none;
+      }
+      svg {
+        display: block;
+      }
     }
 
     .tab_nav_item {
+      opacity: 0.6;
       position: relative;
       @include tablet {
         width: 100%;
@@ -54,6 +109,8 @@ section.u4m-top-tabber {
         width: 100%;
         border-bottom: 2px solid $azure;
         padding: 14px 20px;
+        display: flex;
+        justify-content: space-between;
       }
 
       @include phone {
@@ -61,15 +118,25 @@ section.u4m-top-tabber {
       }
     }
 
-    .active {
+    // .active,
+    .slick-current.slick-active {
+      opacity: 1;
       .tab_nav {
         border-bottom: 2px solid $purlple;
 
         @include tablet {
           width: 100%;
         }
+
+        .tab_nav_icon {
+          transform: rotate(180deg);
+        }
       }
     }
+  }
+
+  .tab_nav_item.active .tab_nav .tab_nav_icon {
+    transform: rotate(180deg);
   }
 
   .content_col {
@@ -132,17 +199,18 @@ section.u4m-top-tabber {
   }
 
   .tabber_pannel_item {
-    @include tabletMin {
-      &:not(.active) {
-        display: none;
-      }
-    }
+    // @include tabletMin {
+    //   &:not(.active) {
+    //     display: none;
+    //   }
+    // }
     .flex_row {
       align-items: center;
       opacity: 0;
       transition: 0.4s ease;
     }
 
+    &.slick-current.slick-active .flex_row,
     &.animated .flex_row {
       opacity: 1;
     }

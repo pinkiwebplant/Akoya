@@ -22,6 +22,7 @@ body {
   line-height: $baseLineHeight;
   color: $basecolor;
   font-weight: $baseFontWeight;
+  -webkit-font-smoothing: antialiased;
 }
 
 @mixin bodyContent {
@@ -646,7 +647,7 @@ form {
     margin-top: 36px;
     display: flex;
     flex-direction: row;
-    column-gap: 36px;
+    column-gap: 24px;
     justify-content: center;
     align-items: center;
     button {
@@ -658,9 +659,15 @@ form {
       border: none;
       line-height: normal;
       padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       svg {
         fill: $black;
-        width: 10px;
+        width: 9px;
+        display: block;
+        position: relative;
+        right: -1.2px;
       }
       &.prev-btn {
         transform: rotate(180deg);
@@ -676,4 +683,10 @@ form {
 
 .u4m-split-form-wrapper .bottom_content_inner ul {
   @include check-ullist;
+}
+.alter-content h6,
+.countdown-assets,
+.topic_list span,
+.stats-assets {
+  text-transform: uppercase;
 }

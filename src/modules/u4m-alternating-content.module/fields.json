@@ -329,7 +329,7 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : "bc72491e-88d0-98ca-fc7e-17fdd3e17088",
-    "default" : 3
+    "default" : 1
   },
   "children" : [ {
     "id" : "f8ba90a1-26da-fa10-7905-4fdda0e016d5",
@@ -344,7 +344,7 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/alternating-img.png",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/alternating-img.png",
       "alt" : "alternating-img",
       "loading" : "lazy",
       "width" : 927,
@@ -522,63 +522,7 @@
   "default" : [ {
     "image_field" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/alternating-img.png",
-      "alt" : "alternating-img",
-      "loading" : "lazy",
-      "width" : 927,
-      "height" : 575,
-      "max_width" : 927,
-      "max_height" : 575
-    },
-    "content" : "<h6>Eyebrow Text</h6>\n<h2>Alternating Content module headline here.</h2>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>",
-    "include_button" : true,
-    "button_group" : {
-      "button_type" : "std",
-      "button_theme" : "hs-button",
-      "button_text" : "HubSpot CTA Text",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    },
-    "image_position_on_left" : true
-  }, {
-    "image_field" : {
-      "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/alternating-img.png",
-      "alt" : "alternating-img",
-      "loading" : "lazy",
-      "width" : 927,
-      "height" : 575,
-      "max_width" : 927,
-      "max_height" : 575
-    },
-    "content" : "<h6>Eyebrow Text</h6>\n<h2>Alternating Content module headline here.</h2>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>",
-    "include_button" : true,
-    "button_group" : {
-      "button_type" : "std",
-      "button_theme" : "hs-button",
-      "button_text" : "HubSpot CTA Text",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    },
-    "image_position_on_left" : true
-  }, {
-    "image_field" : {
-      "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/alternating-img.png",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/alternating-img.png",
       "alt" : "alternating-img",
       "loading" : "lazy",
       "width" : 927,
@@ -917,7 +861,7 @@
     },
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "70a84c9f-c797-71e5-9f3e-dd7301002166",
     "name" : "enable_slider",
@@ -927,7 +871,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "94e04306-ecc1-4735-09fd-9b66482a8101",
     "name" : "background_settings",
@@ -1197,8 +1141,8 @@
     "custom_bottom_padding" : 100,
     "custom_bottom_padding_mobile" : 50,
     "reverse_text" : false,
-    "container_full_width" : true,
-    "enable_slider" : true,
+    "container_full_width" : false,
+    "enable_slider" : false,
     "background_settings" : {
       "background_type" : "color",
       "select_color" : "azure-bg",

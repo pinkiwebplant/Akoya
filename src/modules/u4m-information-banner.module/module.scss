@@ -1,0 +1,43 @@
+@import "../../css/_module-imports";
+
+.information-banner {
+    background-color: $black;
+    display: flex;
+    justify-content: center;
+    padding: 10px 35px 10px 20px;
+    position: relative;
+    text-align: center;
+    @include size16;
+    line-height: 1.25;
+    @include tabletvert {
+        @include size14;
+    }
+    .closeTrigger {
+        position: absolute;
+        right: 14px;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            color: $white;
+            * {
+                opacity: 0.5;
+            }
+        }
+    }
+    p {
+        margin: 0;
+        a {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+}
+body.anncmnt_hide {
+    .information-banner {
+        display: none;
+    }
+}

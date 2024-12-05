@@ -685,6 +685,38 @@
     "type" : "boolean",
     "default" : false
   }, {
+    "id" : "4f31babb-f704-88c1-b9ef-d403a757ec8d",
+    "name" : "change_inner_content_width",
+    "display_width" : null,
+    "label" : "Change Inner Content Width",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "9ffcebea-193c-6f63-80f7-a70c7d97b361",
+    "name" : "inner_content_width",
+    "display_width" : null,
+    "label" : "Inner Content Width",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.change_inner_content_width",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "slider",
+    "min" : 500,
+    "max" : 1000,
+    "step" : 1,
+    "suffix" : "px",
+    "type" : "number",
+    "default" : 852
+  }, {
     "id" : "94e04306-ecc1-4735-09fd-9b66482a8101",
     "name" : "background_settings",
     "display_width" : null,
@@ -954,6 +986,8 @@
     "custom_bottom_padding_mobile" : 50,
     "reverse_text" : false,
     "container_full_width" : false,
+    "change_inner_content_width" : true,
+    "inner_content_width" : 852,
     "background_settings" : {
       "background_type" : "color",
       "select_color" : "white-bg",

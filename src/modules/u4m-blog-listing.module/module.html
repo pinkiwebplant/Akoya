@@ -40,14 +40,16 @@
 							<div class='featured-topic'>
 								{% set included_topics = tag_post.topic_list | rejectattr("slug", "equalto", "featured") | list %}
 								{% for topic in included_topics %}
-									<a class="{{ topic.slug }}" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>{% if not loop.last %},{% endif %}
+									{% if loop.first %}
+									<a class="{{ topic.slug }}" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
+								{% endif %}
 								{% endfor %}
 							</div>
 						{% endif %}
 							<h4>
 								<a href="{{ tag_post.absolute_url }}">{{ tag_post.name }}</a>
 							</h4>
-							<p> {{ tag_post.post_list_content|safe|truncatehtml(200, '.' , false)|striptags}}
+							<p> {{ tag_post.post_list_content|safe|truncatehtml(160, '.' , false)|striptags}}
 							</p>
 							{% if module.featured_post.read_more_text %}
 							<div class='read-more'>
@@ -106,7 +108,9 @@
 								<input type="hidden" name="type" value="HS_CASE_STUDY">
 								{% endif %}
 								{% if module.site_search.include_search_button %}
-								<button aria-label="Search">{% icon name="search" style="solid" %}</button>
+								<button aria-label="Search"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.29922C0 2.82065 2.82065 0 6.29923 0C9.7778 0 12.5985 2.82065 12.5985 6.29922C12.5985 7.78304 12.0805 9.15487 11.2196 10.2327L13.7953 12.8084C14.0682 13.0814 14.0682 13.5223 13.7953 13.7953C13.5223 14.0683 13.0814 14.0683 12.8084 13.7953L10.2327 11.2196C9.15487 12.0805 7.79004 12.5984 6.29923 12.5984C2.82065 12.5984 0 9.7778 0 6.29922ZM6.29923 1.39983C3.59056 1.39983 1.39983 3.59056 1.39983 6.29922C1.39983 9.00789 3.59056 11.1986 6.29923 11.1986C7.65006 11.1986 8.87487 10.6527 9.76377 9.76381C10.6527 8.87492 11.1986 7.65006 11.1986 6.29922C11.1986 3.59056 9.00789 1.39983 6.29923 1.39983Z" fill="#00161D"></path>
+							</svg></button>
 								{% endif %}
 							</form>
 						</div>
@@ -116,11 +120,11 @@
 				<div class="tag-col">
 					{% set my_topics = blog_topics('default', 50) %}
 					<select id="tinynav1" class="tinynav tinynav1" style="background-image: url({{ get_asset_url('../../templates/images/Arrow-Down.png') }});">
-						<option value="{{ group.absolute_url }}">Select type...</option>
+						<option value="{{ group.absolute_url }}">Select topic...</option>
 						{% for item in my_topics %}
 						{% if item=="featured"%}
 						{% else %}
-						<option value="{{ blog_tag_url(group.id, item.slug) }}" {% if content.absolute_url == blog_tag_url(group.id, item.slug) %} selected{% endif %}>{{ item }}</option>
+						<option value="{{ blog_tag_url(group.id, item.slug) }}" {% if content.absolute_url == blog_tag_url(group.id, item.slug) %} selected{% endif %}>{{ item|capitalize}}</option>
 						{% endif %}
 						{% endfor %}
 					</select>  
@@ -149,7 +153,9 @@
 
 							{% set included_topics = content.topic_list | rejectattr("slug", "equalto", "featured") | list %}
 								{% for topic in included_topics %}
-									<a class="{{ topic.slug }}" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>{% if not loop.last %},{% endif %}
+									{% if loop.first %}
+									<a class="{{ topic.slug }}" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
+								{% endif %}
 								{% endfor %}
 
 								
@@ -162,7 +168,7 @@
 							</h4>
 							{% endif %}
 							{% if module.post_item.description %}
-							<p> {{ content.post_list_content|safe|truncatehtml(200, '.' , false)|striptags}}
+							<p> {{ content.post_list_content|safe|truncatehtml(130, '.' , false)|striptags}}
 							</p>
 							{% endif %}
 						</div>

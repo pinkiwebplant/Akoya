@@ -1,0 +1,28 @@
+<!--
+ templateType: global_partial
+ label: Header no navigation
+ -->
+<div class="headerWrap">
+  <div class="header-outer">
+    {% dnd_area "top_section" %} {% dnd_section full_width=true %} {% dnd_column
+    %} {% dnd_row %} {% dnd_module path="../../modules/u4m-information-banner",
+    label="Information Banner" width="12" %} {% end_dnd_module %} {% end_dnd_row
+    %} {% end_dnd_column %} {% end_dnd_section %} {% end_dnd_area %}
+    <header class="header">
+      <div class="page-center">
+        <div class="row">
+          <div class="left_section">
+            <div class="hdr_logo">
+              {% set logo_file =
+              get_asset_url('../../templates/images/Akoya-Logo.png') %} {%
+              module "logo" path="@hubspot/logo", label="Logo", link="/",
+              img={src="{{logo_file}}", alt="Akoya", width= 500,
+              override_inherited_src= true } %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+</div>
+<div class="menu-overlay"></div>

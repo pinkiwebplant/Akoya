@@ -24,13 +24,14 @@ section.u4m-blog-listing {
     box-sizing: border-box;
     width: 100%;
   }
-  .hs-search-field__bar button svg {
-    height: 10px;
-  }
   .hs-search-field__suggestions {
     margin: 0;
     padding: 0;
     list-style: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: #fff;
   }
   .hs-search-field--open .hs-search-field__suggestions {
     border: 1px solid $silver;
@@ -157,12 +158,15 @@ section.u4m-blog-listing {
       flex-wrap: wrap;
       @include tabletvert {
         row-gap: 20px;
+        padding: 0 24px;
       }
     }
     .search-col,
     .tag-col {
       width: 50%;
-      padding: 0 12px;
+      @include tabletvertmin {
+        padding: 0 12px;
+      }
       @include tabletvert {
         width: 100%;
       }
@@ -175,12 +179,24 @@ section.u4m-blog-listing {
         max-width: 100%;
         border-radius: 0;
         background: transparent;
+        position: relative;
+        box-shadow: none;
+        button {
+          background: no-repeat;
+          border: none;
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          padding: 0;
+        }
       }
       .hs-search-field__input {
         border: 2px solid $silver;
         outline: none;
         border-radius: 4px;
         padding: 12px;
+        padding-right: 42px;
         @include b2;
         &::placeholder {
           color: $black;
@@ -202,17 +218,31 @@ section.u4m-blog-listing {
   }
   .listing-wrap {
     margin-bottom: 120px;
-    .flex-row {
-      margin: 0 -20px;
+    @include tabletvert {
       margin-bottom: 60px;
+    }
+    .flex-row {
+      margin: 0 -20px 60px;
+      row-gap: 72px;
+      @include tabletvert {
+        row-gap: 40px;
+      }
+      @include tabletvertmin {
+        margin: 0 -24px 60px;
+      }
     }
 
     .post-item {
       padding: 0 24px;
-      width: 33.3333%;
+      width: 100%;
+      @include tabletvertmin {
+        width: 50%;
+        padding: 0 20px;
+      }
+      @include tabletmidmin {
+        width: 33.3333%;
+      }
       @include tabletvert {
-        width: 100%;
-        margin-bottom: 20px;
         padding: 0 20px;
       }
       .featured-img {
@@ -221,7 +251,10 @@ section.u4m-blog-listing {
           width: 100%;
         }
         img {
-          height: 180px;
+          @include tabletvertmin {
+            height: 180px;
+          }
+          height: 56.66%;
           width: 100%;
           border-radius: 10px;
           object-fit: cover;
@@ -245,6 +278,7 @@ section.u4m-blog-listing {
         }
         p {
           @include b2;
+          margin: 0;
         }
       }
     }
@@ -262,11 +296,14 @@ section.u4m-blog-listing {
         align-items: center;
         justify-content: center;
         border-radius: 100%;
-        background-color: $azure;
+        background-color: $paginationBg;
         @include eyebrow;
         color: $black;
         &.prev-link {
           transform: rotate(180deg);
+        }
+        &.active {
+          background-color: $azure;
         }
       }
     }

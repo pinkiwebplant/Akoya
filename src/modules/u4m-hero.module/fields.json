@@ -14,7 +14,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "5baff6ad-02e1-6b84-3429-260a0ded7ef6",
     "name" : "eyebrow_text",
@@ -34,7 +34,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "Eyebrow Text"
+    "default" : "Optional Eyebrow Text"
   }, {
     "id" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
     "name" : "include_heading",
@@ -64,7 +64,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "U4M Accordion"
+    "default" : "The Hero module headline goes here."
   }, {
     "id" : "2a94b659-9512-ac0b-20f3-66fb2946518f",
     "name" : "include_divider",
@@ -82,7 +82,7 @@
     },
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   }, {
     "id" : "2f10bd6e-cf85-1cf6-5a4f-fa75e1e78238",
     "name" : "include_content",
@@ -218,7 +218,7 @@
       "allow_new_line" : false,
       "show_emoji_picker" : false,
       "type" : "text",
-      "default" : "Button"
+      "default" : "Primary call-to-action"
     }, {
       "id" : "f1ccd7fd-a18d-1262-3c67-476cdf5424cd",
       "name" : "link",
@@ -270,7 +270,7 @@
     "default" : [ {
       "button_type" : "std",
       "button_theme" : "hs-button",
-      "button_text" : "Button",
+      "button_text" : "Primary call-to-action",
       "link" : {
         "url" : {
           "content_id" : null,
@@ -283,7 +283,7 @@
     }, {
       "button_type" : "std",
       "button_theme" : "hs-button",
-      "button_text" : "Button",
+      "button_text" : "Primary call-to-action",
       "link" : {
         "url" : {
           "content_id" : null,
@@ -300,11 +300,11 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "include_eyebrow_text" : true,
-    "eyebrow_text" : "Eyebrow Text",
+    "include_eyebrow_text" : false,
+    "eyebrow_text" : "Optional Eyebrow Text",
     "include_heading" : true,
-    "heading" : "U4M Accordion",
-    "include_divider" : false,
+    "heading" : "The Hero module headline goes here.",
+    "include_divider" : true,
     "include_content" : true,
     "content_style" : "theme",
     "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco labo.</p>",
@@ -312,7 +312,7 @@
     "button_group" : [ {
       "button_type" : "std",
       "button_theme" : "hs-button",
-      "button_text" : "Button",
+      "button_text" : "Primary call-to-action",
       "link" : {
         "url" : {
           "content_id" : null,
@@ -325,7 +325,7 @@
     }, {
       "button_type" : "std",
       "button_theme" : "hs-button",
-      "button_text" : "Button",
+      "button_text" : "Primary call-to-action",
       "link" : {
         "url" : {
           "content_id" : null,
@@ -357,7 +357,7 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/hero-img.png",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/hero-img.png",
       "alt" : "Hero Image",
       "loading" : "lazy",
       "width" : 1464,
@@ -377,12 +377,12 @@
       "controlling_field_path" : "media_section.image_field",
       "controlling_value_regex" : null,
       "property" : "src",
-      "operator" : null,
+      "operator" : "NOT_EMPTY",
       "access" : null
     },
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -391,7 +391,7 @@
   "default" : {
     "image_field" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Akoya/images/hero-img.png",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/hero-img.png",
       "alt" : "Hero Image",
       "loading" : "lazy",
       "width" : 1464,
@@ -399,7 +399,7 @@
       "max_width" : 1464,
       "max_height" : 1163
     },
-    "image_overflow" : false
+    "image_overflow" : true
   }
 }, {
   "id" : "70fc3ac5-f42d-ccbc-70a5-3df1b0810e94",
@@ -780,7 +780,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "color"
+      "default" : "gradient"
     }, {
       "id" : "4ea36da9-c8a6-adf2-7460-cbf4d98190fd",
       "name" : "select_color",
@@ -984,7 +984,7 @@
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "select_color" : "azure-bg",
       "opacity" : 40,
       "select_gradient" : "gradient1",
@@ -1023,7 +1023,7 @@
     "reverse_text" : false,
     "container_full_width" : false,
     "background_settings" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "select_color" : "azure-bg",
       "opacity" : 40,
       "select_gradient" : "gradient1",
