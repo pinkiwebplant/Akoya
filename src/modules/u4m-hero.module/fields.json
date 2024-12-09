@@ -383,6 +383,24 @@
     "display" : "checkbox",
     "type" : "boolean",
     "default" : true
+  }, {
+    "id" : "25fa892d-9132-e9e8-c851-26ee2a5eae1e",
+    "name" : "image_enlarge",
+    "display_width" : null,
+    "label" : "Image Enlarge",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "media_section.image_overflow",
+      "controlling_value_regex" : "false",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -399,7 +417,8 @@
       "max_width" : 1464,
       "max_height" : 1163
     },
-    "image_overflow" : true
+    "image_overflow" : true,
+    "image_enlarge" : false
   }
 }, {
   "id" : "70fc3ac5-f42d-ccbc-70a5-3df1b0810e94",

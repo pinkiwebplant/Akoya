@@ -876,6 +876,20 @@
     "preset" : null,
     "type" : "choice",
     "default" : "light"
+  }, {
+    "id" : "53e533c6-28b8-0845-bad1-c2c7dbcdad79",
+    "name" : "cards_column_in_row",
+    "display_width" : null,
+    "label" : "Cards Column in Row",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "two", "Two" ], [ "three", "Three" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "two"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -884,7 +898,8 @@
   "default" : {
     "card_type" : "type1",
     "select_card_background_color" : "black-bg",
-    "select_card_content_color" : "light"
+    "select_card_content_color" : "light",
+    "cards_column_in_row" : "two"
   }
 }, {
   "id" : "module_overrides",

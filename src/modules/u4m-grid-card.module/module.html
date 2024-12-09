@@ -8,17 +8,64 @@
 			{% for item in module.add_items %}
 			<div class="grid_item">
 				<div class="grid_inr">
-				<div class="arrow">
-					<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-						<path d="M10.9099 0.696661C10.7972 0.58402 10.6018 0.49767 10.4083 0.522286L0.95565 0.340214C0.56752 0.333856 0.267623 0.633753 0.273981 1.02188C0.308515 1.43805 0.6184 1.74794 1.00639 1.75429L8.7123 1.88011L0.28699 10.3054C0.0143631 10.5781 0.021559 11.0216 0.303266 11.3033C0.585044 11.585 1.02855 11.5922 1.30118 11.3196L9.72649 2.89429L9.88049 10.6284C9.88684 11.0164 10.1967 11.3263 10.5847 11.3326C10.9728 11.339 11.2727 11.0391 11.2664 10.6509L11.1125 1.22652C11.1371 1.03298 11.0508 0.83755 10.9099 0.696661Z" fill="#007088"/>
-					</svg>
-				</div>
-				<div class="grid_item_inr">
-					<p><strong>{{ item.title }}</strong></p>
-					<div class="cnt">
-						{{ item.content }}
+					{% if item.include_link %}
+					{% set href = item.link.url.href %}
+					{% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+					{% set href = "mailto:" + href %}
+					{% endif %}
+					<a class="overlay_link"
+						 {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+						 href="{{ href }}" 
+						 {% else %}
+						 href="{{ href|escape_url }}"
+						 {% endif %}
+						 {% if item.link.open_in_new_tab %}
+						 target="_blank"
+						 {% endif %}
+						 {% if item.link.rel %}
+						 rel="{{ item.link.rel|escape_attr }}"
+						 {% endif %}
+						 >
+					</a>
+					<div class="arrow">
+						<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+							<path d="M10.9099 0.696661C10.7972 0.58402 10.6018 0.49767 10.4083 0.522286L0.95565 0.340214C0.56752 0.333856 0.267623 0.633753 0.273981 1.02188C0.308515 1.43805 0.6184 1.74794 1.00639 1.75429L8.7123 1.88011L0.28699 10.3054C0.0143631 10.5781 0.021559 11.0216 0.303266 11.3033C0.585044 11.585 1.02855 11.5922 1.30118 11.3196L9.72649 2.89429L9.88049 10.6284C9.88684 11.0164 10.1967 11.3263 10.5847 11.3326C10.9728 11.339 11.2727 11.0391 11.2664 10.6509L11.1125 1.22652C11.1371 1.03298 11.0508 0.83755 10.9099 0.696661Z" fill="#007088"/>
+						</svg>
 					</div>
-				</div>
+					{% endif %}
+					<div class="grid_item_inr">
+
+						{% if (item.select_icon_type == "image" and item.image_icon.src 
+) or (item.select_icon_type == "icon" and item.icon.name) or (item.select_icon_type == "custom" and item.custom)%}
+						<div class="icon_box">
+							{% if item.select_icon_type == "image" and item.image_icon.src%}
+							<span class="icon img_icon">
+								<img src="{{ item.image_icon.src|escape_url }}" alt="{{ item.image_icon.alt|escape_attr }}">
+							</span>
+							{% endif %}
+
+							{% if item.select_icon_type == "icon" and item.icon.name %}
+							<span class="icon svg_icon">
+								{% icon
+								name="{{ item.icon.name }}"
+								style="{{ item.icon.type }}"
+								unicode="{{ item.icon.unicode }}"
+								icon_set="{{ item.icon.icon_set }}"
+							%}
+							</span>
+							{% endif %}
+
+							{% if item.select_icon_type == "custom" and item.custom %}
+							<span class="material-symbols-outlined"> {{ item.custom }} </span>
+							{% endif %}
+						</div>
+						{% endif %}
+
+						<p><strong>{{ item.title }}</strong></p>
+						<div class="cnt">
+							{{ item.content }}
+						</div>
+					</div>
 				</div>
 			</div>
 			{% endfor %}
@@ -26,13 +73,6 @@
 	</div>
 </div>
 </section>
-
-
-
-
-
-
-
 
 
 

@@ -13,6 +13,8 @@ section.u4m-cards {
   }
   .cardItems {
     margin: 0 -24px;
+    row-gap: 48px;
+    justify-content: center;
     @include navbreak {
       margin: 0 -20px;
     }
@@ -20,6 +22,21 @@ section.u4m-cards {
       margin: 0;
       gap: 30px;
     }
+
+    &.inrow_three {
+      .cardItem {
+        width: 33.33%;
+
+        @include tablet {
+          width: 50%;
+        }
+
+        @include tabletvert {
+          width: 100%;
+        }
+      }
+    }
+
     .cardItem {
       width: 50%;
       padding: 0 24px;
@@ -37,6 +54,9 @@ section.u4m-cards {
         height: 100%;
         display: flex;
         flex-direction: column;
+        @include navbreak {
+          padding: 38px;
+        }
         @include tabletvert {
           padding: 30px;
         }

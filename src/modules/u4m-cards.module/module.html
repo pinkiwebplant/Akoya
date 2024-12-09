@@ -3,7 +3,7 @@
 
 <div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
 	{{macros.introGroup(module.intro_content)}}
-	<div class="cardItems flex_row card_{{ module.module_settings.card_type }}">
+	<div class="cardItems flex_row card_{{ module.module_settings.card_type }} inrow_{{ module.module_settings.cards_column_in_row }}">
 		{% for item in module.card_items %}
 		<div class="cardItem">
 			<div class="cardItemIn {{ module.module_settings.select_card_background_color }} {{ module.module_settings.select_card_content_color }}">
