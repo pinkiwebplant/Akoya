@@ -14,8 +14,19 @@
 						<span class="img_icon">
 							<img src="{{ item.image.src }}" alt="{{ item.image.alt }}" >
 						</span>
-						{% elif item.select_icon_type == "icon" and item.icon %}
+						{% endif %}
+						{% if item.select_icon_type == "custom_icon_name" and item.icon %}
 						<span class="material-symbols-outlined">{{ item.icon }}
+						</span>
+						{% endif %}
+						{% if item.select_icon_type == "icon" and item.icon_svg.name %}
+						<span class="svg_icon">
+							{% icon
+		name="{{ item.icon_svg.name }}"
+		style="{{ item.icon_svg.type }}"
+		unicode="{{ item.icon_svg.unicode }}"
+		icon_set="{{ item.icon_svg.icon_set }}"
+	%}
 						</span>
 						{% endif %}
 					</div>
@@ -34,6 +45,19 @@
 								<span class="material-symbols-outlined">{{ item2.custom_icon }}
 								</span>
 								{% endif %}
+								
+									{% if item2.select_icon_type == "icon" and item2.icon_svg.name %}
+											<span class="svg_icon">{% icon
+												name="{{ item2.icon_svg.name }}"
+												style="{{ item2.icon_svg.type }}"
+												unicode="{{ item2.icon_svg.unicode }}"
+												icon_set="{{ item2.icon_svg.icon_set }}"
+											%}
+										</span>
+								{% endif %}
+								
+								
+								
 							</div>
 							<div class="abs_content_box">
 								{% if item2.title  %}<span class="title_box">{{ item2.title }}</span>{% endif %}
@@ -61,6 +85,8 @@
 </div>
 
 </section>
+
+
 
 
 

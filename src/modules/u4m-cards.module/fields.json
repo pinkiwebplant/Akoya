@@ -339,7 +339,7 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "image", "Image" ], [ "icon", "Icon" ] ],
+    "choices" : [ [ "image", "Image" ], [ "icon", "Icon" ], [ "custom_icon_name", "Custom Icon Name" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
@@ -375,17 +375,36 @@
       "max_height" : 19
     }
   }, {
+    "id" : "91c622f6-52c2-08f5-efbb-31441f40365f",
+    "name" : "icon_svg",
+    "display_width" : null,
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "card_items.select_icon_type",
+      "controlling_value_regex" : "icon",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "icon_set" : "fontawesome-5.14.0",
+    "type" : "icon",
+    "default" : { }
+  }, {
     "id" : "33c39ed9-97e1-afdf-d6dd-b4008adf1f95",
     "name" : "icon",
     "display_width" : null,
-    "label" : "Icon",
+    "label" : "Custom Icon Name",
+    "help_text" : "\"Custom Icon Name\" is to use \"Google Icons\". \nExample : \"<span class=\"material-symbols-outlined\"> description </span>\".  Copy icon name \"description\" and paste here",
     "required" : false,
     "locked" : false,
     "validation_regex" : "",
     "visibility" : {
       "controlling_field" : null,
       "controlling_field_path" : "card_items.select_icon_type",
-      "controlling_value_regex" : "icon",
+      "controlling_value_regex" : "custom_icon_name",
       "property" : null,
       "operator" : "EQUAL",
       "access" : null
@@ -462,7 +481,7 @@
       "required" : false,
       "locked" : false,
       "display" : "select",
-      "choices" : [ [ "image", "Image" ], [ "custom", "Custom" ] ],
+      "choices" : [ [ "image", "Image" ], [ "custom", "Custom Icon Name" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
@@ -501,7 +520,8 @@
       "id" : "e5b61152-4b8d-76a8-8a73-6ac6ac218513",
       "name" : "custom_icon",
       "display_width" : null,
-      "label" : "Custom Icon",
+      "label" : "Custom Icon Name",
+      "help_text" : "\"Custom Icon Name\" is to use \"Google Icons\". \nExample : \"<span class=\"material-symbols-outlined\"> account_circle </span>\".  Copy icon name \"account_circle\" and paste here",
       "required" : false,
       "locked" : false,
       "validation_regex" : "",
@@ -513,6 +533,7 @@
         "operator" : "EQUAL",
         "access" : null
       },
+      "placeholder" : "",
       "allow_new_line" : false,
       "show_emoji_picker" : false,
       "type" : "text",
@@ -762,7 +783,8 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    } ]
+    } ],
+    "icon_field" : { }
   }, {
     "select_icon_type" : "image",
     "image" : {
@@ -809,7 +831,8 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    } ]
+    } ],
+    "icon_field" : { }
   } ]
 }, {
   "id" : "085c883d-cc3d-89ec-c681-0ce525976b30",
