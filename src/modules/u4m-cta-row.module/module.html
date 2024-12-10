@@ -2,69 +2,69 @@
 {% include "../partials/u4-module-includes.html" %}
 
 <div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
-<div class="flex_row">
-	
-	{% for item in module.intro_content %} 
-	<div class="intro_content {% if loop.length >= 2 %}two_col{% endif %}">
+	<div class="flex_row">
 
-		<div class="intro__inner">
-			{% if item.include_eyebrow_text %}
-			<div class="eyebrow_text">
-				{{ item.eyebrow_text }}
-			</div>
-			{% endif %}
-			{% if item.include_heading %}
-			<h3 class="intro_title">{{ item.heading }}</h3>
-			{% endif %}
-			{% if item.include_content %}
-			<div class="intro_desc {{ item.content_style }}">
-				{{ item.content }}
-			</div>
-			{% endif %}
+		{% for item in module.intro_content %} 
+		<div class="intro_content {% if loop.length >= 2 %}two_col{% endif %}">
 
-			{#===#}
-
-			{% if item.include_button %} 
-			<div class="intro_btn_wrap">
-				{% for item2 in item.button_group %}
-				<div class="btn_item">
-					{% if item2.button_type == "std" %}
-					{% set href = item2.link.url.href %}
-					{% if item2.link.url.type is equalto "EMAIL_ADDRESS" %}
-					{% set href = "mailto:" + href %}
-					{% endif %}
-					<a class="{{ item2.button_theme ? item2.button_theme : "hs-button" }}"
-						 {% if item2.link.url.type is equalto "CALL_TO_ACTION"  %}
-						 href="{{ href }}" 
-						 {% else %}
-						 href="{{ href }}"
-						 {% endif %}
-						 {% if item2.link.open_in_new_tab %}
-						 target="_blank"
-						 {% endif %}
-						 {% if item2.link.rel %}
-						 rel="{{ item2.link.rel }}"
-						 {% endif %}>
-						<span>{{ item2.button_text }}</span>{% if item2.button_theme == "arrow-link"%}
-						<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M15 7.49995C15 7.34065 14.9229 7.14141 14.7686 7.02196L8.21335 0.209209C7.9434 -0.0697364 7.51928 -0.0697364 7.24933 0.209209C6.97947 0.527904 6.97947 0.966148 7.24933 1.24499L12.6093 6.78286H0.694071C0.308519 6.78286 0 7.10156 0 7.49995C0 7.89844 0.308519 8.21714 0.694071 8.21714H12.6093L7.24933 13.7949C6.97947 14.0737 6.97947 14.5119 7.24933 14.7908C7.51928 15.0697 7.9434 15.0697 8.21335 14.7908L14.7686 8.01789C14.9229 7.89844 15 7.6992 15 7.49995Z" fill="#00819E"/>
-						</svg> {% endif %}
-					</a>
-					{% endif %}
-					{% if item2.button_type == "cta" %}
-					{% cta guid="{{ item2.cta }}" %}
-					{% endif %}
+			<div class="intro__inner">
+				{% if item.include_eyebrow_text %}
+				<div class="eyebrow_text">
+					{{ item.eyebrow_text }}
 				</div>
-				{% endfor %}
+				{% endif %}
+				{% if item.include_heading %}
+				<h3 class="intro_title">{{ item.heading }}</h3>
+				{% endif %}
+				{% if item.include_content %}
+				<div class="intro_desc {{ item.content_style }}">
+					{{ item.content }}
+				</div>
+				{% endif %}
+
+				{#===#}
+
+				{% if item.include_button %} 
+				<div class="intro_btn_wrap">
+					{% for item2 in item.button_group %}
+					<div class="btn_item">
+						{% if item2.button_type == "std" %}
+						{% set href = item2.link.url.href %}
+						{% if item2.link.url.type is equalto "EMAIL_ADDRESS" %}
+						{% set href = "mailto:" + href %}
+						{% endif %}
+						<a class="{{ item2.button_theme ? item2.button_theme : "hs-button" }}"
+							 {% if item2.link.url.type is equalto "CALL_TO_ACTION"  %}
+							 href="{{ href }}" 
+							 {% else %}
+							 href="{{ href }}"
+							 {% endif %}
+							 {% if item2.link.open_in_new_tab %}
+							 target="_blank"
+							 {% endif %}
+							 {% if item2.link.rel %}
+							 rel="{{ item2.link.rel }}"
+							 {% endif %}>
+							<span>{{ item2.button_text }}</span>{% if item2.button_theme == "arrow-link"%}
+							<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 7.49995C15 7.34065 14.9229 7.14141 14.7686 7.02196L8.21335 0.209209C7.9434 -0.0697364 7.51928 -0.0697364 7.24933 0.209209C6.97947 0.527904 6.97947 0.966148 7.24933 1.24499L12.6093 6.78286H0.694071C0.308519 6.78286 0 7.10156 0 7.49995C0 7.89844 0.308519 8.21714 0.694071 8.21714H12.6093L7.24933 13.7949C6.97947 14.0737 6.97947 14.5119 7.24933 14.7908C7.51928 15.0697 7.9434 15.0697 8.21335 14.7908L14.7686 8.01789C14.9229 7.89844 15 7.6992 15 7.49995Z" fill="#00819E"/>
+							</svg> {% endif %}
+						</a>
+						{% endif %}
+						{% if item2.button_type == "cta" %}
+						{% cta guid="{{ item2.cta }}" %}
+						{% endif %}
+					</div>
+					{% endfor %}
+				</div>
+				{% endif %}
+
+				{#===#}
+
 			</div>
-			{% endif %}
-
-			{#===#}
-
 		</div>
-	</div>
-	{% endfor %}
-	
+		{% endfor %}
+
 	</div>
 </div>
 
@@ -73,23 +73,23 @@
 </section>
 
 
+{% require_css %} 
+<style>
+	.{{name}}.moduleName .bg_overlay.bg_image {
 
+		{% if module.module_overrides.background_settings.overlay_image.overlay_image_size == "custom" %}
+		background-size: {{ module.module_overrides.background_settings.overlay_image.overlay_image_custom_size }} !important;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		{% endif %}
+		{% if module.module_overrides.background_settings.overlay_image.overlay_image_size == "cover" %}
+		background-size:cover;
+		{% endif %}
+		{% if module.module_overrides.background_settings.overlay_image.overlay_image_size == "auto" %}
+		background-size:contain;
+		{% endif %}
+		background-position: {{module.module_overrides.background_settings.overlay_image.overlay_image_position }};
+	}
+</style>
+{% end_require_css %} 
 
 

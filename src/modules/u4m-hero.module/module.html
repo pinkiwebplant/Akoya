@@ -1,6 +1,9 @@
 {% set moduleName = 'u4m-hero {% if module.media_section.image_overflow %} img_overflow {% endif %}' %}
 {% include "../partials/u4-module-includes.html" %}
-<div class="hero_wrapper {% if not module.media_section.image_field.src %} no_img {% endif %} {% if module.intro_content.include_divider %}divider{% endif %} {{ module.module_settings.select_image_alignment }} {% if module.media_section.image_overflow %} img_overflow {% endif %}">
+<div class="hero_wrapper {% if not module.media_section.image_field.src %} no_img {% endif %} {% if module.intro_content.include_divider %}divider{% endif %} {{ module.module_settings.select_image_alignment }} {% if module.media_section.image_overflow and not module.media_section.image_enlarge %} img_overflow {% endif %} {% if not module.media_section.image_overflow and module.media_section.image_enlarge %}enlargeImage{% endif %}">
+	
+	
+	
 	<div class="page-center">	
 		<div class="row">
 			<div class="left_section">

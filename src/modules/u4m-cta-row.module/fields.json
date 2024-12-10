@@ -861,12 +861,32 @@
           "access" : null
         },
         "display" : "select",
-        "choices" : [ [ "cover", "Full" ], [ "auto", "Auto" ] ],
+        "choices" : [ [ "cover", "Full" ], [ "auto", "Auto" ], [ "custom", "Custom" ] ],
         "multiple" : false,
         "reordering_enabled" : true,
         "preset" : null,
         "type" : "choice",
-        "default" : "cover"
+        "default" : "custom"
+      }, {
+        "id" : "b22d6587-12e0-fc31-bd81-cbc5500b9b87",
+        "name" : "overlay_image_custom_size",
+        "display_width" : null,
+        "label" : "Overlay Image Custom Size",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "module_overrides.background_settings.overlay_image.overlay_image_size",
+          "controlling_value_regex" : "custom",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "804px 406px"
       }, {
         "id" : "157c690e-a323-5991-bdcc-5d89c6a5e210",
         "name" : "overlay_image_position",
@@ -883,12 +903,12 @@
           "access" : null
         },
         "display" : "select",
-        "choices" : [ [ "left", "Lelft" ], [ "right", "Right" ], [ "center", "Center" ] ],
+        "choices" : [ [ "left center", "Left Center" ], [ "left top", "Left Top" ], [ "left bottom", "Left Bottom" ], [ "center center", "Center" ], [ "center top", "Center Top" ], [ "center bottom", "Center Bottom" ], [ "right center", "Right Center" ], [ "right top", "Right Top" ], [ "right bottom", "Right Bottom" ] ],
         "multiple" : false,
         "reordering_enabled" : true,
         "preset" : null,
         "type" : "choice",
-        "default" : "center"
+        "default" : "center bottom"
       } ],
       "tab" : "CONTENT",
       "expanded" : false,
@@ -905,8 +925,9 @@
           "max_width" : 1566,
           "max_height" : 806
         },
-        "overlay_image_size" : "cover",
-        "overlay_image_position" : "center"
+        "overlay_image_size" : "custom",
+        "overlay_image_custom_size" : "804px 406px",
+        "overlay_image_position" : "center bottom"
       }
     } ],
     "tab" : "CONTENT",
@@ -931,8 +952,9 @@
           "max_width" : 1566,
           "max_height" : 806
         },
-        "overlay_image_size" : "cover",
-        "overlay_image_position" : "center"
+        "overlay_image_size" : "custom",
+        "overlay_image_custom_size" : "804px 406px",
+        "overlay_image_position" : "center bottom"
       }
     }
   } ],
@@ -974,8 +996,9 @@
           "max_width" : 1566,
           "max_height" : 806
         },
-        "overlay_image_size" : "cover",
-        "overlay_image_position" : "center"
+        "overlay_image_size" : "custom",
+        "overlay_image_custom_size" : "804px 406px",
+        "overlay_image_position" : "center bottom"
       }
     }
   }

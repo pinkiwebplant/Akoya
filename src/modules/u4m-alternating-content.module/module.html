@@ -5,11 +5,11 @@
 	{{macros.introGroup(module.intro_content)}}
 
 	<div class="alter-cnt-row slick">
-			<div class="alter-cnt-items {% if module.module_overrides.enable_slider == "false" %}no-slider{% endif %}">
-				{% for item in module.items_group %}
-				<div class="alter-cnt-item {% if item.image_position_on_left %} reverse-img {% endif %}">
-					<div class=" flex_row">
-						<div class="alter-left col5 col">
+		<div class="alter-cnt-items {% if module.module_overrides.enable_slider == "false" %}no-slider{% endif %}">
+			{% for item in module.items_group %}
+			<div class="alter-cnt-item {% if item.image_position_on_left %} reverse-img {% endif %}">
+				<div class=" flex_row {% if item.include_additional_content and item.additional_content %}addConent {% if not item.image_field.src and (item.include_additional_content and item.additional_content) %}addConent_no_image	{% endif %}{% endif %}">
+					<div class="alter-left col5 col">
 						<div class="alter-content-row">
 							{% if item.content %}
 							<div class="alter-content">
@@ -49,35 +49,43 @@
 							{% endif %}
 						</div>
 					</div>
+					{% if item.image_field.src or (item.include_additional_content and item.additional_content) %}
+					<div class="alter-right col7 col ">
 					{% if item.image_field.src %}
-					<div class="alter-right col7 col">
 						<div class="alter-image">
 							{% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
-							<img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }}>
+							<img src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}" {{ loadingAttr }}>
 						</div>
+					{% endif %}
+						{% if item.include_additional_content %}
+						<div class="additional_content">
+							{{ item.additional_content }}
+						</div>
+						{% endif %}
+
 					</div>
 					{% endif %}
-					</div>
 				</div>
-				{% endfor %}
 			</div>
+			{% endfor %}
+		</div>
 		{% if module.module_overrides.enable_slider %}
-			<div class="btn-wrap">
-				<button class="prev-btn">
-					<span>
-						<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23369 1.23124C1.54528 0.92292 2.05047 0.92292 2.36202 1.23124L6.61737 5.44178C6.92896 5.75009 6.92896 6.24988 6.61737 6.5582L2.36203 10.7688C2.05047 11.0771 1.54528 11.0771 1.23369 10.7688C0.922103 10.4605 0.922103 9.96059 1.23369 9.65228L4.9248 5.99999L1.23369 2.34766C0.922103 2.03934 0.922103 1.53955 1.23369 1.23124Z"/>
-						</svg>
-					</span>
-				</button>
-				<button class="next-btn">
-					<span>
-						<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23369 1.23124C1.54528 0.92292 2.05047 0.92292 2.36202 1.23124L6.61737 5.44178C6.92896 5.75009 6.92896 6.24988 6.61737 6.5582L2.36203 10.7688C2.05047 11.0771 1.54528 11.0771 1.23369 10.7688C0.922103 10.4605 0.922103 9.96059 1.23369 9.65228L4.9248 5.99999L1.23369 2.34766C0.922103 2.03934 0.922103 1.53955 1.23369 1.23124Z"/>
-						</svg>
-					</span>
-				</button>
-			</div>
+		<div class="btn-wrap">
+			<button class="prev-btn">
+				<span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23369 1.23124C1.54528 0.92292 2.05047 0.92292 2.36202 1.23124L6.61737 5.44178C6.92896 5.75009 6.92896 6.24988 6.61737 6.5582L2.36203 10.7688C2.05047 11.0771 1.54528 11.0771 1.23369 10.7688C0.922103 10.4605 0.922103 9.96059 1.23369 9.65228L4.9248 5.99999L1.23369 2.34766C0.922103 2.03934 0.922103 1.53955 1.23369 1.23124Z"/>
+					</svg>
+				</span>
+			</button>
+			<button class="next-btn">
+				<span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23369 1.23124C1.54528 0.92292 2.05047 0.92292 2.36202 1.23124L6.61737 5.44178C6.92896 5.75009 6.92896 6.24988 6.61737 6.5582L2.36203 10.7688C2.05047 11.0771 1.54528 11.0771 1.23369 10.7688C0.922103 10.4605 0.922103 9.96059 1.23369 9.65228L4.9248 5.99999L1.23369 2.34766C0.922103 2.03934 0.922103 1.53955 1.23369 1.23124Z"/>
+					</svg>
+				</span>
+			</button>
+		</div>
 		{% endif %}
 	</div>
 
@@ -101,8 +109,8 @@
 		infinite: false,
 		autoplay: false
 		});
-	
-	
+
+
 	$(".{{name}} .prev-btn").click(function () {
 		$(".{{name}} .alter-cnt-items").slick("slickPrev");
 		});
@@ -127,6 +135,10 @@
 	{% endif %}
 </script>
 {% end_require_js %}
+
+
+
+
 
 
 

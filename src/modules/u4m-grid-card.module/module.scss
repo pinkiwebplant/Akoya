@@ -5,11 +5,14 @@ section.u4m-grid-card {
   }
   .gridcard_wrap {
     .grid_items {
+      justify-content: center;
       row-gap: 30px;
       .grid_item {
         width: 25%;
         transition: all 0.3s linear;
         position: relative;
+        display: flex;
+        flex-wrap: wrap;
         @include tablet {
           width: 50%;
         }
@@ -56,6 +59,16 @@ section.u4m-grid-card {
           background: $white;
           transition: all 0.2s linear;
           height: 100%;
+          padding-right: 36rem;
+          width: 100%;
+          a.overlay_link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+          }
           .arrow {
             width: 24rem;
             height: 24rem;
@@ -82,6 +95,31 @@ section.u4m-grid-card {
                 margin: 0;
               }
             }
+          }
+        }
+
+        .icon_box {
+          text-align: left;
+          display: flex;
+          min-height: 50px;
+          margin-bottom: 20px;
+          align-items: center;
+
+          .material-symbols-outlined,
+          .icon {
+            display: block;
+            font-size: 50px;
+          }
+
+          .icon svg {
+            width: 1em;
+            height: 1em;
+            display: block;
+          }
+
+          .icon img {
+            width: 1em;
+            display: block;
           }
         }
       }
