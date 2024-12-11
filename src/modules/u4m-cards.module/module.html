@@ -9,7 +9,7 @@
 			<div class="cardItemIn {{ module.module_settings.select_card_background_color }} {{ module.module_settings.select_card_content_color }}">
 				{% if item.select_icon_type || module.module_settings.card_type =="type2" %}
 				<div class="cardItemIconWrap flex_row">
-					<div class="cardItemIcon">
+					<div class="cardItemIcon {{ item.select_icon_type }}">
 						{% if item.select_icon_type == "image" and item.image.src %}
 						<span class="img_icon">
 							<img src="{{ item.image.src }}" alt="{{ item.image.alt }}" >

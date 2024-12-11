@@ -799,4 +799,5 @@ body.search-open {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
+  transition: $animation2;
 }

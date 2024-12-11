@@ -32,7 +32,7 @@ section.u4m-grid-card {
           opacity: 0;
           transition: all 0.2s linear;
         }
-        &:hover {
+        &.addLink:hover {
           transform: translateY(-5px);
           cursor: pointer;
           .grid_inr {
