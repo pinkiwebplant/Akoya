@@ -49,8 +49,7 @@
         @include b2;
         text-align: center;
         color: $charcoal;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding: 20px 30px;
         border-right: $azure 1px solid;
         @include tabletvert {
           border-right: 0;

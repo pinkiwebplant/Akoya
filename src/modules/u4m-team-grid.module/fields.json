@@ -505,7 +505,7 @@
           "open_in_new_tab" : false,
           "no_follow" : false
         }
-      },{
+      }, {
         "icon_field" : {
           "name" : "LinkedIn In",
           "type" : "REGULAR",
@@ -519,7 +519,7 @@
             "type" : "EXTERNAL"
           }
         }
-      }]
+      } ]
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
@@ -897,7 +897,7 @@
             "type" : "EXTERNAL"
           }
         }
-      }]
+      } ]
     }
   }, {
     "select_tag" : "board_members",

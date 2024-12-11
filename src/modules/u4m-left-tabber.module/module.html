@@ -14,17 +14,18 @@
 					<div class="nav_text_col">
 
 						<div class="nav_trigger_wrap" data-nav="{{name}}_tab{{loop.index}}">
-							<h4 class="nav_titlee">{{ item.nav_text }}</h4>
-							<span class="arrow_ic">
-								<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23124 6.76631C0.92292 6.45472 0.92292 5.94953 1.23124 5.63798L5.44178 1.38263C5.75009 1.07104 6.24988 1.07104 6.5582 1.38263L10.7688 5.63797C11.0771 5.94953 11.0771 6.45472 10.7688 6.76631C10.4605 7.0779 9.96059 7.0779 9.65228 6.76631L5.99999 3.0752L2.34766 6.76631C2.03934 7.0779 1.53955 7.0779 1.23124 6.76631Z" fill="#4CAF50" stroke="#00161D"/>
-								</svg>
-							</span>
-
+							<div class="nav_trigger_con">
+								<h4 class="nav_titlee">{{ item.nav_text }}</h4>
+								<span class="arrow_ic">
+									<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M1.23124 6.76631C0.92292 6.45472 0.92292 5.94953 1.23124 5.63798L5.44178 1.38263C5.75009 1.07104 6.24988 1.07104 6.5582 1.38263L10.7688 5.63797C11.0771 5.94953 11.0771 6.45472 10.7688 6.76631C10.4605 7.0779 9.96059 7.0779 9.65228 6.76631L5.99999 3.0752L2.34766 6.76631C2.03934 7.0779 1.53955 7.0779 1.23124 6.76631Z" fill="#4CAF50" stroke="#00161D"/>
+									</svg>
+								</span>
+							</div>
+							<div {% if loop.index == 1 %}style="display: block"{% else %}style="display: none"{% endif %} class="nav_descr mobileHide {{item.description_style}}" >{{ item.description }}</div>
 						</div>
-
 						<div class="nav_content_block" {% if loop.index == 1 %}style="display: block"{% else %}style="display: none"{% endif %}>
-							<span class="nav_descr {{item.description_style}}" >{{ item.description }}</span>
+							<span class="nav_descr desktopHide {{item.description_style}}" >{{ item.description }}</span>
 							<div class="mobile_content">
 								<div class="right_col">
 									{% if item.image.src %}
@@ -137,7 +138,9 @@
 
 		$(getthis).parents('.lefttab_nav_item').siblings().removeClass('active animated');
 		$(getthis).parents('.lefttab_nav_item').siblings().find('.nav_content_block').slideUp();
-		$(this).next('.nav_content_block').slideDown()
+		$(this).parents('.lefttab_nav_item').siblings().find('.nav_descr.mobileHide').slideUp();
+		$(this).next('.nav_content_block').slideDown();
+		$(this).children('.nav_descr.mobileHide').slideDown()
 
 
 		$(this).parents('.lefttab_main').find('.lefttabber_pannel_item').removeClass('active animated')

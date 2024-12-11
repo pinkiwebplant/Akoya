@@ -71,7 +71,7 @@ section.u4m-cards {
         .cardItemIconWrap {
           .img_icon {
             img {
-              vertical-align: middle;
+              display: block;
             }
           }
           .material-symbols-outlined {
@@ -142,6 +142,9 @@ section.u4m-cards {
             display: flex;
             align-items: center;
             justify-content: center;
+            &.image {
+              padding: 0;
+            }
           }
         }
       }

@@ -850,6 +850,7 @@
         "name" : "overlay_image_size",
         "display_width" : null,
         "label" : "Overlay Image Size",
+        "help_text" : "",
         "required" : false,
         "locked" : false,
         "visibility" : {

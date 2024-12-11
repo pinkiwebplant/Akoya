@@ -6,7 +6,7 @@
 	<div class="gridcard_wrap">
 		<div class="grid_items flex_row">
 			{% for item in module.add_items %}
-			<div class="grid_item">
+			<div class="grid_item{% if item.include_link %} addLink{% endif %}">
 				<div class="grid_inr">
 					{% if item.include_link %}
 					{% set href = item.link.url.href %}
