@@ -366,13 +366,13 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/iconcard.png",
-      "alt" : "iconcard",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/Dollar.png",
+      "alt" : "Dollar",
       "loading" : "lazy",
-      "width" : 21,
-      "height" : 19,
-      "max_width" : 21,
-      "max_height" : 19
+      "width" : 144,
+      "height" : 144,
+      "max_width" : 144,
+      "max_height" : 144
     }
   }, {
     "id" : "91c622f6-52c2-08f5-efbb-31441f40365f",
@@ -741,14 +741,15 @@
     "select_icon_type" : "image",
     "image" : {
       "size_type" : "auto",
-      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/iconcard.png",
-      "alt" : "iconcard",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/Dollar.png",
+      "alt" : "Dollar",
       "loading" : "lazy",
-      "width" : 21,
-      "height" : 19,
-      "max_width" : 21,
-      "max_height" : 19
+      "width" : 144,
+      "height" : 144,
+      "max_width" : 144,
+      "max_height" : 144
     },
+    "icon_svg" : { },
     "icon" : "description",
     "title" : "Card title goes here",
     "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>",
@@ -783,20 +784,20 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    } ],
-    "icon_field" : { }
+    } ]
   }, {
     "select_icon_type" : "image",
     "image" : {
       "size_type" : "auto",
-      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/iconcard.png",
-      "alt" : "iconcard",
+      "src" : "https://302540.fs1.hubspotusercontent-na1.net/hubfs/302540/Akoya/images/Dollar.png",
+      "alt" : "Dollar",
       "loading" : "lazy",
-      "width" : 21,
-      "height" : 19,
-      "max_width" : 21,
-      "max_height" : 19
+      "width" : 144,
+      "height" : 144,
+      "max_width" : 144,
+      "max_height" : 144
     },
+    "icon_svg" : { },
     "icon" : "description",
     "title" : "Card title goes here",
     "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>",
@@ -831,8 +832,7 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    } ],
-    "icon_field" : { }
+    } ]
   } ]
 }, {
   "id" : "085c883d-cc3d-89ec-c681-0ce525976b30",

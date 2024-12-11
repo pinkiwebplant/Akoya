@@ -72,10 +72,10 @@
 
 </section>
 
-
+{% if module.module_overrides.background_settings.include_overlay_image %}
 {% require_css %} 
 <style>
-	.{{name}}.moduleName .bg_overlay.bg_image {
+	.{{name}}.{{moduleName}} .bg_overlay.bg_image {
 
 		{% if module.module_overrides.background_settings.overlay_image.overlay_image_size == "custom" %}
 		background-size: {{ module.module_overrides.background_settings.overlay_image.overlay_image_custom_size }} !important;
@@ -91,5 +91,5 @@
 	}
 </style>
 {% end_require_css %} 
-
+{% endif %}
 
